@@ -9,8 +9,32 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as PedidosRouteImport } from './routes/pedidos'
+import { Route as LojasRouteImport } from './routes/lojas'
+import { Route as FinanceiroRouteImport } from './routes/financeiro'
+import { Route as EntregadoresRouteImport } from './routes/entregadores'
 import { Route as IndexRouteImport } from './routes/index'
 
+const PedidosRoute = PedidosRouteImport.update({
+  id: '/pedidos',
+  path: '/pedidos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LojasRoute = LojasRouteImport.update({
+  id: '/lojas',
+  path: '/lojas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FinanceiroRoute = FinanceiroRouteImport.update({
+  id: '/financeiro',
+  path: '/financeiro',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EntregadoresRoute = EntregadoresRouteImport.update({
+  id: '/entregadores',
+  path: '/entregadores',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +43,72 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/entregadores': typeof EntregadoresRoute
+  '/financeiro': typeof FinanceiroRoute
+  '/lojas': typeof LojasRoute
+  '/pedidos': typeof PedidosRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/entregadores': typeof EntregadoresRoute
+  '/financeiro': typeof FinanceiroRoute
+  '/lojas': typeof LojasRoute
+  '/pedidos': typeof PedidosRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/entregadores': typeof EntregadoresRoute
+  '/financeiro': typeof FinanceiroRoute
+  '/lojas': typeof LojasRoute
+  '/pedidos': typeof PedidosRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/entregadores' | '/financeiro' | '/lojas' | '/pedidos'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/entregadores' | '/financeiro' | '/lojas' | '/pedidos'
+  id: '__root__' | '/' | '/entregadores' | '/financeiro' | '/lojas' | '/pedidos'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  EntregadoresRoute: typeof EntregadoresRoute
+  FinanceiroRoute: typeof FinanceiroRoute
+  LojasRoute: typeof LojasRoute
+  PedidosRoute: typeof PedidosRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/pedidos': {
+      id: '/pedidos'
+      path: '/pedidos'
+      fullPath: '/pedidos'
+      preLoaderRoute: typeof PedidosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lojas': {
+      id: '/lojas'
+      path: '/lojas'
+      fullPath: '/lojas'
+      preLoaderRoute: typeof LojasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/financeiro': {
+      id: '/financeiro'
+      path: '/financeiro'
+      fullPath: '/financeiro'
+      preLoaderRoute: typeof FinanceiroRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/entregadores': {
+      id: '/entregadores'
+      path: '/entregadores'
+      fullPath: '/entregadores'
+      preLoaderRoute: typeof EntregadoresRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,7 +121,21 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  EntregadoresRoute: EntregadoresRoute,
+  FinanceiroRoute: FinanceiroRoute,
+  LojasRoute: LojasRoute,
+  PedidosRoute: PedidosRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}

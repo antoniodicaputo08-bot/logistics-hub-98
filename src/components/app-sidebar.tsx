@@ -1,13 +1,11 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import {
   LayoutDashboard,
-  Truck,
-  Package,
-  Warehouse,
-  MapPin,
+  Store,
   Users,
-  BarChart3,
-  Settings,
+  Wallet,
+  Package,
+  Truck,
 } from "lucide-react";
 
 import {
@@ -24,16 +22,10 @@ import {
 
 const mainItems = [
   { title: "Visão Geral", url: "/", icon: LayoutDashboard },
-  { title: "Remessas", url: "/remessas", icon: Truck },
-  { title: "Pedidos", url: "/pedidos", icon: Package },
-  { title: "Armazéns", url: "/armazens", icon: Warehouse },
-  { title: "Rotas", url: "/rotas", icon: MapPin },
-];
-
-const otherItems = [
-  { title: "Motoristas", url: "/motoristas", icon: Users },
-  { title: "Relatórios", url: "/relatorios", icon: BarChart3 },
-  { title: "Configurações", url: "/configuracoes", icon: Settings },
+  { title: "Lojas", url: "/lojas", icon: Store },
+  { title: "Entregadores", url: "/entregadores", icon: Users },
+  { title: "Financeiro", url: "/financeiro", icon: Wallet },
+  { title: "Pedidos iFood", url: "/pedidos", icon: Package },
 ];
 
 export function AppSidebar() {
@@ -52,7 +44,7 @@ export function AppSidebar() {
           </div>
           <div className="flex flex-col group-data-[collapsible=icon]:hidden">
             <span className="text-sm font-semibold text-sidebar-foreground">
-              Cargolux
+              R3 Produtividade
             </span>
             <span className="text-xs text-sidebar-foreground/60">
               Operações
@@ -67,24 +59,6 @@ export function AppSidebar() {
           <SidebarGroupContent>
             <SidebarMenu>
               {mainItems.map((item) => (
-                <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild isActive={isActive(item.url)} tooltip={item.title}>
-                    <Link to={item.url}>
-                      <item.icon className="h-4 w-4" />
-                      <span>{item.title}</span>
-                    </Link>
-                  </SidebarMenuButton>
-                </SidebarMenuItem>
-              ))}
-            </SidebarMenu>
-          </SidebarGroupContent>
-        </SidebarGroup>
-
-        <SidebarGroup>
-          <SidebarGroupLabel>Gestão</SidebarGroupLabel>
-          <SidebarGroupContent>
-            <SidebarMenu>
-              {otherItems.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild isActive={isActive(item.url)} tooltip={item.title}>
                     <Link to={item.url}>
