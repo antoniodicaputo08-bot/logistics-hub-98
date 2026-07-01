@@ -4,7 +4,7 @@ import { Store, Users, TrendingUp } from "lucide-react";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { stores } from "@/lib/productivity-data";
+import { useProductivityData } from "@/lib/productivity-data";
 
 export const Route = createFileRoute("/lojas")({
   head: () => ({
@@ -16,13 +16,19 @@ export const Route = createFileRoute("/lojas")({
   component: LojasPage,
 });
 
-const chartData = stores.map((s) => ({ loja: s.nome, margem: s.margem }));
-
 function fmt(v: number) {
   return v.toLocaleString("pt-BR", { style: "currency", currency: "BRL", maximumFractionDigits: 0 });
 }
 
 function LojasPage() {
+  const { data, loading, error } = useProductivityData();
+
+  if (loading) return <div className="flex items-center justify-center h-64 text-muted-foreground">Carregando dados...</div>;
+  if (error || !data) return <div className="flex items-center justify-center h-64 text-destructive">Erro ao carregar dados.</div>;
+
+  const { stores } = data;
+  const chartData = stores.map((s) => ({ loja: s.nome, margem: s.margem }));
+
   return (
     <div className="p-6 lg:p-8 space-y-6">
       <div>

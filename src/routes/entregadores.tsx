@@ -4,7 +4,7 @@ import { Search, Users } from "lucide-react";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { entregadores } from "@/lib/productivity-data";
+import { useProductivityData } from "@/lib/productivity-data";
 
 export const Route = createFileRoute("/entregadores")({
   head: () => ({
@@ -21,20 +21,25 @@ function fmt(v: number) {
 }
 
 function EntregadoresPage() {
+  const { data, loading, error } = useProductivityData();
   const [query, setQuery] = useState("");
 
   const filtered = useMemo(() => {
+    if (!data) return [];
     const q = query.trim().toUpperCase();
-    if (!q) return entregadores;
-    return entregadores.filter((e) => e.nome.includes(q) || e.lojas.some((l) => l.toUpperCase().includes(q)));
-  }, [query]);
+    if (!q) return data.entregadores;
+    return data.entregadores.filter((e) => e.nome.includes(q) || e.lojas.some((l) => l.toUpperCase().includes(q)));
+  }, [query, data]);
+
+  if (loading) return <div className="flex items-center justify-center h-64 text-muted-foreground">Carregando dados...</div>;
+  if (error || !data) return <div className="flex items-center justify-center h-64 text-destructive">Erro ao carregar dados.</div>;
 
   return (
     <div className="p-6 lg:p-8 space-y-6">
       <div className="flex flex-wrap items-end justify-between gap-3">
         <div>
           <h1 className="font-display text-2xl font-semibold text-foreground">Entregadores</h1>
-          <p className="text-sm text-muted-foreground">{entregadores.length} entregadores com registro no período</p>
+          <p className="text-sm text-muted-foreground">{data.entregadores.length} entregadores com registro no período</p>
         </div>
         <div className="relative w-full sm:w-72">
           <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />

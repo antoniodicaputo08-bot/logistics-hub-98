@@ -3,7 +3,7 @@ import { Area, AreaChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YA
 import { Wallet, TrendingUp, TrendingDown } from "lucide-react";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { dailySeries, totals, stores } from "@/lib/productivity-data";
+import { useProductivityData } from "@/lib/productivity-data";
 
 export const Route = createFileRoute("/financeiro")({
   head: () => ({
@@ -25,20 +25,26 @@ function monthLabel(dateStr: string) {
   return `${meses[Number(m) - 1]}/${y.slice(2)}`;
 }
 
-const monthlyMap = new Map<string, { mes: string; custo: number; fatura: number; margem: number }>();
-for (const d of dailySeries) {
-  const key = d.data.slice(0, 7);
-  if (!monthlyMap.has(key)) monthlyMap.set(key, { mes: monthLabel(d.data), custo: 0, fatura: 0, margem: 0 });
-  const m = monthlyMap.get(key)!;
-  m.custo += d.custo;
-  m.fatura += d.fatura;
-  m.margem += d.margem;
-}
-const monthlyData = Array.from(monthlyMap.values());
-
-const margemPct = (totals.margem / totals.totalFatura) * 100;
-
 function FinanceiroPage() {
+  const { data, loading, error } = useProductivityData();
+
+  if (loading) return <div className="flex items-center justify-center h-64 text-muted-foreground">Carregando dados...</div>;
+  if (error || !data) return <div className="flex items-center justify-center h-64 text-destructive">Erro ao carregar dados.</div>;
+
+  const { totals, dailySeries, stores } = data;
+
+  const monthlyMap = new Map<string, { mes: string; custo: number; fatura: number; margem: number }>();
+  for (const d of dailySeries) {
+    const key = d.data.slice(0, 7);
+    if (!monthlyMap.has(key)) monthlyMap.set(key, { mes: monthLabel(d.data), custo: 0, fatura: 0, margem: 0 });
+    const m = monthlyMap.get(key)!;
+    m.custo += d.custo;
+    m.fatura += d.fatura;
+    m.margem += d.margem;
+  }
+  const monthlyData = Array.from(monthlyMap.values());
+  const margemPct = (totals.margem / totals.totalFatura) * 100;
+
   return (
     <div className="p-6 lg:p-8 space-y-6">
       <div>

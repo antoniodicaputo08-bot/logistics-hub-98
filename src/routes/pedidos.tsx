@@ -5,7 +5,7 @@ import { Package, AlertCircle, Search } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
-import { pedidosIfood, registroEntregas, meta } from "@/lib/productivity-data";
+import { useProductivityData } from "@/lib/productivity-data";
 
 export const Route = createFileRoute("/pedidos")({
   head: () => ({
@@ -23,14 +23,20 @@ const statusVariant: Record<string, string> = {
 };
 
 function PedidosPage() {
+  const { data, loading, error } = useProductivityData();
   const [query, setQuery] = useState("");
 
   const filtered = useMemo(() => {
+    if (!data) return [];
     const q = query.trim().toUpperCase();
-    if (!q) return pedidosIfood;
-    return pedidosIfood.filter((p) => p.codigo.toUpperCase().includes(q) || p.entregador.toUpperCase().includes(q));
-  }, [query]);
+    if (!q) return data.pedidosIfood;
+    return data.pedidosIfood.filter((p) => p.codigo.toUpperCase().includes(q) || p.entregador.toUpperCase().includes(q));
+  }, [query, data]);
 
+  if (loading) return <div className="flex items-center justify-center h-64 text-muted-foreground">Carregando dados...</div>;
+  if (error || !data) return <div className="flex items-center justify-center h-64 text-destructive">Erro ao carregar dados.</div>;
+
+  const { meta, pedidosIfood, registroEntregas } = data;
   const totalKmRegistro = registroEntregas.reduce((acc, r) => acc + r.km, 0);
   const totalValorRegistro = registroEntregas.reduce((acc, r) => acc + r.valor, 0);
 
