@@ -3,7 +3,7 @@ import { Area, AreaChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YA
 import { Wallet, TrendingUp, TrendingDown } from "lucide-react";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { useProductivityData } from "@/lib/productivity-data";
+import { loadProductivityData } from "@/lib/productivity-data";
 
 export const Route = createFileRoute("/financeiro")({
   head: () => ({
@@ -12,6 +12,7 @@ export const Route = createFileRoute("/financeiro")({
       { name: "description", content: "Evolução de custo, faturamento e margem ao longo do período." },
     ],
   }),
+  loader: () => loadProductivityData(),
   component: FinanceiroPage,
 });
 
@@ -26,12 +27,7 @@ function monthLabel(dateStr: string) {
 }
 
 function FinanceiroPage() {
-  const { data, loading, error } = useProductivityData();
-
-  if (loading) return <div className="flex items-center justify-center h-64 text-muted-foreground">Carregando dados...</div>;
-  if (error || !data) return <div className="flex items-center justify-center h-64 text-destructive">Erro ao carregar dados.</div>;
-
-  const { totals, dailySeries, stores } = data;
+  const { totals, dailySeries, stores } = Route.useLoaderData();
 
   const monthlyMap = new Map<string, { mes: string; custo: number; fatura: number; margem: number }>();
   for (const d of dailySeries) {

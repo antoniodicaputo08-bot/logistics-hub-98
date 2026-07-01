@@ -14,7 +14,7 @@ import { CheckCircle2, Clock, Package, TrendingUp, Truck } from "lucide-react";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
-import { useProductivityData } from "@/lib/productivity-data";
+import { loadProductivityData } from "@/lib/productivity-data";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -23,6 +23,7 @@ export const Route = createFileRoute("/")({
       { name: "description", content: "KPIs de entregas, custo e faturamento por loja e por entregador." },
     ],
   }),
+  loader: () => loadProductivityData(),
   component: DashboardPage,
 });
 
@@ -33,12 +34,7 @@ function monthLabel(dateStr: string) {
 }
 
 function DashboardPage() {
-  const { data, loading, error } = useProductivityData();
-
-  if (loading) return <div className="flex items-center justify-center h-64 text-muted-foreground">Carregando dados...</div>;
-  if (error || !data) return <div className="flex items-center justify-center h-64 text-destructive">Erro ao carregar dados.</div>;
-
-  const { totals, meta, dailySeries, stores, entregadores } = data;
+  const { totals, meta, dailySeries, stores, entregadores } = Route.useLoaderData();
 
   const kpis = [
     { label: "Total de Entregas", value: totals.totalEntregas.toLocaleString("pt-BR"), icon: Truck, hint: `acumulado em ${meta.totalDias} dias` },

@@ -1,5 +1,3 @@
-import { useState, useEffect } from "react";
-
 export interface DailyPoint {
   data: string;
   entregas: number;
@@ -66,30 +64,8 @@ export interface ProductivityData {
   registroEntregas: RegistroEntrega[];
 }
 
-const cache: { data: ProductivityData | null } = { data: null };
-
-export function useProductivityData() {
-  const [data, setData] = useState<ProductivityData | null>(cache.data);
-  const [loading, setLoading] = useState(cache.data === null);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    if (cache.data) return;
-    fetch("/data.json")
-      .then((r) => {
-        if (!r.ok) throw new Error(`HTTP ${r.status}`);
-        return r.json() as Promise<ProductivityData>;
-      })
-      .then((d) => {
-        cache.data = d;
-        setData(d);
-        setLoading(false);
-      })
-      .catch((e) => {
-        setError(String(e));
-        setLoading(false);
-      });
-  }, []);
-
-  return { data, loading, error };
+export async function loadProductivityData(): Promise<ProductivityData> {
+  const res = await fetch("/data.json");
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  return res.json();
 }

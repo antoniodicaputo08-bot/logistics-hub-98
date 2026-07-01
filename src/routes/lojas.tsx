@@ -4,7 +4,7 @@ import { Store, Users, TrendingUp } from "lucide-react";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { useProductivityData } from "@/lib/productivity-data";
+import { loadProductivityData } from "@/lib/productivity-data";
 
 export const Route = createFileRoute("/lojas")({
   head: () => ({
@@ -13,6 +13,7 @@ export const Route = createFileRoute("/lojas")({
       { name: "description", content: "Desempenho detalhado de entregas, custo e faturamento por loja/cliente." },
     ],
   }),
+  loader: () => loadProductivityData(),
   component: LojasPage,
 });
 
@@ -21,12 +22,7 @@ function fmt(v: number) {
 }
 
 function LojasPage() {
-  const { data, loading, error } = useProductivityData();
-
-  if (loading) return <div className="flex items-center justify-center h-64 text-muted-foreground">Carregando dados...</div>;
-  if (error || !data) return <div className="flex items-center justify-center h-64 text-destructive">Erro ao carregar dados.</div>;
-
-  const { stores } = data;
+  const { stores } = Route.useLoaderData();
   const chartData = stores.map((s) => ({ loja: s.nome, margem: s.margem }));
 
   return (
