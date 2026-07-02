@@ -184,45 +184,6 @@ export default function Dashboard() {
           </div>
         </div>
 
-        {/* Filtro de data */}
-        <div className="p-3 border-b border-[#30363d]">
-          <p className="text-[10px] uppercase tracking-widest text-[#8b949e] mb-2 px-1">Período</p>
-          <div className="space-y-2">
-            <div>
-              <label className="text-[10px] text-[#8b949e] mb-1 block">De</label>
-              <input
-                type="date"
-                value={dataInicio}
-                min={DATA_MIN}
-                max={dataFim}
-                onChange={e => setDataInicio(e.target.value)}
-                className="w-full bg-[#0d1117] border border-[#30363d] rounded-lg px-2 py-1.5 text-xs text-white outline-none focus:border-blue-500 transition-colors"
-              />
-            </div>
-            <div>
-              <label className="text-[10px] text-[#8b949e] mb-1 block">Até</label>
-              <input
-                type="date"
-                value={dataFim}
-                min={dataInicio}
-                max={DATA_MAX}
-                onChange={e => setDataFim(e.target.value)}
-                className="w-full bg-[#0d1117] border border-[#30363d] rounded-lg px-2 py-1.5 text-xs text-white outline-none focus:border-blue-500 transition-colors"
-              />
-            </div>
-            {filtrando && (
-              <button
-                onClick={() => { setDataInicio(DATA_MIN); setDataFim(DATA_MAX); }}
-                className="w-full flex items-center justify-center gap-1.5 text-[10px] text-[#8b949e] hover:text-red-400 transition-colors py-1"
-              >
-                <X className="h-3 w-3" /> Limpar filtro
-              </button>
-            )}
-          </div>
-          <div className="mt-2 text-[10px] text-[#8b949e] text-center">
-            {diasFiltrados} dia{diasFiltrados !== 1 ? "s" : ""} selecionado{diasFiltrados !== 1 ? "s" : ""}
-          </div>
-        </div>
 
         <div className="p-3 border-b border-[#30363d]">
           <p className="text-[10px] uppercase tracking-widest text-[#8b949e] mb-2 px-2">Clientes</p>
@@ -256,24 +217,57 @@ export default function Dashboard() {
       <main className="flex-1 overflow-y-auto">
 
         {/* header */}
-        <div className="sticky top-0 z-10 bg-[#0d1117] border-b border-[#30363d] px-6 py-3 flex items-center justify-between">
-          <div>
-            <h1 className="text-base font-semibold text-white">
-              {activeStore ?? "Visão Geral — Todas as Operações"}
-            </h1>
-            <p className="text-xs text-[#8b949e]">
-              {activeStore ? `${activeStoreData?.registros} registros` : `${stores.length} lojas · ${entregadores.length} motoristas`}
-            </p>
-          </div>
-          <div className="flex items-center gap-4 text-xs text-[#8b949e]">
-            <span className="flex items-center gap-1.5">
-              <Calendar className="h-3.5 w-3.5" />
-              {periodoLabel}
-              {filtrando && <span className="px-1.5 py-0.5 rounded bg-blue-600/20 text-blue-400 text-[10px]">filtrado</span>}
-            </span>
-            <span className="flex items-center gap-1.5 text-[#3fb950]">
+        <div className="sticky top-0 z-10 bg-[#0d1117] border-b border-[#30363d] px-6 py-3 space-y-2">
+          <div className="flex items-center justify-between">
+            <div>
+              <h1 className="text-base font-semibold text-white">
+                {activeStore ?? "Visão Geral — Todas as Operações"}
+              </h1>
+              <p className="text-xs text-[#8b949e]">
+                {activeStore ? `${activeStoreData?.registros} registros` : `${stores.length} lojas · ${entregadores.length} motoristas`}
+              </p>
+            </div>
+            <span className="flex items-center gap-1.5 text-xs text-[#3fb950]">
               <span className="w-2 h-2 rounded-full bg-[#3fb950] animate-pulse" />Ao vivo
             </span>
+          </div>
+          {/* barra de filtros */}
+          <div className="flex flex-wrap items-center gap-2 pb-1">
+            <span className="flex items-center gap-1.5 text-[10px] uppercase tracking-widest text-[#8b949e] mr-1">
+              <Filter className="h-3 w-3" /> Filtros
+            </span>
+            <div className="flex items-center gap-1.5 bg-[#161b22] border border-[#30363d] rounded-lg px-3 py-1.5 text-xs">
+              <Calendar className="h-3.5 w-3.5 text-[#8b949e]" />
+              <label className="text-[#8b949e]">De:</label>
+              <input type="date" value={dataInicio} min={DATA_MIN} max={dataFim}
+                onChange={e => setDataInicio(e.target.value)}
+                className="bg-transparent text-white outline-none text-xs" />
+            </div>
+            <div className="flex items-center gap-1.5 bg-[#161b22] border border-[#30363d] rounded-lg px-3 py-1.5 text-xs">
+              <Calendar className="h-3.5 w-3.5 text-[#8b949e]" />
+              <label className="text-[#8b949e]">Até:</label>
+              <input type="date" value={dataFim} min={dataInicio} max={DATA_MAX}
+                onChange={e => setDataFim(e.target.value)}
+                className="bg-transparent text-white outline-none text-xs" />
+            </div>
+            <select value={motoristaLoja} onChange={e => { setMotoristaLoja(e.target.value); setActiveStore(e.target.value === "Todas" ? null : e.target.value); }}
+              className="bg-[#161b22] border border-[#30363d] rounded-lg px-3 py-1.5 text-xs text-white outline-none">
+              <option value="Todas">Todas as lojas</option>
+              {stores.map(s => <option key={s.nome} value={s.nome}>{s.nome}</option>)}
+            </select>
+            <select value={motoristaBusca ? motoristaBusca : "__all__"}
+              onChange={e => setMotoristaBusca(e.target.value === "__all__" ? "" : e.target.value)}
+              className="bg-[#161b22] border border-[#30363d] rounded-lg px-3 py-1.5 text-xs text-white outline-none">
+              <option value="__all__">Todos os motoristas</option>
+              {entregadores.map(e => <option key={e.nome} value={e.nome}>{e.nome}</option>)}
+            </select>
+            {filtrando && (
+              <button onClick={() => { setDataInicio(DATA_MIN); setDataFim(DATA_MAX); }}
+                className="flex items-center gap-1 text-xs text-red-400 hover:text-red-300 bg-red-500/10 border border-red-500/20 rounded-lg px-2.5 py-1.5 transition-colors">
+                <X className="h-3 w-3" /> Limpar
+              </button>
+            )}
+            <span className="text-[10px] text-[#8b949e] ml-auto">{diasFiltrados} dia{diasFiltrados !== 1 ? "s" : ""}</span>
           </div>
         </div>
 
