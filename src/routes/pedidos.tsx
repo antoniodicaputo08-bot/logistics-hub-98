@@ -12,7 +12,7 @@ function PedidosPage() {
       <div>
         <h1 className="text-2xl font-semibold text-foreground">Pedidos iFood</h1>
         <p className="text-sm text-muted-foreground">
-          {meta.totalPedidosIfood} pedidos no período · {meta.totalRegistros} registros de entrega
+          {meta.totalPedidosIfood} pedidos no período · {meta.totalRegistroEntregas} registros de entrega
         </p>
       </div>
       <div className="rounded-xl border border-yellow-500/30 bg-yellow-500/5 p-5 text-sm text-muted-foreground">
