@@ -5,7 +5,7 @@ import tsconfigPaths from "vite-tsconfig-paths";
 import path from "path";
 
 export default defineConfig({
-  base: "/logistics-hub-98/",
+  base: "/",
   plugins: [react(), tailwindcss(), tsconfigPaths()],
   resolve: {
     alias: { "@": path.resolve(__dirname, "./src") },

@@ -1,0 +1,8 @@
+[build]
+  command = "npx vite build --config vite.config.spa.ts"
+  publish = "dist-spa"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
