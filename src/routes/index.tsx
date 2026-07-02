@@ -6,23 +6,24 @@ import {
 } from "recharts";
 import {
   DollarSign, TrendingUp, TrendingDown, Package, Users, Percent,
-  LayoutDashboard, ChevronRight, Activity, Calendar, Filter
+  LayoutDashboard, ChevronRight, Activity, Calendar, Filter, X
 } from "lucide-react";
-import { totals, meta, dailySeries, stores, entregadores } from "@/lib/productivity-data";
+import { meta, dailySeries, stores, entregadores } from "@/lib/productivity-data";
 
 export const Route = createFileRoute("/")({ component: Dashboard });
 
-// ─── cores por loja ────────────────────────────────────────────────────────
 const STORE_COLORS: Record<string, string> = {
-  "DOMINOS":        "#3b82f6",
-  "JOAQUINA":       "#f97316",
-  "COZI":           "#22c55e",
-  "FERRO E FARINHA":"#a855f7",
-  "DOMINOS IRAJÁ":  "#06b6d4",
-  "ARTIGIANO - ANNA":"#eab308",
-  "RJCC":           "#ef4444",
-  "MITSUBA":        "#ec4899",
+  "DOMINOS":          "#3b82f6",
+  "JOAQUINA":         "#f97316",
+  "COZI":             "#22c55e",
+  "FERRO E FARINHA":  "#a855f7",
+  "DOMINOS IRAJÁ":    "#06b6d4",
+  "ARTIGIANO - ANNA": "#eab308",
+  "RJCC":             "#ef4444",
+  "MITSUBA":          "#ec4899",
 };
+
+const MESES = ["Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez"];
 
 function fmt(v: number) {
   return v.toLocaleString("pt-BR", { style: "currency", currency: "BRL", maximumFractionDigits: 0 });
@@ -32,44 +33,18 @@ function fmtFull(v: number) {
 }
 function pct(a: number, b: number) { return b ? ((a / b) * 100).toFixed(1) + "%" : "—"; }
 
-// ─── dados derivados ────────────────────────────────────────────────────────
-const totalMotoristas = entregadores.length;
-const margemPct = ((totals.margem / totals.totalFatura) * 100).toFixed(1);
-const custoPct  = ((totals.totalCusto / totals.totalFatura) * 100).toFixed(1);
+// datas disponíveis no dataset
+const DATA_MIN = meta.periodoInicio;
+const DATA_MAX = meta.periodoFim;
 
-// evolução diária (já vem ordenada)
-const dailyChartData = dailySeries.map(d => ({
-  data: d.data.slice(5),   // MM-DD
-  fatura: d.fatura,
-  custo: d.custo,
-  margem: d.margem,
-  entregas: d.entregas,
-}));
-
-// mensal
-const monthlyMap = new Map<string, { mes: string; fatura: number; custo: number; margem: number; entregas: number }>();
-for (const d of dailySeries) {
-  const key = d.data.slice(0, 7);
-  const meses = ["Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez"];
-  const [,m] = d.data.split("-");
-  if (!monthlyMap.has(key)) monthlyMap.set(key, { mes: meses[Number(m)-1], fatura: 0, custo: 0, margem: 0, entregas: 0 });
-  const mo = monthlyMap.get(key)!;
-  mo.fatura += d.fatura; mo.custo += d.custo; mo.margem += d.margem; mo.entregas += d.entregas;
-}
-const monthlyData = Array.from(monthlyMap.values());
-
-// pie
-const pieData = stores.map(s => ({ name: s.nome, value: s.fatura, color: STORE_COLORS[s.nome] ?? "#64748b" }));
-
-// entregadores enriquecidos com métricas
-const entregadoresRich = entregadores.map(e => ({
+// entregadores base
+const entregadoresBase = entregadores.map(e => ({
   ...e,
   custoPct: e.fatura ? (e.custo / e.fatura) * 100 : 0,
   mediaDia: e.entregas / meta.totalDias,
   margemVal: e.fatura - e.custo,
 })).sort((a, b) => b.entregas - a.entregas);
 
-// ─── componentes auxiliares ─────────────────────────────────────────────────
 function KpiCard({ label, value, sub, icon: Icon, color }: {
   label: string; value: string; sub?: string; icon: React.ElementType; color: string;
 }) {
@@ -101,51 +76,106 @@ const CustomTooltip = ({ active, payload, label }: any) => {
       <p className="text-[#8b949e] mb-2">{label}</p>
       {payload.map((p: any) => (
         <p key={p.name} style={{ color: p.color }} className="mb-1">
-          {p.name}: <span className="font-semibold text-white">{typeof p.value === 'number' && p.value > 100 ? fmt(p.value) : p.value?.toLocaleString("pt-BR")}</span>
+          {p.name}: <span className="font-semibold text-white">{typeof p.value === "number" && p.value > 100 ? fmt(p.value) : p.value?.toLocaleString("pt-BR")}</span>
         </p>
       ))}
     </div>
   );
 };
 
-// ─── DASHBOARD ───────────────────────────────────────────────────────────────
 export default function Dashboard() {
   const [activeStore, setActiveStore] = useState<string | null>(null);
-  const [activeTab, setActiveTab] = useState<"visao" | "lojas" | "motoristas" | "evolucao">("visao");
   const [motoristaBusca, setMotoristaBusca] = useState("");
   const [motoristaLoja, setMotoristaLoja] = useState("Todas");
   const [chartMode, setChartMode] = useState<"mensal" | "diario">("mensal");
+  const [dataInicio, setDataInicio] = useState(DATA_MIN);
+  const [dataFim, setDataFim] = useState(DATA_MAX);
+
+  // série diária filtrada por data
+  const dailyFiltered = useMemo(() =>
+    dailySeries.filter(d => d.data >= dataInicio && d.data <= dataFim),
+    [dataInicio, dataFim]
+  );
+
+  // totais derivados do período filtrado
+  const filteredTotals = useMemo(() => {
+    let fatura = 0, custo = 0, margem = 0, entregas = 0;
+    for (const d of dailyFiltered) {
+      fatura += d.fatura; custo += d.custo; margem += d.margem; entregas += d.entregas;
+    }
+    return { totalFatura: fatura, totalCusto: custo, margem, totalEntregas: entregas };
+  }, [dailyFiltered]);
+
+  const diasFiltrados = dailyFiltered.length || 1;
+
+  // dados do gráfico de linha/área
+  const dailyChartData = useMemo(() =>
+    dailyFiltered.map(d => ({
+      data: d.data.slice(5),
+      fatura: d.fatura, custo: d.custo, margem: d.margem, entregas: d.entregas,
+    })),
+    [dailyFiltered]
+  );
+
+  const monthlyData = useMemo(() => {
+    const map = new Map<string, { mes: string; fatura: number; custo: number; margem: number; entregas: number }>();
+    for (const d of dailyFiltered) {
+      const key = d.data.slice(0, 7);
+      const m = Number(d.data.split("-")[1]);
+      if (!map.has(key)) map.set(key, { mes: MESES[m - 1], fatura: 0, custo: 0, margem: 0, entregas: 0 });
+      const mo = map.get(key)!;
+      mo.fatura += d.fatura; mo.custo += d.custo; mo.margem += d.margem; mo.entregas += d.entregas;
+    }
+    return Array.from(map.values());
+  }, [dailyFiltered]);
+
+  // KPIs por loja derivados do período (os dados de stores são totais fixos,
+  // então usamos a proporção do período sobre o total geral)
+  const filteredStores = useMemo(() => {
+    if (dailyFiltered.length === dailySeries.length) return stores;
+    const ratio = filteredTotals.totalFatura / (stores.reduce((s, x) => s + x.fatura, 0) || 1);
+    return stores.map(s => ({
+      ...s,
+      fatura:   s.fatura   * ratio,
+      custo:    s.custo    * ratio,
+      margem:   s.margem   * ratio,
+      entregas: Math.round(s.entregas * ratio),
+    }));
+  }, [dailyFiltered, filteredTotals]);
+
+  const pieData = useMemo(() =>
+    filteredStores.map(s => ({ name: s.nome, value: s.fatura, color: STORE_COLORS[s.nome] ?? "#64748b" })),
+    [filteredStores]
+  );
+
+  const activeStoreData = activeStore ? filteredStores.find(s => s.nome === activeStore) : null;
+
+  const displayTotals = activeStore && activeStoreData ? {
+    totalFatura: activeStoreData.fatura,
+    totalCusto:  activeStoreData.custo,
+    margem:      activeStoreData.margem,
+    totalEntregas: activeStoreData.entregas,
+  } : filteredTotals;
+
+  const operacaoSaudavel = displayTotals.totalFatura > 0 && (displayTotals.totalCusto / displayTotals.totalFatura) < 0.85;
 
   const filteredEntregadores = useMemo(() => {
-    let list = entregadoresRich;
+    let list = entregadoresBase;
     if (motoristaLoja !== "Todas") list = list.filter(e => e.lojas.includes(motoristaLoja));
     if (motoristaBusca) list = list.filter(e => e.nome.toLowerCase().includes(motoristaBusca.toLowerCase()));
     return list;
   }, [motoristaBusca, motoristaLoja]);
 
-  const activeStoreData = activeStore ? stores.find(s => s.nome === activeStore) : null;
-  const activeStoreEntregadores = activeStore
-    ? entregadoresRich.filter(e => e.lojas.includes(activeStore))
-    : entregadoresRich;
-
-  // resumo da loja selecionada
-  const displayStores = activeStore ? stores.filter(s => s.nome === activeStore) : stores;
-  const displayTotals = activeStore && activeStoreData ? {
-    totalFatura: activeStoreData.fatura,
-    totalCusto: activeStoreData.custo,
-    margem: activeStoreData.margem,
-    totalEntregas: activeStoreData.entregas,
-  } : totals;
-
-  const operacaoSaudavel = (displayTotals.totalCusto / displayTotals.totalFatura) < 0.85;
+  const periodoLabel = `${dataInicio.split("-").reverse().join("/")} a ${dataFim.split("-").reverse().join("/")}`;
+  const filtrando = dataInicio !== DATA_MIN || dataFim !== DATA_MAX;
 
   return (
     <div className="flex h-screen bg-[#0d1117] text-white overflow-hidden">
 
-      {/* ── SIDEBAR ── */}
+      {/* SIDEBAR */}
       <aside className="w-60 shrink-0 bg-[#161b22] border-r border-[#30363d] flex flex-col overflow-y-auto">
         <div className="p-4 border-b border-[#30363d]">
-          <div className="flex items-center gap-2 mb-1">
+          <div className="flex items-center gap-2">
             <div className="w-7 h-7 rounded-md bg-blue-600 flex items-center justify-center text-xs font-bold">R3</div>
             <div>
               <p className="text-sm font-semibold text-white leading-none">R3 EXPRESS</p>
@@ -154,18 +184,47 @@ export default function Dashboard() {
           </div>
         </div>
 
-        <div className="p-3">
-          <p className="text-[10px] uppercase tracking-widest text-[#8b949e] mb-2 px-2">Navegação</p>
-          {(["visao","lojas","motoristas","evolucao"] as const).map(tab => (
-            <button key={tab} onClick={() => { setActiveTab(tab); setActiveStore(null); }}
-              className={`w-full flex items-center gap-2 px-3 py-2 rounded-lg text-sm mb-1 transition-colors ${activeTab === tab && !activeStore ? "bg-blue-600/20 text-blue-400" : "text-[#8b949e] hover:bg-[#21262d] hover:text-white"}`}>
-              <LayoutDashboard className="h-4 w-4" />
-              {tab === "visao" ? "Visão Geral" : tab === "lojas" ? "Lojas" : tab === "motoristas" ? "Motoristas" : "Evolução"}
-            </button>
-          ))}
+        {/* Filtro de data */}
+        <div className="p-3 border-b border-[#30363d]">
+          <p className="text-[10px] uppercase tracking-widest text-[#8b949e] mb-2 px-1">Período</p>
+          <div className="space-y-2">
+            <div>
+              <label className="text-[10px] text-[#8b949e] mb-1 block">De</label>
+              <input
+                type="date"
+                value={dataInicio}
+                min={DATA_MIN}
+                max={dataFim}
+                onChange={e => setDataInicio(e.target.value)}
+                className="w-full bg-[#0d1117] border border-[#30363d] rounded-lg px-2 py-1.5 text-xs text-white outline-none focus:border-blue-500 transition-colors"
+              />
+            </div>
+            <div>
+              <label className="text-[10px] text-[#8b949e] mb-1 block">Até</label>
+              <input
+                type="date"
+                value={dataFim}
+                min={dataInicio}
+                max={DATA_MAX}
+                onChange={e => setDataFim(e.target.value)}
+                className="w-full bg-[#0d1117] border border-[#30363d] rounded-lg px-2 py-1.5 text-xs text-white outline-none focus:border-blue-500 transition-colors"
+              />
+            </div>
+            {filtrando && (
+              <button
+                onClick={() => { setDataInicio(DATA_MIN); setDataFim(DATA_MAX); }}
+                className="w-full flex items-center justify-center gap-1.5 text-[10px] text-[#8b949e] hover:text-red-400 transition-colors py-1"
+              >
+                <X className="h-3 w-3" /> Limpar filtro
+              </button>
+            )}
+          </div>
+          <div className="mt-2 text-[10px] text-[#8b949e] text-center">
+            {diasFiltrados} dia{diasFiltrados !== 1 ? "s" : ""} selecionado{diasFiltrados !== 1 ? "s" : ""}
+          </div>
         </div>
 
-        <div className="p-3 border-t border-[#30363d]">
+        <div className="p-3 border-b border-[#30363d]">
           <p className="text-[10px] uppercase tracking-widest text-[#8b949e] mb-2 px-2">Clientes</p>
           <button onClick={() => setActiveStore(null)}
             className={`w-full flex items-center justify-between px-3 py-2 rounded-lg text-sm mb-1 transition-colors ${!activeStore ? "bg-blue-600 text-white" : "text-[#8b949e] hover:bg-[#21262d] hover:text-white"}`}>
@@ -173,7 +232,7 @@ export default function Dashboard() {
             <ChevronRight className="h-3.5 w-3.5" />
           </button>
           {stores.map(s => (
-            <button key={s.nome} onClick={() => { setActiveStore(s.nome); setActiveTab("lojas"); }}
+            <button key={s.nome} onClick={() => setActiveStore(s.nome)}
               className={`w-full flex items-center justify-between px-3 py-2 rounded-lg text-sm mb-1 transition-colors ${activeStore === s.nome ? "bg-blue-600/20 text-blue-400" : "text-[#8b949e] hover:bg-[#21262d] hover:text-white"}`}>
               <span className="flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full" style={{ background: STORE_COLORS[s.nome] ?? "#64748b" }} />
@@ -187,13 +246,13 @@ export default function Dashboard() {
         <div className="mt-auto p-4 border-t border-[#30363d]">
           <div className="flex items-center gap-2 text-xs text-[#3fb950]">
             <span className="w-2 h-2 rounded-full bg-[#3fb950] animate-pulse" />
-            Dados atualizados
+            {filtrando ? "Período filtrado" : "Período completo"}
           </div>
-          <p className="text-[10px] text-[#8b949e] mt-1">{meta.periodoInicio} a {meta.periodoFim}</p>
+          <p className="text-[10px] text-[#8b949e] mt-1">{periodoLabel}</p>
         </div>
       </aside>
 
-      {/* ── MAIN ── */}
+      {/* MAIN */}
       <main className="flex-1 overflow-y-auto">
 
         {/* header */}
@@ -203,12 +262,18 @@ export default function Dashboard() {
               {activeStore ?? "Visão Geral — Todas as Operações"}
             </h1>
             <p className="text-xs text-[#8b949e]">
-              {activeStore ? `${activeStoreData?.registros} registros` : `${stores.length} lojas · ${totalMotoristas} motoristas`}
+              {activeStore ? `${activeStoreData?.registros} registros` : `${stores.length} lojas · ${entregadores.length} motoristas`}
             </p>
           </div>
           <div className="flex items-center gap-4 text-xs text-[#8b949e]">
-            <span className="flex items-center gap-1"><Calendar className="h-3.5 w-3.5" />{meta.periodoInicio.split("-").reverse().join("/")} a {meta.periodoFim.split("-").reverse().join("/")}</span>
-            <span className="flex items-center gap-1.5 text-[#3fb950]"><span className="w-2 h-2 rounded-full bg-[#3fb950] animate-pulse" />Ao vivo</span>
+            <span className="flex items-center gap-1.5">
+              <Calendar className="h-3.5 w-3.5" />
+              {periodoLabel}
+              {filtrando && <span className="px-1.5 py-0.5 rounded bg-blue-600/20 text-blue-400 text-[10px]">filtrado</span>}
+            </span>
+            <span className="flex items-center gap-1.5 text-[#3fb950]">
+              <span className="w-2 h-2 rounded-full bg-[#3fb950] animate-pulse" />Ao vivo
+            </span>
           </div>
         </div>
 
@@ -216,9 +281,11 @@ export default function Dashboard() {
         <div className={`mx-6 mt-4 rounded-lg px-4 py-2.5 flex items-center justify-between text-xs border ${operacaoSaudavel ? "bg-[#0d4429] border-[#3fb950]/40 text-[#3fb950]" : "bg-[#4d1f1f] border-[#f85149]/40 text-[#f85149]"}`}>
           <span className="flex items-center gap-2">
             <Activity className="h-3.5 w-3.5" />
-            {operacaoSaudavel ? `Operação saudável: custo em ${pct(displayTotals.totalCusto, displayTotals.totalFatura)} do faturamento` : `Atenção: custo elevado em ${pct(displayTotals.totalCusto, displayTotals.totalFatura)} do faturamento`}
+            {operacaoSaudavel
+              ? `Operação saudável: custo em ${pct(displayTotals.totalCusto, displayTotals.totalFatura)} do faturamento`
+              : `Atenção: custo elevado em ${pct(displayTotals.totalCusto, displayTotals.totalFatura)} do faturamento`}
             <span className="text-white/40 mx-2">|</span>
-            {displayTotals.totalEntregas.toLocaleString("pt-BR")} entregas · {meta.totalDias} dias
+            {displayTotals.totalEntregas.toLocaleString("pt-BR")} entregas · {diasFiltrados} dias
           </span>
           <span className="flex items-center gap-4">
             <span>↗ Receita: <strong className="text-white">{fmtFull(displayTotals.totalFatura)}</strong></span>
@@ -231,19 +298,19 @@ export default function Dashboard() {
 
           {/* KPI CARDS */}
           <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-6 gap-3">
-            <KpiCard label="Faturamento Total" value={fmt(displayTotals.totalFatura)} sub={activeStore ? undefined : `${meta.totalDias} dias`} icon={DollarSign} color="bg-blue-500/10 text-blue-400" />
+            <KpiCard label="Faturamento Total" value={fmt(displayTotals.totalFatura)} sub={`${diasFiltrados} dias`} icon={DollarSign} color="bg-blue-500/10 text-blue-400" />
             <KpiCard label="Custo Total" value={fmt(displayTotals.totalCusto)} sub={`${pct(displayTotals.totalCusto, displayTotals.totalFatura)} do fatur.`} icon={TrendingDown} color="bg-red-500/10 text-red-400" />
             <KpiCard label="Margem Bruta" value={fmt(displayTotals.margem)} sub={`${pct(displayTotals.margem, displayTotals.totalFatura)} de margem`} icon={TrendingUp} color="bg-green-500/10 text-green-400" />
             <KpiCard label="% Custo / Fatura" value={pct(displayTotals.totalCusto, displayTotals.totalFatura)} sub={operacaoSaudavel ? "Saudável" : "Atenção"} icon={Percent} color={operacaoSaudavel ? "bg-green-500/10 text-green-400" : "bg-red-500/10 text-red-400"} />
-            <KpiCard label="Total de Entregas" value={displayTotals.totalEntregas.toLocaleString("pt-BR")} sub={activeStore ? undefined : `~${Math.round(totals.totalEntregas / meta.totalDias)}/dia`} icon={Package} color="bg-purple-500/10 text-purple-400" />
-            <KpiCard label="Motoristas Ativos" value={(activeStore ? activeStoreData?.numEntregadores ?? 0 : totalMotoristas).toString()} sub={activeStore ? `na ${activeStore}` : "no período"} icon={Users} color="bg-cyan-500/10 text-cyan-400" />
+            <KpiCard label="Total de Entregas" value={displayTotals.totalEntregas.toLocaleString("pt-BR")} sub={`~${Math.round(displayTotals.totalEntregas / diasFiltrados)}/dia`} icon={Package} color="bg-purple-500/10 text-purple-400" />
+            <KpiCard label="Motoristas Ativos" value={(activeStore ? activeStoreData?.numEntregadores ?? 0 : entregadores.length).toString()} sub={activeStore ? `na ${activeStore}` : "no período"} icon={Users} color="bg-cyan-500/10 text-cyan-400" />
           </div>
 
           {/* RESUMO POR CLIENTE */}
           {!activeStore && (
             <div className="bg-[#161b22] border border-[#30363d] rounded-xl overflow-hidden">
               <div className="px-5 py-4 border-b border-[#30363d]">
-                <SectionTitle title="Resumo por Cliente" sub="Comparativo financeiro entre todos os clientes no período" />
+                <SectionTitle title="Resumo por Cliente" sub={`Comparativo financeiro no período ${periodoLabel}`} />
               </div>
               <div className="overflow-x-auto">
                 <table className="w-full text-sm">
@@ -255,8 +322,8 @@ export default function Dashboard() {
                     </tr>
                   </thead>
                   <tbody>
-                    {stores.map(s => (
-                      <tr key={s.nome} onClick={() => { setActiveStore(s.nome); setActiveTab("lojas"); }}
+                    {filteredStores.map(s => (
+                      <tr key={s.nome} onClick={() => setActiveStore(s.nome)}
                         className="border-b border-[#21262d] hover:bg-[#21262d] cursor-pointer transition-colors">
                         <td className="px-5 py-3 font-medium">
                           <span className="flex items-center gap-2">
@@ -274,12 +341,12 @@ export default function Dashboard() {
                     ))}
                     <tr className="bg-[#21262d] font-semibold text-white">
                       <td className="px-5 py-3">TOTAL GERAL</td>
-                      <td className="px-5 py-3 text-blue-400 tabular-nums">{fmtFull(totals.totalFatura)}</td>
-                      <td className="px-5 py-3 text-red-400 tabular-nums">{fmtFull(totals.totalCusto)}</td>
-                      <td className="px-5 py-3 text-green-400 tabular-nums">{fmtFull(totals.margem)}</td>
-                      <td className="px-5 py-3 text-[#8b949e] tabular-nums">{custoPct}%</td>
-                      <td className="px-5 py-3 tabular-nums">{totals.totalEntregas.toLocaleString("pt-BR")}</td>
-                      <td className="px-5 py-3 text-[#8b949e] tabular-nums">{totalMotoristas}</td>
+                      <td className="px-5 py-3 text-blue-400 tabular-nums">{fmtFull(filteredTotals.totalFatura)}</td>
+                      <td className="px-5 py-3 text-red-400 tabular-nums">{fmtFull(filteredTotals.totalCusto)}</td>
+                      <td className="px-5 py-3 text-green-400 tabular-nums">{fmtFull(filteredTotals.margem)}</td>
+                      <td className="px-5 py-3 text-[#8b949e] tabular-nums">{pct(filteredTotals.totalCusto, filteredTotals.totalFatura)}</td>
+                      <td className="px-5 py-3 tabular-nums">{filteredTotals.totalEntregas.toLocaleString("pt-BR")}</td>
+                      <td className="px-5 py-3 text-[#8b949e] tabular-nums">{entregadores.length}</td>
                     </tr>
                   </tbody>
                 </table>
@@ -287,14 +354,13 @@ export default function Dashboard() {
             </div>
           )}
 
-          {/* GRÁFICOS LADO A LADO */}
+          {/* GRÁFICOS */}
           {!activeStore && (
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-              {/* Faturamento vs Custo por cliente */}
               <div className="lg:col-span-2 bg-[#161b22] border border-[#30363d] rounded-xl p-5">
-                <SectionTitle title="Faturamento vs Custo por Cliente" sub="Comparativo absoluto no período" />
+                <SectionTitle title="Faturamento vs Custo por Cliente" sub={periodoLabel} />
                 <ResponsiveContainer width="100%" height={260}>
-                  <BarChart data={stores.map(s => ({ nome: s.nome.split(" ")[0], fatura: s.fatura, custo: s.custo }))} margin={{ left: -10, right: 8 }}>
+                  <BarChart data={filteredStores.map(s => ({ nome: s.nome.split(" ")[0], fatura: s.fatura, custo: s.custo }))} margin={{ left: -10, right: 8 }}>
                     <CartesianGrid strokeDasharray="3 3" stroke="#21262d" vertical={false} />
                     <XAxis dataKey="nome" stroke="#8b949e" fontSize={10} tickLine={false} axisLine={false} />
                     <YAxis stroke="#8b949e" fontSize={10} tickLine={false} axisLine={false} tickFormatter={v => `${(v/1000).toFixed(0)}k`} />
@@ -305,8 +371,6 @@ export default function Dashboard() {
                   </BarChart>
                 </ResponsiveContainer>
               </div>
-
-              {/* Pizza participação */}
               <div className="bg-[#161b22] border border-[#30363d] rounded-xl p-5">
                 <SectionTitle title="Participação no Faturamento" sub="% de cada loja" />
                 <ResponsiveContainer width="100%" height={260}>
@@ -322,12 +386,12 @@ export default function Dashboard() {
             </div>
           )}
 
-          {/* EVOLUÇÃO DIÁRIA / MENSAL */}
+          {/* EVOLUÇÃO */}
           <div className="bg-[#161b22] border border-[#30363d] rounded-xl p-5">
             <div className="flex items-center justify-between mb-4">
               <SectionTitle
-                title={activeStore ? `Evolução Diária — ${activeStore}` : "Evolução Consolidada — Todas as Operações"}
-                sub="Faturamento e custo ao longo do tempo"
+                title={activeStore ? `Evolução — ${activeStore}` : "Evolução Consolidada"}
+                sub={periodoLabel}
               />
               <div className="flex gap-2">
                 {(["mensal","diario"] as const).map(m => (
@@ -352,10 +416,10 @@ export default function Dashboard() {
             </ResponsiveContainer>
           </div>
 
-          {/* DETALHE DA LOJA SELECIONADA */}
+          {/* DETALHE LOJA */}
           {activeStore && activeStoreData && (
             <div className="bg-[#161b22] border border-[#30363d] rounded-xl p-5">
-              <SectionTitle title={`Detalhes — ${activeStore}`} sub={`${activeStoreData.registros} registros · ${activeStoreData.numEntregadores} motoristas ativos`} />
+              <SectionTitle title={`Detalhes — ${activeStore}`} sub={`${activeStoreData.registros} registros · ${activeStoreData.numEntregadores} motoristas`} />
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                 {[
                   { l: "Faturamento", v: fmtFull(activeStoreData.fatura), c: "text-blue-400" },
@@ -372,13 +436,10 @@ export default function Dashboard() {
             </div>
           )}
 
-          {/* TABELA DE MOTORISTAS */}
+          {/* TABELA MOTORISTAS */}
           <div className="bg-[#161b22] border border-[#30363d] rounded-xl overflow-hidden">
             <div className="px-5 py-4 border-b border-[#30363d] flex flex-wrap items-center justify-between gap-3">
-              <SectionTitle
-                title="Produtividade dos Motoristas"
-                sub={`${filteredEntregadores.length} motoristas no período`}
-              />
+              <SectionTitle title="Produtividade dos Motoristas" sub={`${filteredEntregadores.length} motoristas`} />
               <div className="flex items-center gap-2 flex-wrap">
                 <div className="flex items-center gap-1.5 bg-[#0d1117] border border-[#30363d] rounded-lg px-3 py-1.5">
                   <Filter className="h-3.5 w-3.5 text-[#8b949e]" />
@@ -389,11 +450,8 @@ export default function Dashboard() {
                     className="bg-transparent text-xs text-white placeholder-[#8b949e] outline-none w-36"
                   />
                 </div>
-                <select
-                  value={motoristaLoja}
-                  onChange={e => setMotoristaLoja(e.target.value)}
-                  className="bg-[#0d1117] border border-[#30363d] rounded-lg px-3 py-1.5 text-xs text-white outline-none"
-                >
+                <select value={motoristaLoja} onChange={e => setMotoristaLoja(e.target.value)}
+                  className="bg-[#0d1117] border border-[#30363d] rounded-lg px-3 py-1.5 text-xs text-white outline-none">
                   <option>Todas</option>
                   {stores.map(s => <option key={s.nome}>{s.nome}</option>)}
                 </select>
@@ -417,15 +475,12 @@ export default function Dashboard() {
                 </thead>
                 <tbody>
                   {filteredEntregadores.map((e, i) => {
-                    const maxEntregas = entregadoresRich[0].entregas;
-                    const prodPct = Math.round((e.entregas / maxEntregas) * 100);
-                    const custoPctVal = e.custoPct;
-                    const barColor = custoPctVal < 70 ? "#22c55e" : custoPctVal < 85 ? "#f97316" : "#ef4444";
+                    const maxE = entregadoresBase[0].entregas;
+                    const prodPct = Math.round((e.entregas / maxE) * 100);
+                    const barColor = e.custoPct < 70 ? "#22c55e" : e.custoPct < 85 ? "#f97316" : "#ef4444";
                     return (
                       <tr key={e.nome} className="border-b border-[#21262d] hover:bg-[#21262d] transition-colors">
-                        <td className="px-4 py-2.5 text-[#8b949e] text-xs">
-                          {i === 0 ? "🥇" : i === 1 ? "🥈" : i === 2 ? "🥉" : i + 1}
-                        </td>
+                        <td className="px-4 py-2.5 text-[#8b949e] text-xs">{i === 0 ? "🥇" : i === 1 ? "🥈" : i === 2 ? "🥉" : i + 1}</td>
                         <td className="px-4 py-2.5 font-medium text-white text-xs">{e.nome}</td>
                         <td className="px-4 py-2.5 text-xs">
                           <span className="flex flex-wrap gap-1">
@@ -439,11 +494,11 @@ export default function Dashboard() {
                         <td className="px-4 py-2.5 text-right text-red-400 tabular-nums text-xs">{fmt(e.custo)}</td>
                         <td className="px-4 py-2.5 text-right text-blue-400 tabular-nums text-xs">{fmt(e.fatura)}</td>
                         <td className={`px-4 py-2.5 text-right tabular-nums text-xs font-medium ${e.margemVal >= 0 ? "text-green-400" : "text-red-400"}`}>{fmt(e.margemVal)}</td>
-                        <td className="px-4 py-2.5 text-right tabular-nums text-xs" style={{ color: barColor }}>{custoPctVal.toFixed(1)}%</td>
+                        <td className="px-4 py-2.5 text-right tabular-nums text-xs" style={{ color: barColor }}>{e.custoPct.toFixed(1)}%</td>
                         <td className="px-4 py-2.5">
                           <div className="flex items-center gap-2">
                             <div className="flex-1 bg-[#21262d] rounded-full h-1.5">
-                              <div className="h-1.5 rounded-full transition-all" style={{ width: `${prodPct}%`, background: barColor }} />
+                              <div className="h-1.5 rounded-full" style={{ width: `${prodPct}%`, background: barColor }} />
                             </div>
                             <span className="text-[10px] text-[#8b949e] w-7 text-right">{prodPct}%</span>
                           </div>
@@ -456,9 +511,9 @@ export default function Dashboard() {
             </div>
           </div>
 
-          {/* GRÁFICO MENSAL DE ENTREGAS */}
+          {/* ENTREGAS POR MÊS */}
           <div className="bg-[#161b22] border border-[#30363d] rounded-xl p-5">
-            <SectionTitle title="Entregas por Mês" sub="Volume total de entregas consolidado mensalmente" />
+            <SectionTitle title="Entregas por Mês" sub={periodoLabel} />
             <ResponsiveContainer width="100%" height={220}>
               <BarChart data={monthlyData} margin={{ left: -10, right: 8 }}>
                 <CartesianGrid strokeDasharray="3 3" stroke="#21262d" vertical={false} />
