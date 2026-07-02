@@ -11,8 +11,6 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
-import { AppSidebar } from "@/components/app-sidebar";
 
 function NotFoundComponent() {
   return (
@@ -79,10 +77,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Cargolux — Dashboard de Logística" },
-      { name: "description", content: "Painel de operações logísticas: remessas, frota, armazéns e desempenho em tempo real." },
-      { property: "og:title", content: "Cargolux — Dashboard de Logística" },
-      { property: "og:description", content: "Painel de operações logísticas em tempo real." },
+      { title: "R3 Express — Dashboard de Produtividade" },
+      { name: "description", content: "Dashboard operacional R3 Express: entregas, motoristas, lojas e financeiro." },
+      { property: "og:title", content: "R3 Express — Dashboard de Produtividade" },
+      { property: "og:description", content: "Painel de produtividade operacional R3 Express." },
       { property: "og:type", content: "website" },
     ],
     links: [
@@ -120,25 +118,7 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <SidebarProvider>
-        <div className="flex min-h-screen w-full bg-background">
-          <AppSidebar />
-          <div className="flex flex-1 flex-col">
-            <header className="sticky top-0 z-10 flex h-14 items-center gap-3 border-b border-border bg-background/80 px-4 backdrop-blur">
-              <SidebarTrigger />
-              <div className="ml-auto flex items-center gap-3 text-sm text-muted-foreground">
-                <span className="hidden md:inline">Centro de Operações</span>
-                <div className="h-8 w-8 rounded-full bg-primary/10 text-primary flex items-center justify-center text-xs font-semibold">
-                  JM
-                </div>
-              </div>
-            </header>
-            <main className="flex-1">
-              <Outlet />
-            </main>
-          </div>
-        </div>
-      </SidebarProvider>
+      <Outlet />
     </QueryClientProvider>
   );
 }
