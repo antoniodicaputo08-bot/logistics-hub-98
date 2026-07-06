@@ -1,52 +1,75 @@
 export const entregadores = [
   {
-    "nome": "DANIEL HENRIQUE MIGUEL",
-    "entregas": 40,
-    "fatura": 0,
-    "custo": 0,
-    "lojas": []
-  },
-  {
     "nome": "AYLA NATIELLE JANUARIO CARDOSO",
-    "entregas": 37,
+    "entregas": 70,
     "fatura": 0,
     "custo": 0,
-    "lojas": []
-  },
-  {
-    "nome": "WELDER DA SILVA SANTOS",
-    "entregas": 35,
-    "fatura": 0,
-    "custo": 0,
-    "lojas": []
-  },
-  {
-    "nome": "BRENO HENRIQUE DA SILVA",
-    "entregas": 35,
-    "fatura": 0,
-    "custo": 0,
-    "lojas": []
+    "lojas": [
+      "RSV_MG"
+    ]
   },
   {
     "nome": "ALEXSANDRO ALEXANDRE DA SILVA",
-    "entregas": 28,
+    "entregas": 56,
     "fatura": 0,
     "custo": 0,
-    "lojas": []
+    "lojas": [
+      "RSV_SP"
+    ]
+  },
+  {
+    "nome": "DANIEL HENRIQUE MIGUEL",
+    "entregas": 56,
+    "fatura": 0,
+    "custo": 0,
+    "lojas": [
+      "RSV_SP"
+    ]
+  },
+  {
+    "nome": "WELDER DA SILVA SANTOS",
+    "entregas": 51,
+    "fatura": 0,
+    "custo": 0,
+    "lojas": [
+      "RSV_SP"
+    ]
+  },
+  {
+    "nome": "FERNANDO BISPO RIBEIRO",
+    "entregas": 47,
+    "fatura": 0,
+    "custo": 0,
+    "lojas": [
+      "RSV_SP"
+    ]
+  },
+  {
+    "nome": "BRENO HENRIQUE DA SILVA",
+    "entregas": 47,
+    "fatura": 0,
+    "custo": 0,
+    "lojas": [
+      "RSV_MG"
+    ]
   },
   {
     "nome": "MICHAEL LIMA RODRIGUES",
     "entregas": 28,
     "fatura": 0,
     "custo": 0,
-    "lojas": []
+    "lojas": [
+      "RSV_SP"
+    ]
   },
   {
-    "nome": "FERNANDO BISPO RIBEIRO",
-    "entregas": 27,
+    "nome": "ANISIO RODRIGUES DOS REIS",
+    "entregas": 26,
     "fatura": 0,
     "custo": 0,
-    "lojas": []
+    "lojas": [
+      "RSV_SP"
+    ]
   },
   {
     "nome": "ELVIS PEREIRA NEVES",
@@ -60,19 +83,30 @@ export const entregadores = [
     "entregas": 8,
     "fatura": 0,
     "custo": 0,
-    "lojas": []
+    "lojas": [
+      "RSV_SP"
+    ]
   },
   {
     "nome": "THIAGO MARTINS TEIXEIRA",
-    "entregas": 4,
+    "entregas": 6,
     "fatura": 0,
     "custo": 0,
-    "lojas": []
+    "lojas": [
+      "RSV_SP"
+    ]
   },
   {
     "nome": "CLAUDIO A. DO SANTOS",
     "entregas": 3,
     "fatura": 0,
+    "custo": 0,
+    "lojas": []
+  },
+  {
+    "nome": "74600",
+    "entregas": 1,
+    "fatura": 22.4,
     "custo": 0,
     "lojas": []
   },
