@@ -647,8 +647,8 @@ export const dailySeries = [
     "data": "2026-06-16",
     "entregas": 414,
     "custo": 4830.72,
-    "fatura": 7305.34,
-    "margem": 2474.62
+    "fatura": 1001.4,
+    "margem": -3829.32
   },
   {
     "data": "2026-06-17",
@@ -661,8 +661,8 @@ export const dailySeries = [
     "data": "2026-06-18",
     "entregas": 195,
     "custo": 3065.4,
-    "fatura": 4446.34,
-    "margem": 1380.94
+    "fatura": 137.3,
+    "margem": -2928.1
   },
   {
     "data": "2026-06-19",
@@ -700,32 +700,67 @@ export const dailySeries = [
     "margem": 1511
   },
   {
+    "data": "2026-06-25",
+    "entregas": 35,
+    "custo": 0,
+    "fatura": 546.5,
+    "margem": 546.5
+  },
+  {
+    "data": "2026-06-26",
+    "entregas": 62,
+    "custo": 0,
+    "fatura": 2207.5,
+    "margem": 2207.5
+  },
+  {
+    "data": "2026-06-27",
+    "entregas": 0,
+    "custo": 0,
+    "fatura": 19.4,
+    "margem": 19.4
+  },
+  {
+    "data": "2026-06-29",
+    "entregas": 29,
+    "custo": 0,
+    "fatura": 577.8,
+    "margem": 577.8
+  },
+  {
+    "data": "2026-06-30",
+    "entregas": 57,
+    "custo": 0,
+    "fatura": 2432.1,
+    "margem": 2432.1
+  },
+  {
     "data": "2026-07-01",
     "entregas": 55,
     "custo": 1384.1,
-    "fatura": 1384.1,
-    "margem": 0
+    "fatura": 1400.5,
+    "margem": 16.4
   },
   {
     "data": "2026-07-02",
-    "entregas": 38,
+    "entregas": 43,
     "custo": 726.8,
-    "fatura": 726.8,
-    "margem": 0
+    "fatura": 837.1,
+    "margem": 110.3
   },
   {
     "data": "2026-07-03",
     "entregas": 60,
     "custo": 1204.5,
-    "fatura": 1204.5,
-    "margem": 0
+    "fatura": 1677.2,
+    "margem": 472.7
   },
   {
     "data": "2026-07-04",
-    "entregas": 43,
+    "entregas": 44,
     "custo": 861.2,
-    "fatura": 861.2,
-    "margem": 0
+    "fatura": 1055.5,
+    "margem": 194.3
   },
   {
     "data": "2026-07-05",
@@ -733,5 +768,12 @@ export const dailySeries = [
     "custo": 32.9,
     "fatura": 32.9,
     "margem": 0
+  },
+  {
+    "data": "2026-07-06",
+    "entregas": 26,
+    "custo": 0,
+    "fatura": 1217.9,
+    "margem": 1217.9
   }
 ];
