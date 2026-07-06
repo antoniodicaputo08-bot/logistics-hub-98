@@ -14,6 +14,7 @@ export const Route = createFileRoute("/")({ component: Dashboard });
 
 const STORE_COLORS: Record<string, string> = {
   "DOMINOS":          "#3b82f6",
+  "DOMINOS_SP":       "#60a5fa",
   "JOAQUINA":         "#f97316",
   "COZI":             "#22c55e",
   "FERRO E FARINHA":  "#a855f7",
@@ -21,6 +22,8 @@ const STORE_COLORS: Record<string, string> = {
   "ARTIGIANO - ANNA": "#eab308",
   "RJCC":             "#ef4444",
   "MITSUBA":          "#ec4899",
+  "RSV_SP":           "#8b5cf6",
+  "RSV_MG":           "#14b8a6",
 };
 
 const MESES = ["Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez"];
