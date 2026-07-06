@@ -1,5 +1,12 @@
 export const dailySeries = [
   {
+    "data": "2026-02-26",
+    "entregas": 1,
+    "custo": 0,
+    "fatura": 22.4,
+    "margem": 22.4
+  },
+  {
     "data": "2026-03-16",
     "entregas": 278,
     "custo": 3394.08,
