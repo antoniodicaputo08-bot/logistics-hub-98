@@ -771,9 +771,9 @@ export const dailySeries = [
   },
   {
     "data": "2026-07-06",
-    "entregas": 26,
+    "entregas": 63,
     "custo": 0,
-    "fatura": 1217.9,
-    "margem": 1217.9
+    "fatura": 1729.9,
+    "margem": 1729.9
   }
 ];
