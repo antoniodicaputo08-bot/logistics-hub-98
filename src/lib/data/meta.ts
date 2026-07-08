@@ -1,6 +1,6 @@
 export const meta = {
   periodoInicio: "2026-03-16",
-  periodoFim: "2026-07-07",
-  totalDias: 114,
+  periodoFim: "2026-07-05",
+  totalDias: 112,
   totalMotoristas: 201
 };
