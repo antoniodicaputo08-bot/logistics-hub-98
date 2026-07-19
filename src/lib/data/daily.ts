@@ -866,5 +866,12 @@ export const dailySeries = [
     "custo": 0,
     "fatura": 0,
     "margem": 0
+  },
+  {
+    "data": "2026-07-18",
+    "entregas": 34,
+    "custo": 0,
+    "fatura": 0,
+    "margem": 0
   }
 ];
