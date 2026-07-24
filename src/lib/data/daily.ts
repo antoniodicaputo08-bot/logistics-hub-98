@@ -758,9 +758,9 @@ export const dailySeries = [
   {
     "data": "2026-07-02",
     "entregas": 43,
-    "custo": 4541.64,
-    "fatura": 6912.34,
-    "margem": 2370.7
+    "custo": 4516,
+    "fatura": 6902.34,
+    "margem": 2386.34
   },
   {
     "data": "2026-07-03",
@@ -807,15 +807,15 @@ export const dailySeries = [
   {
     "data": "2026-07-09",
     "entregas": 35,
-    "custo": 4756.64,
-    "fatura": 7130.34,
-    "margem": 2373.7
+    "custo": 4731,
+    "fatura": 7120.34,
+    "margem": 2389.34
   },
   {
     "data": "2026-07-10",
     "entregas": 0,
-    "custo": 7978.64,
-    "fatura": 11271.34,
+    "custo": 8003.64,
+    "fatura": 11296.34,
     "margem": 3292.7
   },
   {
@@ -828,9 +828,9 @@ export const dailySeries = [
   {
     "data": "2026-07-12",
     "entregas": 0,
-    "custo": 8002.32,
-    "fatura": 11568.01,
-    "margem": 3565.69
+    "custo": 7951.04,
+    "fatura": 11548.01,
+    "margem": 3596.97
   },
   {
     "data": "2026-07-13",
@@ -891,15 +891,15 @@ export const dailySeries = [
   {
     "data": "2026-07-21",
     "entregas": 0,
-    "custo": 3426.4,
-    "fatura": 4879.34,
-    "margem": 1452.94
+    "custo": 5167.08,
+    "fatura": 7690.34,
+    "margem": 2523.26
   },
   {
     "data": "2026-07-22",
     "entregas": 54,
-    "custo": 0,
-    "fatura": 0,
-    "margem": 0
+    "custo": 4371.08,
+    "fatura": 6579.34,
+    "margem": 2208.26
   }
 ];
