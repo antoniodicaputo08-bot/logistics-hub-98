@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState, useMemo } from "react";
+import { useState, useMemo, useRef, useEffect } from "react";
 import {
   BarChart, Bar, LineChart, Line, PieChart, Pie, Cell,
   XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer
@@ -92,7 +92,11 @@ export default function Dashboard() {
   const [motoristaLoja, setMotoristaLoja] = useState("Todas");
   const [chartMode, setChartMode] = useState<"mensal" | "diario">("mensal");
   const [dataInicio, setDataInicio] = useState(DATA_MIN);
-  const [dataFim, setDataFim] = useState(meta.periodoFim);
+  const [dataFim, setDataFim] = useState(DATA_MAX);
+  const refDe = useRef<HTMLInputElement>(null);
+  const refAte = useRef<HTMLInputElement>(null);
+  useEffect(() => { if (refDe.current) refDe.current.value = DATA_MIN; }, []);
+  useEffect(() => { if (refAte.current) refAte.current.value = meta.periodoFim; }, []);
 
   // série diária filtrada por data
   const dailyFiltered = useMemo(() =>
@@ -247,14 +251,14 @@ export default function Dashboard() {
             <div className="flex items-center gap-1.5 bg-[#161b22] border border-[#30363d] rounded-lg px-3 py-1.5 text-xs">
               <Calendar className="h-3.5 w-3.5 text-[#8b949e]" />
               <label className="text-[#8b949e]">De:</label>
-              <input type="date" key={`de-${dataInicio}`} defaultValue={dataInicio}
+              <input type="date" ref={refDe}
                 onChange={e => { if (e.target.value) setDataInicio(e.target.value); }}
                 className="bg-transparent text-white outline-none text-xs" />
             </div>
             <div className="flex items-center gap-1.5 bg-[#161b22] border border-[#30363d] rounded-lg px-3 py-1.5 text-xs">
               <Calendar className="h-3.5 w-3.5 text-[#8b949e]" />
               <label className="text-[#8b949e]">Até:</label>
-              <input type="date" key={`ate-${dataFim}`} defaultValue={dataFim}
+              <input type="date" ref={refAte}
                 onChange={e => { if (e.target.value) setDataFim(e.target.value); }}
                 className="bg-transparent text-white outline-none text-xs" />
             </div>
@@ -270,7 +274,7 @@ export default function Dashboard() {
               {entregadores.map(e => <option key={e.nome} value={e.nome}>{e.nome}</option>)}
             </select>
             {filtrando && (
-              <button onClick={() => { setDataInicio(DATA_MIN); setDataFim(meta.periodoFim); }}
+              <button onClick={() => { setDataInicio(DATA_MIN); setDataFim(DATA_MAX); if (refDe.current) refDe.current.value = DATA_MIN; if (refAte.current) refAte.current.value = meta.periodoFim; }}
                 className="flex items-center gap-1 text-xs text-red-400 hover:text-red-300 bg-red-500/10 border border-red-500/20 rounded-lg px-2.5 py-1.5 transition-colors">
                 <X className="h-3 w-3" /> Limpar
               </button>
