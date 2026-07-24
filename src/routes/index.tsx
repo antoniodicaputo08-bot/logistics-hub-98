@@ -247,14 +247,14 @@ export default function Dashboard() {
             <div className="flex items-center gap-1.5 bg-[#161b22] border border-[#30363d] rounded-lg px-3 py-1.5 text-xs">
               <Calendar className="h-3.5 w-3.5 text-[#8b949e]" />
               <label className="text-[#8b949e]">De:</label>
-              <input type="date" value={dataInicio} min={DATA_MIN} max={dataFim}
+              <input type="date" value={dataInicio} min={DATA_MIN} max={DATA_MAX}
                 onChange={e => setDataInicio(e.target.value)}
                 className="bg-transparent text-white outline-none text-xs" />
             </div>
             <div className="flex items-center gap-1.5 bg-[#161b22] border border-[#30363d] rounded-lg px-3 py-1.5 text-xs">
               <Calendar className="h-3.5 w-3.5 text-[#8b949e]" />
               <label className="text-[#8b949e]">Até:</label>
-              <input type="date" value={dataFim} min={dataInicio} max={DATA_MAX}
+              <input type="date" value={dataFim} min={DATA_MIN} max={DATA_MAX}
                 onChange={e => setDataFim(e.target.value)}
                 className="bg-transparent text-white outline-none text-xs" />
             </div>
