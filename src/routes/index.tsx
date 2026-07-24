@@ -247,15 +247,15 @@ export default function Dashboard() {
             <div className="flex items-center gap-1.5 bg-[#161b22] border border-[#30363d] rounded-lg px-3 py-1.5 text-xs">
               <Calendar className="h-3.5 w-3.5 text-[#8b949e]" />
               <label className="text-[#8b949e]">De:</label>
-              <input type="date" value={dataInicio}
-                onChange={e => setDataInicio(e.target.value)}
+              <input type="date" key={`de-${dataInicio}`} defaultValue={dataInicio}
+                onChange={e => { if (e.target.value) setDataInicio(e.target.value); }}
                 className="bg-transparent text-white outline-none text-xs" />
             </div>
             <div className="flex items-center gap-1.5 bg-[#161b22] border border-[#30363d] rounded-lg px-3 py-1.5 text-xs">
               <Calendar className="h-3.5 w-3.5 text-[#8b949e]" />
               <label className="text-[#8b949e]">Até:</label>
-              <input type="date" value={dataFim}
-                onChange={e => setDataFim(e.target.value)}
+              <input type="date" key={`ate-${dataFim}`} defaultValue={dataFim}
+                onChange={e => { if (e.target.value) setDataFim(e.target.value); }}
                 className="bg-transparent text-white outline-none text-xs" />
             </div>
             <select value={motoristaLoja} onChange={e => { setMotoristaLoja(e.target.value); setActiveStore(e.target.value === "Todas" ? null : e.target.value); }}
