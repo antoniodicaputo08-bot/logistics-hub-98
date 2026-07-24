@@ -38,7 +38,7 @@ function pct(a: number, b: number) { return b ? ((a / b) * 100).toFixed(1) + "%"
 
 // datas disponíveis no dataset
 const DATA_MIN = meta.periodoInicio;
-const DATA_MAX = meta.periodoFim;
+const DATA_MAX = new Date().toISOString().slice(0, 10);
 
 // entregadores base
 const entregadoresBase = entregadores.map(e => ({
