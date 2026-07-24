@@ -7,3 +7,4 @@ export { meta } from "./data/meta";
 export { stores } from "./data/stores";
 export { dailySeries } from "./data/daily";
 export { entregadores } from "./data/entregadores";
+export { storesSeries } from "./data/storesSeries";

@@ -8,7 +8,7 @@ import {
   DollarSign, TrendingUp, TrendingDown, Package, Users, Percent,
   LayoutDashboard, ChevronRight, Activity, Calendar, Filter, X
 } from "lucide-react";
-import { meta, dailySeries, stores, entregadores } from "@/lib/productivity-data";
+import { meta, dailySeries, stores, entregadores, storesSeries } from "@/lib/productivity-data";
 
 export const Route = createFileRoute("/")({ component: Dashboard });
 
@@ -132,19 +132,24 @@ export default function Dashboard() {
     return Array.from(map.values());
   }, [dailyFiltered]);
 
-  // KPIs por loja derivados do período (os dados de stores são totais fixos,
-  // então usamos a proporção do período sobre o total geral)
+  // KPIs por loja calculados linha a linha a partir do storesSeries filtrado por data
   const filteredStores = useMemo(() => {
-    if (dailyFiltered.length === dailySeries.length) return stores;
-    const ratio = filteredTotals.totalFatura / (stores.reduce((s, x) => s + x.fatura, 0) || 1);
-    return stores.map(s => ({
-      ...s,
-      fatura:   s.fatura   * ratio,
-      custo:    s.custo    * ratio,
-      margem:   s.margem   * ratio,
-      entregas: Math.round(s.entregas * ratio),
-    }));
-  }, [dailyFiltered, filteredTotals]);
+    const acc: Record<string, { fatura: number; custo: number; entregas: number }> = {};
+    for (const day of storesSeries) {
+      if (day.data < dataInicio || day.data > dataFim) continue;
+      for (const [nome, v] of Object.entries(day.lojas as Record<string, { f: number; c: number; e: number }>)) {
+        if (!acc[nome]) acc[nome] = { fatura: 0, custo: 0, entregas: 0 };
+        acc[nome].fatura   += v.f;
+        acc[nome].custo    += v.c;
+        acc[nome].entregas += v.e;
+      }
+    }
+    return stores.map(s => {
+      const a = acc[s.nome];
+      if (!a) return { ...s, fatura: 0, custo: 0, margem: 0, entregas: 0 };
+      return { ...s, fatura: Math.round(a.fatura * 100) / 100, custo: Math.round(a.custo * 100) / 100, margem: Math.round((a.fatura - a.custo) * 100) / 100, entregas: a.entregas };
+    }).filter(s => s.fatura > 0 || s.entregas > 0);
+  }, [dataInicio, dataFim]);
 
   const pieData = useMemo(() =>
     filteredStores.map(s => ({ name: s.nome, value: s.fatura, color: STORE_COLORS[s.nome] ?? "#64748b" })),
