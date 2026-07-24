@@ -18,7 +18,7 @@ const STORE_COLORS: Record<string, string> = {
   "JOAQUINA":         "#f97316",
   "COZI":             "#22c55e",
   "FERRO E FARINHA":  "#a855f7",
-  "DOMINOS IRAJÃ":    "#06b6d4",
+  "DOMINOS IRAJÁ":    "#06b6d4",
   "ARTIGIANO - ANNA": "#eab308",
   "RJCC":             "#ef4444",
   "MITSUBA":          "#ec4899",
@@ -34,9 +34,9 @@ function fmt(v: number) {
 function fmtFull(v: number) {
   return v.toLocaleString("pt-BR", { style: "currency", currency: "BRL", minimumFractionDigits: 2 });
 }
-function pct(a: number, b: number) { return b ? ((a / b) * 100).toFixed(1) + "%" : "â€”"; }
+function pct(a: number, b: number) { return b ? ((a / b) * 100).toFixed(1) + "%" : "—"; }
 
-// datas disponÃ­veis no dataset
+// datas disponíveis no dataset
 const DATA_MIN = meta.periodoInicio;
 const DATA_MAX = "2026-12-31";
 
@@ -94,13 +94,13 @@ export default function Dashboard() {
   const [dataInicio, setDataInicio] = useState(DATA_MIN);
   const [dataFim, setDataFim] = useState(meta.periodoFim);
 
-  // sÃ©rie diÃ¡ria filtrada por data
+  // série diária filtrada por data
   const dailyFiltered = useMemo(() =>
     dailySeries.filter(d => d.data >= dataInicio && d.data <= dataFim),
     [dataInicio, dataFim]
   );
 
-  // totais derivados do perÃ­odo filtrado
+  // totais derivados do período filtrado
   const filteredTotals = useMemo(() => {
     let fatura = 0, custo = 0, margem = 0, entregas = 0;
     for (const d of dailyFiltered) {
@@ -111,7 +111,7 @@ export default function Dashboard() {
 
   const diasFiltrados = dailyFiltered.length || 1;
 
-  // dados do grÃ¡fico de linha/Ã¡rea
+  // dados do gráfico de linha/área
   const dailyChartData = useMemo(() =>
     dailyFiltered.map(d => ({
       data: d.data.slice(5),
@@ -215,7 +215,7 @@ export default function Dashboard() {
         <div className="mt-auto p-4 border-t border-[#30363d]">
           <div className="flex items-center gap-2 text-xs text-[#3fb950]">
             <span className="w-2 h-2 rounded-full bg-[#3fb950] animate-pulse" />
-            {filtrando ? "PerÃ­odo filtrado" : "PerÃ­odo completo"}
+            {filtrando ? "Período filtrado" : "Período completo"}
           </div>
           <p className="text-[10px] text-[#8b949e] mt-1">{periodoLabel}</p>
         </div>
@@ -229,10 +229,10 @@ export default function Dashboard() {
           <div className="flex items-center justify-between">
             <div>
               <h1 className="text-base font-semibold text-white">
-                {activeStore ?? "VisÃ£o Geral â€” Todas as OperaÃ§Ãµes"}
+                {activeStore ?? "Visão Geral — Todas as Operações"}
               </h1>
               <p className="text-xs text-[#8b949e]">
-                {activeStore ? `${activeStoreData?.registros} registros` : `${stores.length} lojas Â· ${entregadores.length} motoristas`}
+                {activeStore ? `${activeStoreData?.registros} registros` : `${stores.length} lojas · ${entregadores.length} motoristas`}
               </p>
             </div>
             <span className="flex items-center gap-1.5 text-xs text-[#3fb950]">
@@ -256,7 +256,7 @@ export default function Dashboard() {
             </div>
             <div className="flex items-center gap-1.5 bg-[#161b22] border border-[#30363d] rounded-lg px-3 py-1.5 text-xs">
               <Calendar className="h-3.5 w-3.5 text-[#8b949e]" />
-              <label className="text-[#8b949e]">AtÃ©:</label>
+              <label className="text-[#8b949e]">Até:</label>
               <select value={dataFim.slice(0,7)} onChange={e => { const ultimo = dailySeries.filter(d => d.data.startsWith(e.target.value)).slice(-1)[0]?.data || e.target.value+"-28"; setDataFim(ultimo); }}
                 className="bg-transparent text-white outline-none text-xs cursor-pointer">
                 {Array.from(new Set(dailySeries.map(d => d.data.slice(0,7)))).sort().map(m => (
@@ -290,14 +290,14 @@ export default function Dashboard() {
           <span className="flex items-center gap-2">
             <Activity className="h-3.5 w-3.5" />
             {operacaoSaudavel
-              ? `OperaÃ§Ã£o saudÃ¡vel: custo em ${pct(displayTotals.totalCusto, displayTotals.totalFatura)} do faturamento`
-              : `AtenÃ§Ã£o: custo elevado em ${pct(displayTotals.totalCusto, displayTotals.totalFatura)} do faturamento`}
+              ? `Operação saudável: custo em ${pct(displayTotals.totalCusto, displayTotals.totalFatura)} do faturamento`
+              : `Atenção: custo elevado em ${pct(displayTotals.totalCusto, displayTotals.totalFatura)} do faturamento`}
             <span className="text-white/40 mx-2">|</span>
-            {displayTotals.totalEntregas.toLocaleString("pt-BR")} entregas Â· {diasFiltrados} dias
+            {displayTotals.totalEntregas.toLocaleString("pt-BR")} entregas · {diasFiltrados} dias
           </span>
           <span className="flex items-center gap-4">
-            <span>â†— Receita: <strong className="text-white">{fmtFull(displayTotals.totalFatura)}</strong></span>
-            <span>â†˜ Custo: <strong className="text-white">{fmtFull(displayTotals.totalCusto)}</strong></span>
+            <span>↗ Receita: <strong className="text-white">{fmtFull(displayTotals.totalFatura)}</strong></span>
+            <span>↘ Custo: <strong className="text-white">{fmtFull(displayTotals.totalCusto)}</strong></span>
             <span>Margem: <strong className="text-[#3fb950]">{fmtFull(displayTotals.margem)}</strong></span>
           </span>
         </div>
@@ -309,16 +309,16 @@ export default function Dashboard() {
             <KpiCard label="Faturamento Total" value={fmt(displayTotals.totalFatura)} sub={`${diasFiltrados} dias`} icon={DollarSign} color="bg-blue-500/10 text-blue-400" />
             <KpiCard label="Custo Total" value={fmt(displayTotals.totalCusto)} sub={`${pct(displayTotals.totalCusto, displayTotals.totalFatura)} do fatur.`} icon={TrendingDown} color="bg-red-500/10 text-red-400" />
             <KpiCard label="Margem Bruta" value={fmt(displayTotals.margem)} sub={`${pct(displayTotals.margem, displayTotals.totalFatura)} de margem`} icon={TrendingUp} color="bg-green-500/10 text-green-400" />
-            <KpiCard label="% Custo / Fatura" value={pct(displayTotals.totalCusto, displayTotals.totalFatura)} sub={operacaoSaudavel ? "SaudÃ¡vel" : "AtenÃ§Ã£o"} icon={Percent} color={operacaoSaudavel ? "bg-green-500/10 text-green-400" : "bg-red-500/10 text-red-400"} />
+            <KpiCard label="% Custo / Fatura" value={pct(displayTotals.totalCusto, displayTotals.totalFatura)} sub={operacaoSaudavel ? "Saudável" : "Atenção"} icon={Percent} color={operacaoSaudavel ? "bg-green-500/10 text-green-400" : "bg-red-500/10 text-red-400"} />
             <KpiCard label="Total de Entregas" value={displayTotals.totalEntregas.toLocaleString("pt-BR")} sub={`~${Math.round(displayTotals.totalEntregas / diasFiltrados)}/dia`} icon={Package} color="bg-purple-500/10 text-purple-400" />
-            <KpiCard label="Motoristas Ativos" value={(activeStore ? activeStoreData?.numEntregadores ?? 0 : entregadores.length).toString()} sub={activeStore ? `na ${activeStore}` : "no perÃ­odo"} icon={Users} color="bg-cyan-500/10 text-cyan-400" />
+            <KpiCard label="Motoristas Ativos" value={(activeStore ? activeStoreData?.numEntregadores ?? 0 : entregadores.length).toString()} sub={activeStore ? `na ${activeStore}` : "no período"} icon={Users} color="bg-cyan-500/10 text-cyan-400" />
           </div>
 
           {/* RESUMO POR CLIENTE */}
           {!activeStore && (
             <div className="bg-[#161b22] border border-[#30363d] rounded-xl overflow-hidden">
               <div className="px-5 py-4 border-b border-[#30363d]">
-                <SectionTitle title="Resumo por Cliente" sub={`Comparativo financeiro no perÃ­odo ${periodoLabel}`} />
+                <SectionTitle title="Resumo por Cliente" sub={`Comparativo financeiro no período ${periodoLabel}`} />
               </div>
               <div className="overflow-x-auto">
                 <table className="w-full text-sm">
@@ -362,7 +362,7 @@ export default function Dashboard() {
             </div>
           )}
 
-          {/* GRÃFICOS */}
+          {/* GRÁFICOS */}
           {!activeStore && (
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
               <div className="lg:col-span-2 bg-[#161b22] border border-[#30363d] rounded-xl p-5">
@@ -380,7 +380,7 @@ export default function Dashboard() {
                 </ResponsiveContainer>
               </div>
               <div className="bg-[#161b22] border border-[#30363d] rounded-xl p-5">
-                <SectionTitle title="ParticipaÃ§Ã£o no Faturamento" sub="% de cada loja" />
+                <SectionTitle title="Participação no Faturamento" sub="% de cada loja" />
                 <ResponsiveContainer width="100%" height={260}>
                   <PieChart>
                     <Pie data={pieData} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={90} strokeWidth={2} stroke="#0d1117">
@@ -394,18 +394,18 @@ export default function Dashboard() {
             </div>
           )}
 
-          {/* EVOLUÃ‡ÃƒO */}
+          {/* EVOLUÇÃO */}
           <div className="bg-[#161b22] border border-[#30363d] rounded-xl p-5">
             <div className="flex items-center justify-between mb-4">
               <SectionTitle
-                title={activeStore ? `EvoluÃ§Ã£o â€” ${activeStore}` : "EvoluÃ§Ã£o Consolidada"}
+                title={activeStore ? `Evolução — ${activeStore}` : "Evolução Consolidada"}
                 sub={periodoLabel}
               />
               <div className="flex gap-2">
                 {(["mensal","diario"] as const).map(m => (
                   <button key={m} onClick={() => setChartMode(m)}
                     className={`px-3 py-1 rounded text-xs font-medium transition-colors ${chartMode === m ? "bg-blue-600 text-white" : "bg-[#21262d] text-[#8b949e] hover:text-white"}`}>
-                    {m === "mensal" ? "Mensal" : "DiÃ¡rio"}
+                    {m === "mensal" ? "Mensal" : "Diário"}
                   </button>
                 ))}
               </div>
@@ -427,7 +427,7 @@ export default function Dashboard() {
           {/* DETALHE LOJA */}
           {activeStore && activeStoreData && (
             <div className="bg-[#161b22] border border-[#30363d] rounded-xl p-5">
-              <SectionTitle title={`Detalhes â€” ${activeStore}`} sub={`${activeStoreData.registros} registros Â· ${activeStoreData.numEntregadores} motoristas`} />
+              <SectionTitle title={`Detalhes — ${activeStore}`} sub={`${activeStoreData.registros} registros · ${activeStoreData.numEntregadores} motoristas`} />
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                 {[
                   { l: "Faturamento", v: fmtFull(activeStoreData.fatura), c: "text-blue-400" },
@@ -473,7 +473,7 @@ export default function Dashboard() {
                     <th className="px-4 py-3 text-left">Motorista</th>
                     <th className="px-4 py-3 text-left">Loja(s)</th>
                     <th className="px-4 py-3 text-right">Entregas</th>
-                    <th className="px-4 py-3 text-right">MÃ©dia/dia</th>
+                    <th className="px-4 py-3 text-right">Média/dia</th>
                     <th className="px-4 py-3 text-right">Custo</th>
                     <th className="px-4 py-3 text-right">Faturamento</th>
                     <th className="px-4 py-3 text-right">Margem</th>
@@ -488,7 +488,7 @@ export default function Dashboard() {
                     const barColor = e.custoPct < 70 ? "#22c55e" : e.custoPct < 85 ? "#f97316" : "#ef4444";
                     return (
                       <tr key={e.nome} className="border-b border-[#21262d] hover:bg-[#21262d] transition-colors">
-                        <td className="px-4 py-2.5 text-[#8b949e] text-xs">{i === 0 ? "ðŸ¥‡" : i === 1 ? "ðŸ¥ˆ" : i === 2 ? "ðŸ¥‰" : i + 1}</td>
+                        <td className="px-4 py-2.5 text-[#8b949e] text-xs">{i === 0 ? "🥇" : i === 1 ? "🥈" : i === 2 ? "🥉" : i + 1}</td>
                         <td className="px-4 py-2.5 font-medium text-white text-xs">{e.nome}</td>
                         <td className="px-4 py-2.5 text-xs">
                           <span className="flex flex-wrap gap-1">
@@ -519,9 +519,9 @@ export default function Dashboard() {
             </div>
           </div>
 
-          {/* ENTREGAS POR MÃŠS */}
+          {/* ENTREGAS POR MÊS */}
           <div className="bg-[#161b22] border border-[#30363d] rounded-xl p-5">
-            <SectionTitle title="Entregas por MÃªs" sub={periodoLabel} />
+            <SectionTitle title="Entregas por Mês" sub={periodoLabel} />
             <ResponsiveContainer width="100%" height={220}>
               <BarChart data={monthlyData} margin={{ left: -10, right: 8 }}>
                 <CartesianGrid strokeDasharray="3 3" stroke="#21262d" vertical={false} />
@@ -538,4 +538,3 @@ export default function Dashboard() {
     </div>
   );
 }
-
