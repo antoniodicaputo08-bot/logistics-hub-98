@@ -114,37 +114,37 @@ export const dailySeries = [
   {
     "data": "2026-04-01",
     "entregas": 398,
-    "custo": 4606,
-    "fatura": 6967.34,
-    "margem": 2361.34
+    "custo": 4811.12,
+    "fatura": 7291.68,
+    "margem": 2480.56
   },
   {
     "data": "2026-04-02",
     "entregas": 573,
-    "custo": 5360.08,
-    "fatura": 7799.34,
-    "margem": 2439.26
+    "custo": 5590.84,
+    "fatura": 8256.01,
+    "margem": 2665.17
   },
   {
     "data": "2026-04-03",
     "entregas": 692,
-    "custo": 6723.64,
-    "fatura": 9822.34,
-    "margem": 3098.7
+    "custo": 6980.04,
+    "fatura": 10289.68,
+    "margem": 3309.64
   },
   {
     "data": "2026-04-04",
     "entregas": 589,
-    "custo": 6363.12,
-    "fatura": 9432.34,
-    "margem": 3069.22
+    "custo": 6619.52,
+    "fatura": 9899.68,
+    "margem": 3280.16
   },
   {
     "data": "2026-04-05",
     "entregas": 547,
-    "custo": 6236.92,
-    "fatura": 9480.01,
-    "margem": 3243.09
+    "custo": 6698.44,
+    "fatura": 10420.35,
+    "margem": 3721.91
   },
   {
     "data": "2026-04-06",
@@ -156,44 +156,44 @@ export const dailySeries = [
   {
     "data": "2026-04-07",
     "entregas": 349,
-    "custo": 4594.08,
-    "fatura": 6999.34,
-    "margem": 2405.26
+    "custo": 4850.48,
+    "fatura": 7424.68,
+    "margem": 2574.2
   },
   {
     "data": "2026-04-08",
     "entregas": 359,
-    "custo": 4226.36,
-    "fatura": 6516.34,
-    "margem": 2289.98
+    "custo": 4482.76,
+    "fatura": 6941.68,
+    "margem": 2458.92
   },
   {
     "data": "2026-04-09",
     "entregas": 358,
-    "custo": 4255.36,
-    "fatura": 6541.34,
-    "margem": 2285.98
+    "custo": 4511.76,
+    "fatura": 6966.68,
+    "margem": 2454.92
   },
   {
     "data": "2026-04-10",
     "entregas": 686,
-    "custo": 6869.36,
-    "fatura": 9844.34,
-    "margem": 2974.98
+    "custo": 7125.76,
+    "fatura": 10311.68,
+    "margem": 3185.92
   },
   {
     "data": "2026-04-11",
     "entregas": 703,
-    "custo": 6784.92,
-    "fatura": 9918.34,
-    "margem": 3133.42
+    "custo": 7041.32,
+    "fatura": 10385.68,
+    "margem": 3344.36
   },
   {
     "data": "2026-04-12",
     "entregas": 670,
-    "custo": 6407,
-    "fatura": 9454.34,
-    "margem": 3047.34
+    "custo": 6868.52,
+    "fatura": 10394.68,
+    "margem": 3526.16
   },
   {
     "data": "2026-04-13",
@@ -205,44 +205,44 @@ export const dailySeries = [
   {
     "data": "2026-04-14",
     "entregas": 378,
-    "custo": 4667.36,
-    "fatura": 7222.34,
-    "margem": 2554.98
+    "custo": 4923.76,
+    "fatura": 7647.68,
+    "margem": 2723.92
   },
   {
     "data": "2026-04-15",
     "entregas": 360,
-    "custo": 4341.36,
-    "fatura": 6669.34,
-    "margem": 2327.98
+    "custo": 4597.76,
+    "fatura": 7094.68,
+    "margem": 2496.92
   },
   {
     "data": "2026-04-16",
     "entregas": 379,
-    "custo": 4302.08,
-    "fatura": 6566.34,
-    "margem": 2264.26
+    "custo": 4558.48,
+    "fatura": 6991.68,
+    "margem": 2433.2
   },
   {
     "data": "2026-04-17",
     "entregas": 617,
-    "custo": 6538.36,
-    "fatura": 9351.34,
-    "margem": 2812.98
+    "custo": 6794.76,
+    "fatura": 9818.68,
+    "margem": 3023.92
   },
   {
     "data": "2026-04-18",
     "entregas": 685,
-    "custo": 6897.84,
-    "fatura": 9923.34,
-    "margem": 3025.5
+    "custo": 7154.24,
+    "fatura": 10390.68,
+    "margem": 3236.44
   },
   {
     "data": "2026-04-19",
     "entregas": 638,
-    "custo": 6400.64,
-    "fatura": 9325.01,
-    "margem": 2924.37
+    "custo": 6862.16,
+    "fatura": 10243.35,
+    "margem": 3381.19
   },
   {
     "data": "2026-04-20",
@@ -254,44 +254,44 @@ export const dailySeries = [
   {
     "data": "2026-04-21",
     "entregas": 619,
-    "custo": 5968.08,
-    "fatura": 8696.34,
-    "margem": 2728.26
+    "custo": 6224.48,
+    "fatura": 9121.68,
+    "margem": 2897.2
   },
   {
     "data": "2026-04-22",
     "entregas": 407,
-    "custo": 5250.72,
-    "fatura": 7974.34,
-    "margem": 2723.62
+    "custo": 5507.12,
+    "fatura": 8399.68,
+    "margem": 2892.56
   },
   {
     "data": "2026-04-23",
     "entregas": 536,
-    "custo": 5630.36,
-    "fatura": 8344.34,
-    "margem": 2713.98
+    "custo": 5886.76,
+    "fatura": 8769.68,
+    "margem": 2882.92
   },
   {
     "data": "2026-04-24",
     "entregas": 554,
-    "custo": 6246.72,
-    "fatura": 9195.34,
-    "margem": 2948.62
+    "custo": 6503.12,
+    "fatura": 9662.68,
+    "margem": 3159.56
   },
   {
     "data": "2026-04-25",
     "entregas": 684,
-    "custo": 6845.92,
-    "fatura": 9888.34,
-    "margem": 3042.42
+    "custo": 7102.32,
+    "fatura": 10355.68,
+    "margem": 3253.36
   },
   {
     "data": "2026-04-26",
     "entregas": 702,
-    "custo": 6716.84,
-    "fatura": 9831.01,
-    "margem": 3114.17
+    "custo": 7101.44,
+    "fatura": 10469.02,
+    "margem": 3367.58
   },
   {
     "data": "2026-04-27",
@@ -303,44 +303,44 @@ export const dailySeries = [
   {
     "data": "2026-04-28",
     "entregas": 405,
-    "custo": 4727.08,
-    "fatura": 7160.34,
-    "margem": 2433.26
+    "custo": 4983.48,
+    "fatura": 7585.68,
+    "margem": 2602.2
   },
   {
     "data": "2026-04-29",
     "entregas": 381,
-    "custo": 4394.36,
-    "fatura": 6722.34,
-    "margem": 2327.98
+    "custo": 4650.76,
+    "fatura": 7147.68,
+    "margem": 2496.92
   },
   {
     "data": "2026-04-30",
     "entregas": 757,
-    "custo": 6352.28,
-    "fatura": 9243.01,
-    "margem": 2890.73
+    "custo": 6608.68,
+    "fatura": 9668.35,
+    "margem": 3059.67
   },
   {
     "data": "2026-05-01",
     "entregas": 974,
-    "custo": 7623.24,
-    "fatura": 10932.35,
-    "margem": 3309.11
+    "custo": 7879.64,
+    "fatura": 11357.69,
+    "margem": 3478.05
   },
   {
     "data": "2026-05-02",
     "entregas": 692,
-    "custo": 7035.4,
-    "fatura": 10116.34,
-    "margem": 3080.94
+    "custo": 7291.8,
+    "fatura": 10541.68,
+    "margem": 3249.88
   },
   {
     "data": "2026-05-03",
     "entregas": 798,
-    "custo": 7047.2,
-    "fatura": 10185.01,
-    "margem": 3137.81
+    "custo": 7431.8,
+    "fatura": 10918.35,
+    "margem": 3486.55
   },
   {
     "data": "2026-05-04",
@@ -352,44 +352,44 @@ export const dailySeries = [
   {
     "data": "2026-05-05",
     "entregas": 427,
-    "custo": 5142.08,
-    "fatura": 7806.34,
-    "margem": 2664.26
+    "custo": 5398.48,
+    "fatura": 8231.68,
+    "margem": 2833.2
   },
   {
     "data": "2026-05-06",
     "entregas": 326,
-    "custo": 4242.36,
-    "fatura": 6729.34,
-    "margem": 2486.98
+    "custo": 4498.76,
+    "fatura": 7154.68,
+    "margem": 2655.92
   },
   {
     "data": "2026-05-07",
     "entregas": 412,
-    "custo": 4523.36,
-    "fatura": 6945.34,
-    "margem": 2421.98
+    "custo": 4779.76,
+    "fatura": 7370.68,
+    "margem": 2590.92
   },
   {
     "data": "2026-05-08",
     "entregas": 667,
-    "custo": 6652.36,
-    "fatura": 9419.34,
-    "margem": 2766.98
+    "custo": 6908.76,
+    "fatura": 9844.68,
+    "margem": 2935.92
   },
   {
     "data": "2026-05-09",
     "entregas": 700,
-    "custo": 6764.28,
-    "fatura": 9709.34,
-    "margem": 2945.06
+    "custo": 7020.68,
+    "fatura": 10134.68,
+    "margem": 3114
   },
   {
     "data": "2026-05-10",
     "entregas": 722,
-    "custo": 6948.56,
-    "fatura": 9961.01,
-    "margem": 3012.45
+    "custo": 7384.44,
+    "fatura": 10700.02,
+    "margem": 3315.58
   },
   {
     "data": "2026-05-11",
@@ -401,499 +401,499 @@ export const dailySeries = [
   {
     "data": "2026-05-12",
     "entregas": 413,
-    "custo": 4785.08,
-    "fatura": 7040.34,
-    "margem": 2255.26
+    "custo": 5041.48,
+    "fatura": 7465.68,
+    "margem": 2424.2
   },
   {
     "data": "2026-05-13",
     "entregas": 351,
-    "custo": 4170.72,
-    "fatura": 6504.34,
-    "margem": 2333.62
+    "custo": 4427.12,
+    "fatura": 6929.68,
+    "margem": 2502.56
   },
   {
     "data": "2026-05-14",
     "entregas": 359,
-    "custo": 4214.08,
-    "fatura": 6404.34,
-    "margem": 2190.26
+    "custo": 4470.48,
+    "fatura": 6829.68,
+    "margem": 2359.2
   },
   {
     "data": "2026-05-15",
     "entregas": 638,
-    "custo": 6407.08,
-    "fatura": 9147.34,
-    "margem": 2740.26
+    "custo": 6663.48,
+    "fatura": 9572.68,
+    "margem": 2909.2
   },
   {
     "data": "2026-05-16",
     "entregas": 726,
-    "custo": 6616.36,
-    "fatura": 9839.67,
-    "margem": 3223.31
+    "custo": 3756.76,
+    "fatura": 6183.01,
+    "margem": 2426.25
   },
   {
     "data": "2026-05-17",
     "entregas": 770,
-    "custo": 7090.28,
-    "fatura": 10142.01,
-    "margem": 3051.73
+    "custo": 1991.8,
+    "fatura": 3667.35,
+    "margem": 1675.55
   },
   {
     "data": "2026-05-18",
     "entregas": 317,
-    "custo": 3637.16,
-    "fatura": 5572.34,
-    "margem": 1935.18
+    "custo": 1508.56,
+    "fatura": 2632.68,
+    "margem": 1124.12
   },
   {
     "data": "2026-05-19",
     "entregas": 436,
-    "custo": 4824.52,
-    "fatura": 7198.34,
-    "margem": 2373.82
+    "custo": 1242.52,
+    "fatura": 2254.34,
+    "margem": 1011.82
   },
   {
     "data": "2026-05-20",
     "entregas": 441,
-    "custo": 4587.8,
-    "fatura": 7035.34,
-    "margem": 2447.54
+    "custo": 1570.2,
+    "fatura": 2844.68,
+    "margem": 1274.48
   },
   {
     "data": "2026-05-21",
     "entregas": 417,
-    "custo": 4477.08,
-    "fatura": 6850.34,
-    "margem": 2373.26
+    "custo": 1611.48,
+    "fatura": 2840.68,
+    "margem": 1229.2
   },
   {
     "data": "2026-05-22",
     "entregas": 758,
-    "custo": 7070.44,
-    "fatura": 10045.34,
-    "margem": 2974.9
+    "custo": 1609.84,
+    "fatura": 2893.68,
+    "margem": 1283.84
   },
   {
     "data": "2026-05-23",
     "entregas": 745,
-    "custo": 7162.56,
-    "fatura": 10241.68,
-    "margem": 3079.12
+    "custo": 1835.96,
+    "fatura": 3282.02,
+    "margem": 1446.06
   },
   {
     "data": "2026-05-24",
     "entregas": 835,
-    "custo": 7439.2,
-    "fatura": 10734.35,
-    "margem": 3295.15
+    "custo": 2074.72,
+    "fatura": 3818.69,
+    "margem": 1743.97
   },
   {
     "data": "2026-05-25",
     "entregas": 317,
-    "custo": 3603.16,
-    "fatura": 5835.34,
-    "margem": 2232.18
+    "custo": 1265.16,
+    "fatura": 2249.34,
+    "margem": 984.18
   },
   {
     "data": "2026-05-26",
     "entregas": 392,
-    "custo": 4717.16,
-    "fatura": 7138.34,
-    "margem": 2421.18
+    "custo": 1514.56,
+    "fatura": 2662.68,
+    "margem": 1148.12
   },
   {
     "data": "2026-05-27",
     "entregas": 344,
-    "custo": 4125.88,
-    "fatura": 6533.34,
-    "margem": 2407.46
+    "custo": 1475.28,
+    "fatura": 2675.68,
+    "margem": 1200.4
   },
   {
     "data": "2026-05-28",
     "entregas": 373,
-    "custo": 4349.16,
-    "fatura": 6812.34,
-    "margem": 2463.18
+    "custo": 1532.56,
+    "fatura": 2722.68,
+    "margem": 1190.12
   },
   {
     "data": "2026-05-29",
     "entregas": 820,
-    "custo": 7452.08,
-    "fatura": 10463.34,
-    "margem": 3011.26
+    "custo": 1641.48,
+    "fatura": 2930.68,
+    "margem": 1289.2
   },
   {
     "data": "2026-05-30",
     "entregas": 726,
-    "custo": 6923.28,
-    "fatura": 10083.01,
-    "margem": 3159.73
+    "custo": 1781.68,
+    "fatura": 3197.35,
+    "margem": 1415.67
   },
   {
     "data": "2026-05-31",
     "entregas": 785,
-    "custo": 6818.56,
-    "fatura": 10021.68,
-    "margem": 3203.12
+    "custo": 1979.16,
+    "fatura": 3607.69,
+    "margem": 1628.53
   },
   {
     "data": "2026-06-01",
     "entregas": 332,
-    "custo": 3772.16,
-    "fatura": 5902.34,
-    "margem": 2130.18
+    "custo": 1725.56,
+    "fatura": 3071.68,
+    "margem": 1346.12
   },
   {
     "data": "2026-06-02",
     "entregas": 397,
-    "custo": 4713.16,
-    "fatura": 7198.34,
-    "margem": 2485.18
+    "custo": 1723.56,
+    "fatura": 3035.68,
+    "margem": 1312.12
   },
   {
     "data": "2026-06-03",
     "entregas": 471,
-    "custo": 5182.44,
-    "fatura": 7743.34,
-    "margem": 2560.9
+    "custo": 1858.84,
+    "fatura": 3182.68,
+    "margem": 1323.84
   },
   {
     "data": "2026-06-04",
     "entregas": 607,
-    "custo": 6231.44,
-    "fatura": 9088.34,
-    "margem": 2856.9
+    "custo": 1924.84,
+    "fatura": 3360.68,
+    "margem": 1435.84
   },
   {
     "data": "2026-06-05",
     "entregas": 593,
-    "custo": 6597.44,
-    "fatura": 9514.34,
-    "margem": 2916.9
+    "custo": 2065.84,
+    "fatura": 3521.68,
+    "margem": 1455.84
   },
   {
     "data": "2026-06-06",
     "entregas": 678,
-    "custo": 7221.28,
-    "fatura": 10486.01,
-    "margem": 3264.73
+    "custo": 2277.68,
+    "fatura": 3855.35,
+    "margem": 1577.67
   },
   {
     "data": "2026-06-07",
     "entregas": 779,
-    "custo": 7435.56,
-    "fatura": 10713.68,
-    "margem": 3278.12
+    "custo": 2579.08,
+    "fatura": 4599.02,
+    "margem": 2019.94
   },
   {
     "data": "2026-06-08",
     "entregas": 315,
-    "custo": 3727.52,
-    "fatura": 5824.34,
-    "margem": 2096.82
+    "custo": 1434.52,
+    "fatura": 2566.34,
+    "margem": 1131.82
   },
   {
     "data": "2026-06-09",
     "entregas": 372,
-    "custo": 4828.16,
-    "fatura": 7423.34,
-    "margem": 2595.18
+    "custo": 1831.56,
+    "fatura": 3158.68,
+    "margem": 1327.12
   },
   {
     "data": "2026-06-10",
     "entregas": 345,
-    "custo": 4245.8,
-    "fatura": 6879.34,
-    "margem": 2633.54
+    "custo": 1786.2,
+    "fatura": 3201.68,
+    "margem": 1415.48
   },
   {
     "data": "2026-06-11",
     "entregas": 414,
-    "custo": 4632.08,
-    "fatura": 7165.34,
-    "margem": 2533.26
+    "custo": 1940.48,
+    "fatura": 3376.68,
+    "margem": 1436.2
   },
   {
     "data": "2026-06-12",
     "entregas": 817,
-    "custo": 8185.8,
-    "fatura": 11559.34,
-    "margem": 3373.54
+    "custo": 2298.2,
+    "fatura": 3809.68,
+    "margem": 1511.48
   },
   {
     "data": "2026-06-13",
     "entregas": 634,
-    "custo": 7211.28,
-    "fatura": 10531.01,
-    "margem": 3319.73
+    "custo": 2339.68,
+    "fatura": 3971.35,
+    "margem": 1631.67
   },
   {
     "data": "2026-06-14",
     "entregas": 754,
-    "custo": 7716.56,
-    "fatura": 11083.68,
-    "margem": 3367.12
+    "custo": 2713.08,
+    "fatura": 4766.02,
+    "margem": 2052.94
   },
   {
     "data": "2026-06-15",
     "entregas": 365,
-    "custo": 3937.16,
-    "fatura": 5971.34,
-    "margem": 2034.18
+    "custo": 1490.16,
+    "fatura": 2602.34,
+    "margem": 1112.18
   },
   {
     "data": "2026-06-16",
     "entregas": 414,
-    "custo": 4575.32,
-    "fatura": 6883,
-    "margem": 2307.68
+    "custo": 1424.72,
+    "fatura": 2586.34,
+    "margem": 1161.62
   },
   {
     "data": "2026-06-17",
     "entregas": 214,
-    "custo": 4156.6,
-    "fatura": 6450,
-    "margem": 2293.4
+    "custo": 1481,
+    "fatura": 2676.34,
+    "margem": 1195.34
   },
   {
     "data": "2026-06-18",
     "entregas": 195,
-    "custo": 4200.36,
-    "fatura": 6448.34,
-    "margem": 2247.98
+    "custo": 1722.76,
+    "fatura": 3002.68,
+    "margem": 1279.92
   },
   {
     "data": "2026-06-19",
     "entregas": 629,
-    "custo": 7670.08,
-    "fatura": 10745.34,
-    "margem": 3075.26
+    "custo": 1727.48,
+    "fatura": 2993.68,
+    "margem": 1266.2
   },
   {
     "data": "2026-06-20",
     "entregas": 493,
-    "custo": 7012.08,
-    "fatura": 10084.34,
-    "margem": 3072.26
+    "custo": 1896.48,
+    "fatura": 3374.68,
+    "margem": 1478.2
   },
   {
     "data": "2026-06-21",
     "entregas": 570,
-    "custo": 7453.36,
-    "fatura": 10668.01,
-    "margem": 3214.65
+    "custo": 2160.88,
+    "fatura": 4030.35,
+    "margem": 1869.47
   },
   {
     "data": "2026-06-22",
     "entregas": 160,
-    "custo": 3564.16,
-    "fatura": 5553.34,
-    "margem": 1989.18
+    "custo": 1505.56,
+    "fatura": 2623.68,
+    "margem": 1118.12
   },
   {
     "data": "2026-06-23",
     "entregas": 238,
-    "custo": 4695.16,
-    "fatura": 7238.34,
-    "margem": 2543.18
+    "custo": 1578.56,
+    "fatura": 2779.68,
+    "margem": 1201.12
   },
   {
     "data": "2026-06-24",
     "entregas": 39,
-    "custo": 7396.8,
-    "fatura": 10211.34,
-    "margem": 2814.54
+    "custo": 1634.2,
+    "fatura": 2934.68,
+    "margem": 1300.48
   },
   {
     "data": "2026-06-25",
     "entregas": 35,
-    "custo": 4464.44,
-    "fatura": 6945.34,
-    "margem": 2480.9
+    "custo": 1682.84,
+    "fatura": 3022.68,
+    "margem": 1339.84
   },
   {
     "data": "2026-06-26",
     "entregas": 62,
-    "custo": 6763.08,
-    "fatura": 9694.34,
-    "margem": 2931.26
+    "custo": 1780.48,
+    "fatura": 3137.68,
+    "margem": 1357.2
   },
   {
     "data": "2026-06-27",
     "entregas": 47,
-    "custo": 6533.44,
-    "fatura": 9595.34,
-    "margem": 3061.9
+    "custo": 1838.84,
+    "fatura": 3325.68,
+    "margem": 1486.84
   },
   {
     "data": "2026-06-28",
     "entregas": 3,
-    "custo": 7036.36,
-    "fatura": 10125.01,
-    "margem": 3088.65
+    "custo": 2147.88,
+    "fatura": 3955.35,
+    "margem": 1807.47
   },
   {
     "data": "2026-06-29",
     "entregas": 29,
-    "custo": 9922.52,
-    "fatura": 13225.34,
-    "margem": 3302.82
+    "custo": 1245.52,
+    "fatura": 2296.34,
+    "margem": 1050.82
   },
   {
     "data": "2026-06-30",
     "entregas": 57,
-    "custo": 4722.24,
-    "fatura": 7058.67,
-    "margem": 2336.43
+    "custo": 1516.64,
+    "fatura": 2698.01,
+    "margem": 1181.37
   },
   {
     "data": "2026-07-01",
     "entregas": 55,
-    "custo": 4233.24,
-    "fatura": 6611,
-    "margem": 2377.76
+    "custo": 1504.64,
+    "fatura": 2692.34,
+    "margem": 1187.7
   },
   {
     "data": "2026-07-02",
     "entregas": 43,
-    "custo": 4285.24,
-    "fatura": 6487,
-    "margem": 2201.76
+    "custo": 1512.64,
+    "fatura": 2692.34,
+    "margem": 1179.7
   },
   {
     "data": "2026-07-03",
     "entregas": 60,
-    "custo": 6872.24,
-    "fatura": 9788,
-    "margem": 2915.76
+    "custo": 1620.64,
+    "fatura": 2881.34,
+    "margem": 1260.7
   },
   {
     "data": "2026-07-04",
     "entregas": 44,
-    "custo": 7003.24,
-    "fatura": 10004,
-    "margem": 3000.76
+    "custo": 1767.64,
+    "fatura": 3187.34,
+    "margem": 1419.7
   },
   {
     "data": "2026-07-05",
     "entregas": 2,
-    "custo": 8485.24,
-    "fatura": 11880,
-    "margem": 3394.76
+    "custo": 1904.76,
+    "fatura": 3564.34,
+    "margem": 1659.58
   },
   {
     "data": "2026-07-06",
     "entregas": 63,
-    "custo": 3595.32,
-    "fatura": 5384,
-    "margem": 1788.68
+    "custo": 1081.32,
+    "fatura": 1975,
+    "margem": 893.68
   },
   {
     "data": "2026-07-07",
     "entregas": 53,
-    "custo": 4693.96,
-    "fatura": 6878,
-    "margem": 2184.04
+    "custo": 1458.36,
+    "fatura": 2536.34,
+    "margem": 1077.98
   },
   {
     "data": "2026-07-08",
     "entregas": 62,
-    "custo": 4433.6,
-    "fatura": 6726,
-    "margem": 2292.4
+    "custo": 1490,
+    "fatura": 2703.34,
+    "margem": 1213.34
   },
   {
     "data": "2026-07-09",
     "entregas": 35,
-    "custo": 4500.24,
-    "fatura": 6705,
-    "margem": 2204.76
+    "custo": 1486.64,
+    "fatura": 2626.34,
+    "margem": 1139.7
   },
   {
     "data": "2026-07-10",
     "entregas": 0,
-    "custo": 7722.24,
-    "fatura": 10846,
-    "margem": 3123.76
+    "custo": 1602.64,
+    "fatura": 2839.34,
+    "margem": 1236.7
   },
   {
     "data": "2026-07-11",
     "entregas": 0,
-    "custo": 6753.24,
-    "fatura": 9665,
-    "margem": 2911.76
+    "custo": 1692.64,
+    "fatura": 3082.34,
+    "margem": 1389.7
   },
   {
     "data": "2026-07-12",
     "entregas": 0,
-    "custo": 7540.8,
-    "fatura": 10669.67,
-    "margem": 3128.87
+    "custo": 2035.32,
+    "fatura": 3791.01,
+    "margem": 1755.69
   },
   {
     "data": "2026-07-13",
     "entregas": 0,
-    "custo": 3845.68,
-    "fatura": 5655,
-    "margem": 1809.32
+    "custo": 1058.68,
+    "fatura": 1883,
+    "margem": 824.32
   },
   {
     "data": "2026-07-14",
     "entregas": 0,
-    "custo": 5034.68,
-    "fatura": 7292,
-    "margem": 2257.32
+    "custo": 1402.08,
+    "fatura": 2470.34,
+    "margem": 1068.26
   },
   {
     "data": "2026-07-15",
     "entregas": 0,
-    "custo": 4580.96,
-    "fatura": 6905,
-    "margem": 2324.04
+    "custo": 1451.36,
+    "fatura": 2551.34,
+    "margem": 1099.98
   },
   {
     "data": "2026-07-16",
     "entregas": 0,
-    "custo": 4464.96,
-    "fatura": 6792,
-    "margem": 2327.04
+    "custo": 1466.36,
+    "fatura": 2608.34,
+    "margem": 1141.98
   },
   {
     "data": "2026-07-17",
     "entregas": 0,
-    "custo": 6435.96,
-    "fatura": 9255,
-    "margem": 2819.04
+    "custo": 1553.36,
+    "fatura": 2758.34,
+    "margem": 1204.98
   },
   {
     "data": "2026-07-18",
     "entregas": 0,
-    "custo": 6569.96,
-    "fatura": 9709,
-    "margem": 3139.04
+    "custo": 1644.36,
+    "fatura": 2968.34,
+    "margem": 1323.98
   },
   {
     "data": "2026-07-19",
     "entregas": 0,
-    "custo": 7273.88,
-    "fatura": 10376.67,
-    "margem": 3102.79
+    "custo": 1949.4,
+    "fatura": 3655.01,
+    "margem": 1705.61
   },
   {
     "data": "2026-07-20",
     "entregas": 0,
-    "custo": 3699.68,
-    "fatura": 5444,
-    "margem": 1744.32
+    "custo": 1053.68,
+    "fatura": 1868,
+    "margem": 814.32
   },
   {
     "data": "2026-07-21",
     "entregas": 0,
-    "custo": 3170,
-    "fatura": 4454,
-    "margem": 1284
+    "custo": 256.4,
+    "fatura": 425.34,
+    "margem": 168.94
   },
   {
     "data": "2026-07-22",
