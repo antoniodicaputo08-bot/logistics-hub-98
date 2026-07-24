@@ -1,3 +1,4 @@
+﻿export type StoreDay = { data: string; lojas: Record<string, { f: number; c: number; e: number }> };
 export const storesSeries = [
   {
     "data": "2026-03-16",
