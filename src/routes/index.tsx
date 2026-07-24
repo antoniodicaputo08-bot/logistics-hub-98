@@ -38,7 +38,7 @@ function pct(a: number, b: number) { return b ? ((a / b) * 100).toFixed(1) + "%"
 
 // datas disponíveis no dataset
 const DATA_MIN = meta.periodoInicio;
-const DATA_MAX = new Date().toISOString().slice(0, 10);
+const DATA_MAX = "2026-12-31";
 
 // entregadores base
 const entregadoresBase = entregadores.map(e => ({
@@ -92,7 +92,7 @@ export default function Dashboard() {
   const [motoristaLoja, setMotoristaLoja] = useState("Todas");
   const [chartMode, setChartMode] = useState<"mensal" | "diario">("mensal");
   const [dataInicio, setDataInicio] = useState(DATA_MIN);
-  const [dataFim, setDataFim] = useState(DATA_MAX);
+  const [dataFim, setDataFim] = useState(meta.periodoFim);
 
   // série diária filtrada por data
   const dailyFiltered = useMemo(() =>
@@ -270,7 +270,7 @@ export default function Dashboard() {
               {entregadores.map(e => <option key={e.nome} value={e.nome}>{e.nome}</option>)}
             </select>
             {filtrando && (
-              <button onClick={() => { setDataInicio(DATA_MIN); setDataFim(DATA_MAX); }}
+              <button onClick={() => { setDataInicio(DATA_MIN); setDataFim(meta.periodoFim); }}
                 className="flex items-center gap-1 text-xs text-red-400 hover:text-red-300 bg-red-500/10 border border-red-500/20 rounded-lg px-2.5 py-1.5 transition-colors">
                 <X className="h-3 w-3" /> Limpar
               </button>
