@@ -90,6 +90,7 @@ export default function Dashboard() {
   const [activeStore, setActiveStore] = useState<string | null>(null);
   const [motoristaBusca, setMotoristaBusca] = useState("");
   const [motoristaLoja, setMotoristaLoja] = useState("Todas");
+  const [estadoFiltro, setEstadoFiltro] = useState("Todos");
   const [chartMode, setChartMode] = useState<"mensal" | "diario">("mensal");
   const [dataInicio, setDataInicio] = useState(DATA_MIN);
   const [dataFim, setDataFim] = useState(meta.periodoFim);
@@ -132,6 +133,11 @@ export default function Dashboard() {
     return Array.from(map.values());
   }, [dailyFiltered]);
 
+  const estadosDisponiveis = useMemo(() =>
+    ["Todos", ...Array.from(new Set(stores.map(s => s.estado || "RJ"))).sort()],
+    []
+  );
+
   // KPIs por loja calculados linha a linha a partir do storesSeries filtrado por data
   const filteredStores = useMemo(() => {
     const acc: Record<string, { fatura: number; custo: number; entregas: number }> = {};
@@ -148,7 +154,8 @@ export default function Dashboard() {
       const a = acc[s.nome];
       if (!a) return { ...s, fatura: 0, custo: 0, margem: 0, entregas: 0 };
       return { ...s, fatura: Math.round(a.fatura * 100) / 100, custo: Math.round(a.custo * 100) / 100, margem: Math.round((a.fatura - a.custo) * 100) / 100, entregas: a.entregas };
-    }).filter(s => s.fatura > 0 || s.entregas > 0);
+    }).filter(s => s.fatura > 0 || s.entregas > 0)
+      .filter(s => estadoFiltro === "Todos" || (s.estado || "RJ") === estadoFiltro);
   }, [dataInicio, dataFim]);
 
   const pieData = useMemo(() =>
@@ -269,6 +276,10 @@ export default function Dashboard() {
               <option value="Todas">Todas as lojas</option>
               {stores.map(s => <option key={s.nome} value={s.nome}>{s.nome}</option>)}
             </select>
+            <select value={estadoFiltro} onChange={e => { setEstadoFiltro(e.target.value); setActiveStore(null); }}
+              className="bg-[#161b22] border border-[#30363d] rounded-lg px-3 py-1.5 text-xs text-white outline-none">
+              {estadosDisponiveis.map(uf => <option key={uf} value={uf}>{uf === "Todos" ? "Todos os estados" : uf}</option>)}
+            </select>
             <select value={motoristaBusca ? motoristaBusca : "__all__"}
               onChange={e => setMotoristaBusca(e.target.value === "__all__" ? "" : e.target.value)}
               className="bg-[#161b22] border border-[#30363d] rounded-lg px-3 py-1.5 text-xs text-white outline-none">
@@ -276,7 +287,7 @@ export default function Dashboard() {
               {entregadores.map(e => <option key={e.nome} value={e.nome}>{e.nome}</option>)}
             </select>
             {filtrando && (
-              <button onClick={() => { setDataInicio(DATA_MIN); setDataFim(meta.periodoFim); }}
+              <button onClick={() => { setDataInicio(DATA_MIN); setDataFim(meta.periodoFim); setEstadoFiltro("Todos"); }}
                 className="flex items-center gap-1 text-xs text-red-400 hover:text-red-300 bg-red-500/10 border border-red-500/20 rounded-lg px-2.5 py-1.5 transition-colors">
                 <X className="h-3 w-3" /> Limpar
               </button>
@@ -324,7 +335,7 @@ export default function Dashboard() {
                 <table className="w-full text-sm">
                   <thead>
                     <tr className="border-b border-[#30363d] text-[10px] uppercase tracking-widest text-[#8b949e]">
-                      {["Cliente","Faturamento","Custo","Margem","% Custo","Entregas","Motoristas"].map(h => (
+                      {["Cliente","Estado","Faturamento","Custo","Margem","% Custo","Entregas","Motoristas"].map(h => (
                         <th key={h} className="px-5 py-3 text-left font-medium">{h}</th>
                       ))}
                     </tr>
@@ -338,6 +349,9 @@ export default function Dashboard() {
                             <span className="w-2.5 h-2.5 rounded-full" style={{ background: STORE_COLORS[s.nome] ?? "#64748b" }} />
                             {s.nome}
                           </span>
+                        </td>
+                        <td className="px-5 py-3">
+                          <span className="px-2 py-0.5 rounded text-[10px] font-semibold bg-blue-500/10 text-blue-400">{s.estado || "RJ"}</span>
                         </td>
                         <td className="px-5 py-3 text-blue-400 tabular-nums">{fmtFull(s.fatura)}</td>
                         <td className="px-5 py-3 text-red-400 tabular-nums">{fmtFull(s.custo)}</td>
