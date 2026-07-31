@@ -3637,6 +3637,11 @@ export const storesSeries = [
   {
     "data": "2026-07-24",
     "lojas": {
+      "ARTIGIANO - ANNA": {
+        "f": 222,
+        "c": 102.56,
+        "e": 21
+      },
       "DOMINOS": {
         "f": 7772,
         "c": 5865,
@@ -3662,6 +3667,11 @@ export const storesSeries = [
   {
     "data": "2026-07-25",
     "lojas": {
+      "ARTIGIANO - ANNA": {
+        "f": 222,
+        "c": 102.56,
+        "e": 23
+      },
       "DOMINOS": {
         "f": 7552,
         "c": 5580,
@@ -3687,6 +3697,11 @@ export const storesSeries = [
   {
     "data": "2026-07-26",
     "lojas": {
+      "ARTIGIANO - ANNA": {
+        "f": 279.67,
+        "c": 128.2,
+        "e": 35
+      },
       "DOMINOS": {
         "f": 8142,
         "c": 6146,
@@ -3713,9 +3728,9 @@ export const storesSeries = [
     "data": "2026-07-27",
     "lojas": {
       "DOMINOS": {
-        "f": 3231,
-        "c": 2347,
-        "e": 187
+        "f": 3531,
+        "c": 2569,
+        "e": 205
       },
       "JOAQUINA": {
         "f": 1844,
@@ -3726,6 +3741,56 @@ export const storesSeries = [
   },
   {
     "data": "2026-07-28",
+    "lojas": {
+      "DOMINOS": {
+        "f": 5354,
+        "c": 3904,
+        "e": 317
+      },
+      "JOAQUINA": {
+        "f": 1880,
+        "c": 1057.68,
+        "e": 109
+      },
+      "MITSUBA": {
+        "f": 150,
+        "c": 87,
+        "e": 3
+      },
+      "RJCC": {
+        "f": 425.34,
+        "c": 256.4,
+        "e": 0
+      }
+    }
+  },
+  {
+    "data": "2026-07-29",
+    "lojas": {
+      "DOMINOS": {
+        "f": 4706,
+        "c": 3477,
+        "e": 307
+      },
+      "JOAQUINA": {
+        "f": 1859,
+        "c": 1050.68,
+        "e": 102
+      },
+      "MITSUBA": {
+        "f": 150,
+        "c": 95,
+        "e": 5
+      },
+      "RJCC": {
+        "f": 425.34,
+        "c": 256.4,
+        "e": 0
+      }
+    }
+  },
+  {
+    "data": "2026-07-30",
     "lojas": {
       "MITSUBA": {
         "f": 150,
