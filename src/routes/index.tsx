@@ -49,7 +49,6 @@ function getWeekStart(dateStr: string): string {
 }
 
 const DATA_MIN = meta.periodoInicio;
-const DATA_MAX = "2026-12-31";
 
 const entregadoresBase = entregadores.map(e => ({
   ...e,
@@ -271,7 +270,7 @@ export default function Dashboard() {
   }, [motoristaBusca, motoristaLoja, mostrarInativos]);
 
   const periodoLabel = `${dataInicio.split("-").reverse().join("/")} a ${dataFim.split("-").reverse().join("/")}`;
-  const filtrando = dataInicio !== DATA_MIN || dataFim !== DATA_MAX || estadoFiltro !== "Todos";
+  const filtrando = dataInicio !== DATA_MIN || dataFim !== meta.periodoFim || estadoFiltro !== "Todos";
 
   // deltas semana vs semana anterior para KPI cards
   const kpiDeltas = useMemo(() => {
@@ -414,22 +413,16 @@ export default function Dashboard() {
             <div className="flex items-center gap-1.5 bg-[#161b22] border border-[#30363d] rounded-lg px-3 py-1.5 text-xs">
               <Calendar className="h-3.5 w-3.5 text-[#8b949e]" />
               <label className="text-[#8b949e]">De:</label>
-              <select value={dataInicio.slice(0,7)} onChange={e => setDataInicio(e.target.value + "-01")}
-                className="bg-transparent text-white outline-none text-xs cursor-pointer">
-                {Array.from(new Set(dailySeries.map(d => d.data.slice(0,7)))).sort().map(m => (
-                  <option key={m} value={m} className="bg-[#161b22]">{MESES[Number(m.split("-")[1])-1]}/{m.slice(2,4)}</option>
-                ))}
-              </select>
+              <input type="date" value={dataInicio} min={DATA_MIN} max={dataFim}
+                onChange={e => { if (e.target.value) setDataInicio(e.target.value); }}
+                className="bg-transparent text-white outline-none text-xs cursor-pointer [color-scheme:dark]" />
             </div>
             <div className="flex items-center gap-1.5 bg-[#161b22] border border-[#30363d] rounded-lg px-3 py-1.5 text-xs">
               <Calendar className="h-3.5 w-3.5 text-[#8b949e]" />
               <label className="text-[#8b949e]">Até:</label>
-              <select value={dataFim.slice(0,7)} onChange={e => { const ultimo = dailySeries.filter(d => d.data.startsWith(e.target.value)).slice(-1)[0]?.data || e.target.value+"-28"; setDataFim(ultimo); }}
-                className="bg-transparent text-white outline-none text-xs cursor-pointer">
-                {Array.from(new Set(dailySeries.map(d => d.data.slice(0,7)))).sort().map(m => (
-                  <option key={m} value={m} className="bg-[#161b22]">{MESES[Number(m.split("-")[1])-1]}/{m.slice(2,4)}</option>
-                ))}
-              </select>
+              <input type="date" value={dataFim} min={dataInicio} max={meta.periodoFim}
+                onChange={e => { if (e.target.value) setDataFim(e.target.value); }}
+                className="bg-transparent text-white outline-none text-xs cursor-pointer [color-scheme:dark]" />
             </div>
             <select value={estadoFiltro} onChange={e => { setEstadoFiltro(e.target.value); setActiveStore(null); }}
               className="bg-[#161b22] border border-[#30363d] rounded-lg px-3 py-1.5 text-xs text-white outline-none">
