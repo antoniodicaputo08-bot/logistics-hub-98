@@ -390,6 +390,27 @@ export default function Dashboard() {
             <span className="flex items-center gap-1.5 text-[10px] uppercase tracking-widest text-[#8b949e] mr-1">
               <Filter className="h-3 w-3" /> Filtros
             </span>
+            {/* atalhos de período */}
+            {[
+              { label: "Hoje",    dias: 0 },
+              { label: "7 dias",  dias: 7 },
+              { label: "15 dias", dias: 15 },
+              { label: "30 dias", dias: 30 },
+              { label: "Tudo",    dias: -1 },
+            ].map(({ label, dias }) => {
+              const fim = meta.periodoFim;
+              const ini = dias === -1 ? DATA_MIN : dias === 0 ? fim
+                : new Date(new Date(fim + "T12:00:00").getTime() - dias * 86400000).toISOString().slice(0, 10);
+              const ativo = dataInicio === ini && dataFim === fim;
+              return (
+                <button key={label} onClick={() => { setDataInicio(ini); setDataFim(fim); }}
+                  className={`text-[11px] px-2.5 py-1 rounded-md border transition-colors ${ativo
+                    ? "bg-[#1f6feb] border-[#1f6feb] text-white"
+                    : "bg-[#161b22] border-[#30363d] text-[#8b949e] hover:text-white hover:border-[#8b949e]"}`}>
+                  {label}
+                </button>
+              );
+            })}
             <div className="flex items-center gap-1.5 bg-[#161b22] border border-[#30363d] rounded-lg px-3 py-1.5 text-xs">
               <Calendar className="h-3.5 w-3.5 text-[#8b949e]" />
               <label className="text-[#8b949e]">De:</label>
