@@ -9,7 +9,7 @@ import {
   LayoutDashboard, ChevronRight, Activity, Calendar, Filter, X,
   AlertTriangle, Clock, ArrowUpRight, ArrowDownRight, UserX, FileDown
 } from "lucide-react";
-import { meta, dailySeries, stores, entregadores, storesSeries } from "@/lib/productivity-data";
+import { meta, dailySeries, stores, entregadores, storesSeries, huskyValidation } from "@/lib/productivity-data";
 
 export const Route = createFileRoute("/")({ component: Dashboard });
 
@@ -787,6 +787,52 @@ export default function Dashboard() {
               </BarChart>
             </ResponsiveContainer>
           </div>
+
+          {/* VALIDAÇÃO HUSKY */}
+          {huskyValidation.lojas.length > 0 && (
+            <div className="bg-[#161b22] border border-[#30363d] rounded-xl p-5">
+              <SectionTitle
+                title="Validação Husky × Planilha"
+                sub={`Período: ${huskyValidation.periodo.inicio} → ${huskyValidation.periodo.fim} · Sync: ${huskyValidation.lastSync ? new Date(huskyValidation.lastSync).toLocaleString("pt-BR") : "—"}`}
+              />
+              {huskyValidation.totalDivergencias > 0 && (
+                <div className="mb-3 flex items-center gap-2 text-xs text-amber-400 bg-amber-500/10 border border-amber-500/30 rounded-lg px-3 py-2">
+                  <AlertTriangle className="h-4 w-4 shrink-0" />
+                  {huskyValidation.totalDivergencias} loja{huskyValidation.totalDivergencias !== 1 ? "s" : ""} com divergência entre planilha e Husky
+                </div>
+              )}
+              <div className="overflow-x-auto">
+                <table className="w-full text-xs">
+                  <thead>
+                    <tr className="border-b border-[#30363d] text-[#8b949e] text-left">
+                      <th className="pb-2 font-medium">Loja</th>
+                      <th className="pb-2 font-medium text-right">Planilha</th>
+                      <th className="pb-2 font-medium text-right">Husky</th>
+                      <th className="pb-2 font-medium text-right">Diferença</th>
+                      <th className="pb-2 font-medium text-right">Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {huskyValidation.lojas.map((l: any) => (
+                      <tr key={l.nome} className="border-b border-[#21262d] hover:bg-[#1c2128]">
+                        <td className="py-2 text-white font-medium">{l.nome}</td>
+                        <td className="py-2 text-right text-[#8b949e]">{l.planilhaEntregas.toLocaleString("pt-BR")}</td>
+                        <td className="py-2 text-right text-[#8b949e]">{l.huskyEntregas.toLocaleString("pt-BR")}</td>
+                        <td className={`py-2 text-right font-medium ${l.diff === 0 ? "text-green-400" : Math.abs(l.diffPct) < 5 ? "text-amber-400" : "text-red-400"}`}>
+                          {l.diff > 0 ? "+" : ""}{l.diff} ({l.diff === 0 ? "0" : (l.diffPct > 0 ? "+" : "")}{l.diffPct.toFixed(1)}%)
+                        </td>
+                        <td className="py-2 text-right">
+                          {l.status === 'ok' && <span className="text-green-400">✓ OK</span>}
+                          {l.status === 'divergente' && <span className="text-red-400">⚠ Divergente</span>}
+                          {l.status === 'sem_dados' && <span className="text-[#8b949e]">— Sem dados Husky</span>}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )}
 
         </div>
       </main>
