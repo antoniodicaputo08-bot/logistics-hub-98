@@ -11,23 +11,23 @@ export const stores = [
   },
   {
     "nome": "COZI",
-    "fatura": 29954.08,
-    "custo": 20934.12,
-    "margem": 9019.96,
-    "entregas": 1499,
+    "fatura": 144743.72,
+    "custo": 71384.33,
+    "margem": 73359.39,
+    "entregas": 5940,
     "numEntregadores": 13,
     "estado": "RJ",
-    "registros": 1499
+    "registros": 5940
   },
   {
     "nome": "DOMINOS",
-    "fatura": 767492,
-    "custo": 562210,
-    "margem": 205282,
-    "entregas": 47616,
+    "fatura": 2196349,
+    "custo": 1589885,
+    "margem": 606464,
+    "entregas": 143302,
     "numEntregadores": 150,
     "estado": "RJ",
-    "registros": 47616
+    "registros": 143302
   },
   {
     "nome": "FERRO E FARINHA",
@@ -41,13 +41,13 @@ export const stores = [
   },
   {
     "nome": "JOAQUINA",
-    "fatura": 289226,
-    "custo": 156654.68,
-    "margem": 132571.32,
-    "entregas": 19173,
+    "fatura": 764156.22,
+    "custo": 388136.97,
+    "margem": 376019.25,
+    "entregas": 54317,
     "numEntregadores": 60,
     "estado": "RJ",
-    "registros": 19173
+    "registros": 54317
   },
   {
     "nome": "MITSUBA",
