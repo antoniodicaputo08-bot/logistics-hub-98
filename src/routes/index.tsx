@@ -31,6 +31,12 @@ const MESES = ["Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov"
 const META_ENTREGAS_DIA = 15; // meta de entregas/dia por motorista
 const CUSTO_ALERTA = 0.80;    // % custo acima disso = alerta
 
+// Lojas faturadas por turno/diária: o faturamento não depende do volume de
+// entregas, e o campo de quantidade costuma vir em branco na planilha.
+// A contagem de entregas dessas lojas é subnotificada — sinalizamos na tabela
+// para o número não ser lido como produtividade real.
+const LOJAS_DIARIA = ["RJCC", "MITSUBA", "ARTIGIANO - ANNA", "COZI"];
+
 function fmt(v: number) {
   return v.toLocaleString("pt-BR", { style: "currency", currency: "BRL", maximumFractionDigits: 0 });
 }
@@ -515,7 +521,7 @@ export default function Dashboard() {
           {!activeStore && (
             <div className="bg-[#161b22] border border-[#30363d] rounded-xl overflow-hidden">
               <div className="px-5 py-4 border-b border-[#30363d] flex items-center justify-between">
-                <SectionTitle title="Resumo por Cliente" sub={`Comparativo financeiro no período ${periodoLabel}`} />
+                <SectionTitle title="Resumo por Cliente" sub={`Comparativo financeiro no período ${periodoLabel} · clientes marcados como "diária" faturam por turno, não por entrega`} />
                 <button onClick={handleExport}
                   className="flex items-center gap-1.5 text-xs text-[#8b949e] hover:text-white transition-colors">
                   <FileDown className="h-3.5 w-3.5" /> CSV
@@ -551,7 +557,17 @@ export default function Dashboard() {
                           <td className="px-5 py-3 text-red-400 tabular-nums">{fmtFull(s.custo)}</td>
                           <td className={`px-5 py-3 tabular-nums font-medium ${s.margem >= 0 ? "text-green-400" : "text-red-400"}`}>{fmtFull(s.margem)}</td>
                           <td className={`px-5 py-3 tabular-nums font-medium ${alerta ? "text-amber-400" : "text-[#8b949e]"}`}>{pct(s.custo, s.fatura)}</td>
-                          <td className="px-5 py-3 text-white tabular-nums">{s.entregas.toLocaleString("pt-BR")}</td>
+                          <td className="px-5 py-3 text-white tabular-nums">
+                            <span className="flex items-center gap-1.5">
+                              {s.entregas.toLocaleString("pt-BR")}
+                              {LOJAS_DIARIA.includes(s.nome) && (
+                                <span title="Cliente faturado por turno/diária — a quantidade de entregas nem sempre é preenchida na planilha, então este número é subnotificado."
+                                  className="px-1.5 py-0.5 rounded text-[9px] font-semibold bg-[#8b949e]/15 text-[#8b949e] cursor-help">
+                                  diária
+                                </span>
+                              )}
+                            </span>
+                          </td>
                           <td className="px-5 py-3 text-[#8b949e] tabular-nums">{s.numEntregadores}</td>
                         </tr>
                       );
