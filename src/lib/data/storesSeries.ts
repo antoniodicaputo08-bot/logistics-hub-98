@@ -8009,7 +8009,7 @@ export const storesSeries = [
       },
       "DOMINOS": {
         "f": 7777,
-        "c": 5967,
+        "c": 5961,
         "e": 587
       },
       "JOAQUINA": {
@@ -8168,9 +8168,9 @@ export const storesSeries = [
         "e": 16
       },
       "DOMINOS": {
-        "f": 7166,
-        "c": 5182,
-        "e": 437
+        "f": 6866,
+        "c": 4956,
+        "e": 418
       },
       "JOAQUINA": {
         "f": 1982,
@@ -8198,9 +8198,9 @@ export const storesSeries = [
         "e": 26
       },
       "DOMINOS": {
-        "f": 7620,
-        "c": 5786,
-        "e": 539
+        "f": 7272,
+        "c": 5520,
+        "e": 513
       },
       "JOAQUINA": {
         "f": 2027,
@@ -8223,9 +8223,9 @@ export const storesSeries = [
     "data": "2026-07-20",
     "lojas": {
       "DOMINOS": {
-        "f": 3576,
-        "c": 2646,
-        "e": 228
+        "f": 3426,
+        "c": 2539,
+        "e": 220
       },
       "JOAQUINA": {
         "f": 1868,
@@ -8238,9 +8238,9 @@ export const storesSeries = [
     "data": "2026-07-21",
     "lojas": {
       "DOMINOS": {
-        "f": 5268,
-        "c": 3777,
-        "e": 300
+        "f": 4968,
+        "c": 3567,
+        "e": 285
       },
       "JOAQUINA": {
         "f": 1847,
@@ -8268,9 +8268,9 @@ export const storesSeries = [
         "e": 4
       },
       "DOMINOS": {
-        "f": 4733,
-        "c": 3407,
-        "e": 270
+        "f": 4590,
+        "c": 3301,
+        "e": 259
       },
       "JOAQUINA": {
         "f": 1874,
@@ -8298,9 +8298,9 @@ export const storesSeries = [
         "e": 4
       },
       "DOMINOS": {
-        "f": 5068,
-        "c": 3602,
-        "e": 280
+        "f": 4768,
+        "c": 3388,
+        "e": 264
       },
       "JOAQUINA": {
         "f": 1865,
@@ -8323,14 +8323,14 @@ export const storesSeries = [
     "data": "2026-07-24",
     "lojas": {
       "ARTIGIANO - ANNA": {
-        "f": 222,
-        "c": 102.56,
-        "e": 21
+        "f": 111,
+        "c": 51.28,
+        "e": 14
       },
       "DOMINOS": {
-        "f": 7772,
-        "c": 5865,
-        "e": 568
+        "f": 7393,
+        "c": 5602,
+        "e": 525
       },
       "JOAQUINA": {
         "f": 1904,
@@ -8353,14 +8353,14 @@ export const storesSeries = [
     "data": "2026-07-25",
     "lojas": {
       "ARTIGIANO - ANNA": {
-        "f": 222,
-        "c": 102.56,
-        "e": 23
+        "f": 111,
+        "c": 51.28,
+        "e": 16
       },
       "DOMINOS": {
-        "f": 7552,
-        "c": 5580,
-        "e": 488
+        "f": 7068,
+        "c": 5212,
+        "e": 445
       },
       "JOAQUINA": {
         "f": 1949,
@@ -8368,8 +8368,8 @@ export const storesSeries = [
         "e": 132
       },
       "MITSUBA": {
-        "f": 300,
-        "c": 162,
+        "f": 450,
+        "c": 237,
         "e": 3
       },
       "RJCC": {
@@ -8388,9 +8388,9 @@ export const storesSeries = [
         "e": 35
       },
       "DOMINOS": {
-        "f": 8142,
-        "c": 6146,
-        "e": 587
+        "f": 7759,
+        "c": 5855,
+        "e": 556
       },
       "JOAQUINA": {
         "f": 2006,
@@ -8413,9 +8413,9 @@ export const storesSeries = [
     "data": "2026-07-27",
     "lojas": {
       "DOMINOS": {
-        "f": 3531,
-        "c": 2569,
-        "e": 205
+        "f": 3381,
+        "c": 2458,
+        "e": 196
       },
       "JOAQUINA": {
         "f": 1844,
@@ -8428,9 +8428,9 @@ export const storesSeries = [
     "data": "2026-07-28",
     "lojas": {
       "DOMINOS": {
-        "f": 5354,
-        "c": 3904,
-        "e": 317
+        "f": 5054,
+        "c": 3690,
+        "e": 301
       },
       "JOAQUINA": {
         "f": 1880,
@@ -8452,10 +8452,15 @@ export const storesSeries = [
   {
     "data": "2026-07-29",
     "lojas": {
+      "ARTIGIANO - ANNA": {
+        "f": 111,
+        "c": 51.28,
+        "e": 13
+      },
       "DOMINOS": {
-        "f": 4706,
-        "c": 3477,
-        "e": 307
+        "f": 4973,
+        "c": 3607,
+        "e": 320
       },
       "JOAQUINA": {
         "f": 1859,
@@ -8477,10 +8482,15 @@ export const storesSeries = [
   {
     "data": "2026-07-30",
     "lojas": {
+      "ARTIGIANO - ANNA": {
+        "f": 111,
+        "c": 51.28,
+        "e": 8
+      },
       "DOMINOS": {
-        "f": 5191,
-        "c": 3767,
-        "e": 307
+        "f": 4811,
+        "c": 3477,
+        "e": 277
       },
       "JOAQUINA": {
         "f": 1911,
@@ -8502,9 +8512,129 @@ export const storesSeries = [
   {
     "data": "2026-07-31",
     "lojas": {
+      "ARTIGIANO - ANNA": {
+        "f": 111,
+        "c": 51.28,
+        "e": 23
+      },
+      "DOMINOS": {
+        "f": 7211,
+        "c": 5475,
+        "e": 514
+      },
+      "JOAQUINA": {
+        "f": 1937,
+        "c": 1076.68,
+        "e": 128
+      },
+      "MITSUBA": {
+        "f": 300,
+        "c": 190,
+        "e": 10
+      },
+      "RJCC": {
+        "f": 425.34,
+        "c": 256.4,
+        "e": 0
+      }
+    }
+  },
+  {
+    "data": "2026-08-01",
+    "lojas": {
+      "ARTIGIANO - ANNA": {
+        "f": 111,
+        "c": 51.28,
+        "e": 11
+      },
+      "DOMINOS": {
+        "f": 6987,
+        "c": 5187,
+        "e": 441
+      },
+      "JOAQUINA": {
+        "f": 1985,
+        "c": 1092.68,
+        "e": 144
+      },
+      "MITSUBA": {
+        "f": 300,
+        "c": 170,
+        "e": 5
+      },
+      "RJCC": {
+        "f": 425.34,
+        "c": 256.4,
+        "e": 0
+      }
+    }
+  },
+  {
+    "data": "2026-08-02",
+    "lojas": {
+      "ARTIGIANO - ANNA": {
+        "f": 279.67,
+        "c": 128.2,
+        "e": 23
+      },
+      "DOMINOS": {
+        "f": 7626,
+        "c": 5800,
+        "e": 559
+      },
+      "JOAQUINA": {
+        "f": 1946,
+        "c": 1079.68,
+        "e": 131
+      },
+      "MITSUBA": {
+        "f": 300,
+        "c": 170,
+        "e": 5
+      },
+      "RJCC": {
+        "f": 898.34,
+        "c": 461.52,
+        "e": 0
+      }
+    }
+  },
+  {
+    "data": "2026-08-03",
+    "lojas": {
+      "DOMINOS": {
+        "f": 3218,
+        "c": 2239,
+        "e": 158
+      },
+      "JOAQUINA": {
+        "f": 1709,
+        "c": 986.4,
+        "e": 89
+      }
+    }
+  },
+  {
+    "data": "2026-08-04",
+    "lojas": {
+      "DOMINOS": {
+        "f": 5125,
+        "c": 3649,
+        "e": 276
+      },
+      "JOAQUINA": {
+        "f": 1446,
+        "c": 928.12,
+        "e": 82
+      },
       "MITSUBA": {
         "f": 150,
-        "c": 75,
+        "c": 83,
+        "e": 2
+      },
+      "RJCC": {
+        "f": 425.34,
+        "c": 256.4,
         "e": 0
       }
     }
