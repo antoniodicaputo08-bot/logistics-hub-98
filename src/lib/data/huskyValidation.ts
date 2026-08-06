@@ -7,9 +7,9 @@ export const huskyValidation = {
   "lojas": [
     {
       "nome": "ARTIGIANO - ANNA",
-      "planilhaEntregas": 0,
+      "planilhaEntregas": 55,
       "huskyEntregas": 0,
-      "diff": 0,
+      "diff": 55,
       "diffPct": 0,
       "status": "sem_dados"
     },
@@ -23,9 +23,9 @@ export const huskyValidation = {
     },
     {
       "nome": "DOMINOS",
-      "planilhaEntregas": 614,
+      "planilhaEntregas": 1552,
       "huskyEntregas": 0,
-      "diff": 614,
+      "diff": 1552,
       "diffPct": 0,
       "status": "sem_dados"
     },
@@ -39,17 +39,17 @@ export const huskyValidation = {
     },
     {
       "nome": "JOAQUINA",
-      "planilhaEntregas": 228,
+      "planilhaEntregas": 500,
       "huskyEntregas": 356,
-      "diff": -128,
-      "diffPct": -36,
+      "diff": 144,
+      "diffPct": 40.4,
       "status": "divergente"
     },
     {
       "nome": "MITSUBA",
-      "planilhaEntregas": 9,
+      "planilhaEntregas": 24,
       "huskyEntregas": 0,
-      "diff": 9,
+      "diff": 24,
       "diffPct": 0,
       "status": "sem_dados"
     },
