@@ -21,13 +21,13 @@ export const stores = [
   },
   {
     "nome": "DOMINOS",
-    "fatura": 2223166,
-    "custo": 1609693,
-    "margem": 613473,
-    "entregas": 144996,
-    "numEntregadores": 151,
+    "fatura": 2227629,
+    "custo": 1612713,
+    "margem": 614916,
+    "entregas": 145188,
+    "numEntregadores": 152,
     "estado": "RJ",
-    "registros": 144996
+    "registros": 145188
   },
   {
     "nome": "FERRO E FARINHA",
@@ -41,29 +41,29 @@ export const stores = [
   },
   {
     "nome": "JOAQUINA",
-    "fatura": 773179.22,
-    "custo": 393300.53,
-    "margem": 379878.69,
-    "entregas": 54891,
+    "fatura": 774951.22,
+    "custo": 394307.93,
+    "margem": 380643.29,
+    "entregas": 55001,
     "numEntregadores": 60,
     "estado": "RJ",
-    "registros": 54891
+    "registros": 55001
   },
   {
     "nome": "MITSUBA",
-    "fatura": 12300,
-    "custo": 7058,
-    "margem": 5242,
-    "entregas": 227,
+    "fatura": 12450,
+    "custo": 7149,
+    "margem": 5301,
+    "entregas": 231,
     "numEntregadores": 9,
     "estado": "RJ",
-    "registros": 227
+    "registros": 231
   },
   {
     "nome": "RJCC",
-    "fatura": 54826.74,
-    "custo": 31562.84,
-    "margem": 23263.9,
+    "fatura": 55252.08,
+    "custo": 31819.24,
+    "margem": 23432.84,
     "entregas": 43,
     "numEntregadores": 20,
     "estado": "RJ",
