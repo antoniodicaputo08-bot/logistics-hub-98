@@ -3018,9 +3018,51 @@ export const dailySeries = [
   },
   {
     "data": "2026-08-05",
-    "entregas": 306,
-    "custo": 4374.8,
-    "fatura": 6810.34,
-    "margem": 2435.54
+    "entregas": 313,
+    "custo": 4426.08,
+    "fatura": 6921.34,
+    "margem": 2495.26
+  },
+  {
+    "data": "2026-08-06",
+    "entregas": 355,
+    "custo": 4550.36,
+    "fatura": 6941.34,
+    "margem": 2390.98
+  },
+  {
+    "data": "2026-08-07",
+    "entregas": 745,
+    "custo": 7623.08,
+    "fatura": 10685.34,
+    "margem": 3062.26
+  },
+  {
+    "data": "2026-08-08",
+    "entregas": 621,
+    "custo": 7008.08,
+    "fatura": 10295.34,
+    "margem": 3287.26
+  },
+  {
+    "data": "2026-08-09",
+    "entregas": 661,
+    "custo": 8319.2,
+    "fatura": 11600.01,
+    "margem": 3280.81
+  },
+  {
+    "data": "2026-08-10",
+    "entregas": 320,
+    "custo": 3455.4,
+    "fatura": 5324,
+    "margem": 1868.6
+  },
+  {
+    "data": "2026-08-11",
+    "entregas": 0,
+    "custo": 75,
+    "fatura": 150,
+    "margem": 75
   }
 ];
