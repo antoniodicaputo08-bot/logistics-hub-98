@@ -22,5 +22,10 @@ export { stores } from "./data/stores";
 export { dailySeries } from "./data/daily";
 export { entregadores } from "./data/entregadores";
 export { storesSeries } from "./data/storesSeries";
-export type { StoreDay } from "./data/storesSeries";
+
+/** Um dia da série por loja: { data, lojas: { NOME: { f: fatura, c: custo, e: entregas } } } */
+export interface StoreDay {
+  data: string;
+  lojas: Record<string, { f: number; c: number; e: number }>;
+}
 export { huskyValidation } from "./data/huskyValidation";

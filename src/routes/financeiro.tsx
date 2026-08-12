@@ -27,15 +27,15 @@ for (const d of dailySeries) {
   mo.custo += d.custo; mo.fatura += d.fatura; mo.margem += d.margem;
 }
 const monthlyData = Array.from(monthlyMap.values());
-const margemPct = (totals.margem / totals.totalFatura) * 100;
+const margemPct = (totals.margem / totals.fatura) * 100;
 
 function FinanceiroPage() {
   return (
     <div className="p-6 lg:p-8 space-y-6">
       <div><h1 className="font-display text-2xl font-semibold text-foreground">Financeiro</h1><p className="text-sm text-muted-foreground">Custo, faturamento e margem acumulados no período</p></div>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-        <Card className="border-border/60 shadow-sm"><CardContent className="p-5"><div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary"><Wallet className="h-5 w-5" /></div><p className="mt-4 text-xs uppercase tracking-wider text-muted-foreground">Faturamento Total</p><p className="mt-1 font-display text-3xl font-semibold text-foreground">{fmt(totals.totalFatura)}</p></CardContent></Card>
-        <Card className="border-border/60 shadow-sm"><CardContent className="p-5"><div className="flex h-10 w-10 items-center justify-center rounded-lg bg-destructive/10 text-destructive"><TrendingDown className="h-5 w-5" /></div><p className="mt-4 text-xs uppercase tracking-wider text-muted-foreground">Custo Total</p><p className="mt-1 font-display text-3xl font-semibold text-foreground">{fmt(totals.totalCusto)}</p></CardContent></Card>
+        <Card className="border-border/60 shadow-sm"><CardContent className="p-5"><div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary"><Wallet className="h-5 w-5" /></div><p className="mt-4 text-xs uppercase tracking-wider text-muted-foreground">Faturamento Total</p><p className="mt-1 font-display text-3xl font-semibold text-foreground">{fmt(totals.fatura)}</p></CardContent></Card>
+        <Card className="border-border/60 shadow-sm"><CardContent className="p-5"><div className="flex h-10 w-10 items-center justify-center rounded-lg bg-destructive/10 text-destructive"><TrendingDown className="h-5 w-5" /></div><p className="mt-4 text-xs uppercase tracking-wider text-muted-foreground">Custo Total</p><p className="mt-1 font-display text-3xl font-semibold text-foreground">{fmt(totals.custo)}</p></CardContent></Card>
         <Card className="border-border/60 shadow-sm"><CardContent className="p-5"><div className="flex h-10 w-10 items-center justify-center rounded-lg bg-success/10 text-success"><TrendingUp className="h-5 w-5" /></div><p className="mt-4 text-xs uppercase tracking-wider text-muted-foreground">Margem</p><p className="mt-1 font-display text-3xl font-semibold text-foreground">{fmt(totals.margem)}</p><p className="mt-1 text-xs text-muted-foreground">{margemPct.toFixed(1)}% do faturamento</p></CardContent></Card>
       </div>
       <Card className="border-border/60 shadow-sm">
