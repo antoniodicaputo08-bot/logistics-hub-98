@@ -10,11 +10,17 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as PedidosRouteImport } from './routes/pedidos'
+import { Route as ColetasRouteImport } from './routes/coletas'
 import { Route as LojasRouteImport } from './routes/lojas'
 import { Route as FinanceiroRouteImport } from './routes/financeiro'
 import { Route as EntregadoresRouteImport } from './routes/entregadores'
 import { Route as IndexRouteImport } from './routes/index'
 
+const ColetasRoute = ColetasRouteImport.update({
+  id: '/coletas',
+  path: '/coletas',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PedidosRoute = PedidosRouteImport.update({
   id: '/pedidos',
   path: '/pedidos',
@@ -47,6 +53,7 @@ export interface FileRoutesByFullPath {
   '/financeiro': typeof FinanceiroRoute
   '/lojas': typeof LojasRoute
   '/pedidos': typeof PedidosRoute
+  '/coletas': typeof ColetasRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -54,6 +61,7 @@ export interface FileRoutesByTo {
   '/financeiro': typeof FinanceiroRoute
   '/lojas': typeof LojasRoute
   '/pedidos': typeof PedidosRoute
+  '/coletas': typeof ColetasRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -62,12 +70,13 @@ export interface FileRoutesById {
   '/financeiro': typeof FinanceiroRoute
   '/lojas': typeof LojasRoute
   '/pedidos': typeof PedidosRoute
+  '/coletas': typeof ColetasRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/entregadores' | '/financeiro' | '/lojas' | '/pedidos'
+  fullPaths: '/' | '/entregadores' | '/financeiro' | '/lojas' | '/pedidos' | '/coletas'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/entregadores' | '/financeiro' | '/lojas' | '/pedidos'
+  to: '/' | '/entregadores' | '/financeiro' | '/lojas' | '/pedidos' | '/coletas'
   id: '__root__' | '/' | '/entregadores' | '/financeiro' | '/lojas' | '/pedidos'
   fileRoutesById: FileRoutesById
 }
@@ -77,10 +86,18 @@ export interface RootRouteChildren {
   FinanceiroRoute: typeof FinanceiroRoute
   LojasRoute: typeof LojasRoute
   PedidosRoute: typeof PedidosRoute
+  ColetasRoute: typeof ColetasRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/coletas': {
+      id: '/coletas'
+      path: '/coletas'
+      fullPath: '/coletas'
+      preLoaderRoute: typeof ColetasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/pedidos': {
       id: '/pedidos'
       path: '/pedidos'
@@ -125,6 +142,7 @@ const rootRouteChildren: RootRouteChildren = {
   FinanceiroRoute: FinanceiroRoute,
   LojasRoute: LojasRoute,
   PedidosRoute: PedidosRoute,
+  ColetasRoute: ColetasRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
