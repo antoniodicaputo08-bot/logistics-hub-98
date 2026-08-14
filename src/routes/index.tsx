@@ -9,7 +9,7 @@ import {
   LayoutDashboard, ChevronRight, Activity, Calendar, Filter, X,
   AlertTriangle, Clock, ArrowUpRight, ArrowDownRight, UserX, FileDown
 } from "lucide-react";
-import { meta, dailySeries, stores, entregadores, storesSeries, huskyValidation } from "@/lib/productivity-data";
+import { meta, dailySeries, stores, entregadores, storesSeries, entregadoresSeries, huskyValidation } from "@/lib/productivity-data";
 
 export const Route = createFileRoute("/")({ component: Dashboard });
 
@@ -56,7 +56,11 @@ function getWeekStart(dateStr: string): string {
 
 const DATA_MIN = meta.periodoInicio;
 
-const entregadoresBase = entregadores.map(e => ({
+// entregadoresSeries só tem granularidade diária a partir de 16/03/2026 (planilha
+// atual); dias anteriores vêm só do histórico agregado, sem detalhe por motorista.
+const PRIMEIRO_DIA_SERIE_MOTORISTA = entregadoresSeries[0]?.data ?? meta.periodoInicio;
+
+const entregadoresBaseTotal = entregadores.map(e => ({
   ...e,
   custoPct: e.fatura ? (e.custo / e.fatura) * 100 : 0,
   mediaDia: e.entregas / meta.totalDias,
@@ -256,24 +260,62 @@ export default function Dashboard() {
 
   const operacaoSaudavel = displayTotals.totalFatura > 0 && (displayTotals.totalCusto / displayTotals.totalFatura) < CUSTO_ALERTA;
 
-  // motoristas ativos nos últimos 30 dias (têm dados na dailySeries recente via storesSeries — aproximação pelo entregadores)
-  // usamos a lógica: motoristas presentes em storesSeries nos últimos 30 dias vs período anterior 30-60 dias
+  // Produtividade por motorista respeitando o filtro De/Até. entregadoresSeries só
+  // tem granularidade diária a partir de 16/03/2026 — se o filtro cobre o período
+  // completo (ou toca em datas anteriores a isso), cai para o total histórico
+  // (entregadoresBaseTotal) em vez de mostrar zero por falta de detalhe diário.
+  const filtroCobrePeriodoTotal = dataInicio === DATA_MIN && dataFim === meta.periodoFim;
+  const filtroAntesDaSerieDiaria = dataInicio < PRIMEIRO_DIA_SERIE_MOTORISTA;
+
+  const entregadoresBase = useMemo(() => {
+    if (filtroCobrePeriodoTotal || filtroAntesDaSerieDiaria) return entregadoresBaseTotal;
+
+    const acc: Record<string, { fatura: number; custo: number; entregas: number }> = {};
+    for (const day of entregadoresSeries) {
+      if (day.data < dataInicio || day.data > dataFim) continue;
+      for (const [nome, v] of Object.entries(day.motoristas as unknown as Record<string, { f: number; c: number; e: number }>)) {
+        if (!acc[nome]) acc[nome] = { fatura: 0, custo: 0, entregas: 0 };
+        acc[nome].fatura   += v.f;
+        acc[nome].custo    += v.c;
+        acc[nome].entregas += v.e;
+      }
+    }
+    const diasNoPeriodo = Math.max(1, diasFiltrados);
+    return entregadoresBaseTotal
+      .map(e => {
+        const a = acc[e.nome];
+        if (!a) return null;
+        const fatura = Math.round(a.fatura * 100) / 100;
+        const custo = Math.round(a.custo * 100) / 100;
+        return {
+          ...e,
+          fatura, custo, entregas: a.entregas,
+          custoPct: fatura ? (custo / fatura) * 100 : 0,
+          mediaDia: a.entregas / diasNoPeriodo,
+          margemVal: fatura - custo,
+        };
+      })
+      .filter((e): e is NonNullable<typeof e> => e !== null)
+      .sort((a, b) => b.entregas - a.entregas);
+  }, [dataInicio, dataFim, filtroCobrePeriodoTotal, filtroAntesDaSerieDiaria, diasFiltrados]);
+
+  // Inatividade é sobre o histórico completo do motorista, não sobre o filtro de
+  // data visível — por isso usa entregadoresBaseTotal, não a versão filtrada.
+  // proxy: motorista tem entregas registradas mas fatura=0 no acumulado total.
   const motoristasInativos = useMemo(() => {
-    // aproximação: motoristas que trabalharam apenas em lojas com dados no período 30-60 dias atrás
-    // mas não aparecem nos últimos 30 dias — inferido pelo período de dados disponível
-    // como não temos data por motorista, usamos custo=0 como proxy de inatividade
-    return entregadoresBase.filter(e => e.fatura === 0 && e.entregas > 0);
+    return entregadoresBaseTotal.filter(e => e.fatura === 0 && e.entregas > 0);
   }, []);
 
   const filteredEntregadores = useMemo(() => {
     let list = entregadoresBase;
     if (mostrarInativos) {
-      list = list.filter(e => e.fatura === 0 && e.entregas > 0);
+      const inativosNomes = new Set(motoristasInativos.map(e => e.nome));
+      list = list.filter(e => inativosNomes.has(e.nome));
     }
     if (motoristaLoja !== "Todas") list = list.filter(e => e.lojas.includes(motoristaLoja));
     if (motoristaBusca) list = list.filter(e => e.nome.toLowerCase().includes(motoristaBusca.toLowerCase()));
     return list;
-  }, [motoristaBusca, motoristaLoja, mostrarInativos]);
+  }, [entregadoresBase, motoristasInativos, motoristaBusca, motoristaLoja, mostrarInativos]);
 
   const periodoLabel = `${dataInicio.split("-").reverse().join("/")} a ${dataFim.split("-").reverse().join("/")}`;
   const filtrando = dataInicio !== DATA_MIN || dataFim !== meta.periodoFim || estadoFiltro !== "Todos";
@@ -671,9 +713,15 @@ export default function Dashboard() {
 
           {/* TABELA MOTORISTAS — com ranking + meta + inativos */}
           <div className="bg-[#161b22] border border-[#30363d] rounded-xl overflow-hidden">
+            {filtrando && filtroAntesDaSerieDiaria && (
+              <div className="mx-5 mt-4 rounded-lg px-4 py-2.5 flex items-center gap-3 text-xs bg-amber-500/10 border border-amber-500/30 text-amber-400">
+                <AlertTriangle className="h-4 w-4 shrink-0" />
+                Detalhe diário por motorista só existe a partir de {PRIMEIRO_DIA_SERIE_MOTORISTA.split("-").reverse().join("/")}. Para datas anteriores, a tabela mostra o total histórico do motorista, não o valor do período filtrado.
+              </div>
+            )}
             <div className="px-5 py-4 border-b border-[#30363d] flex flex-wrap items-center justify-between gap-3">
               <div>
-                <SectionTitle title="Produtividade dos Motoristas" sub={`${filteredEntregadores.length} motoristas`} />
+                <SectionTitle title="Produtividade dos Motoristas" sub={`${filteredEntregadores.length} motoristas${filtrando && !filtroAntesDaSerieDiaria ? ` · ${periodoLabel}` : ""}`} />
               </div>
               <div className="flex items-center gap-2 flex-wrap">
                 {motoristasInativos.length > 0 && (
