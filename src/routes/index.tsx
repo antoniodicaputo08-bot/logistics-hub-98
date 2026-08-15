@@ -307,11 +307,10 @@ export default function Dashboard() {
   }, []);
 
   const filteredEntregadores = useMemo(() => {
-    let list = entregadoresBase;
-    if (mostrarInativos) {
-      const inativosNomes = new Set(motoristasInativos.map(e => e.nome));
-      list = list.filter(e => inativosNomes.has(e.nome));
-    }
+    // Inatividade é sobre o histórico completo (ver motoristasInativos acima),
+    // então essa visão ignora o filtro de data e parte de entregadoresBaseTotal —
+    // senão um motorista inativo no período filtrado simplesmente some da lista.
+    let list = mostrarInativos ? motoristasInativos : entregadoresBase;
     if (motoristaLoja !== "Todas") list = list.filter(e => e.lojas.includes(motoristaLoja));
     if (motoristaBusca) list = list.filter(e => e.nome.toLowerCase().includes(motoristaBusca.toLowerCase()));
     return list;
@@ -773,8 +772,17 @@ export default function Dashboard() {
                   </tr>
                 </thead>
                 <tbody>
+                  {filteredEntregadores.length === 0 && (
+                    <tr>
+                      <td colSpan={11} className="px-4 py-8 text-center text-xs text-[#8b949e]">
+                        Nenhum motorista com dados no período filtrado — pode ser um dia sem sincronização ainda, não necessariamente ausência de entregas.
+                      </td>
+                    </tr>
+                  )}
                   {filteredEntregadores.map((e, i) => {
-                    const maxE = entregadoresBase[0].entregas;
+                    // maior valor do proprio conjunto exibido (nao entregadoresBase, que
+                    // pode estar vazio ou ser outro conjunto quando "mostrar inativos" ativo)
+                    const maxE = filteredEntregadores[0]?.entregas || 1;
                     const prodPct = Math.round((e.entregas / maxE) * 100);
                     const barColor = e.custoPct < 70 ? "#22c55e" : e.custoPct < 85 ? "#f97316" : "#ef4444";
                     const abaixoMeta = e.mediaDia < META_ENTREGAS_DIA && e.entregas > 0;
