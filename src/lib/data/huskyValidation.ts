@@ -1,15 +1,15 @@
 export const huskyValidation = {
-  "lastSync": "2026-08-01T04:22:50.371Z",
+  "lastSync": "2026-08-15T02:20:19.418Z",
   "periodo": {
-    "inicio": "2026-07-29",
-    "fim": "2026-08-01"
+    "inicio": "2026-08-12",
+    "fim": "2026-08-15"
   },
   "lojas": [
     {
       "nome": "ARTIGIANO - ANNA",
-      "planilhaEntregas": 55,
+      "planilhaEntregas": 7,
       "huskyEntregas": 0,
-      "diff": 55,
+      "diff": 7,
       "diffPct": 0,
       "status": "sem_dados"
     },
@@ -23,9 +23,9 @@ export const huskyValidation = {
     },
     {
       "nome": "DOMINOS",
-      "planilhaEntregas": 1552,
+      "planilhaEntregas": 466,
       "huskyEntregas": 0,
-      "diff": 1552,
+      "diff": 466,
       "diffPct": 0,
       "status": "sem_dados"
     },
@@ -39,17 +39,17 @@ export const huskyValidation = {
     },
     {
       "nome": "JOAQUINA",
-      "planilhaEntregas": 500,
-      "huskyEntregas": 356,
-      "diff": 144,
-      "diffPct": 40.4,
+      "planilhaEntregas": 182,
+      "huskyEntregas": 657,
+      "diff": -475,
+      "diffPct": -72.3,
       "status": "divergente"
     },
     {
       "nome": "MITSUBA",
-      "planilhaEntregas": 24,
+      "planilhaEntregas": 4,
       "huskyEntregas": 0,
-      "diff": 24,
+      "diff": 4,
       "diffPct": 0,
       "status": "sem_dados"
     },
