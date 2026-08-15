@@ -1,120 +1,228 @@
 // Gerado por analise-rotas.js — não editar à mão.
 // Atualizado diariamente às 8h pelo rotas-diario.js.
 export const coletas = {
-  "gerado": "2026-08-15T08:00:22.674Z",
+  "gerado": "2026-08-15T14:34:13.736Z",
   "resumo": {
-    "coletas": 917,
-    "motoristas": 68,
-    "medianaColetas": 9,
-    "sobrecarregados": 9,
-    "ociosos": 13,
-    "dispersos": 8,
-    "semCadastro": 14
+    "coletas": 2564,
+    "motoristas": 195,
+    "medianaColetas": 5,
+    "sobrecarregados": 58,
+    "ociosos": 73,
+    "dispersos": 19,
+    "semCadastro": 87
   },
   "cobertura": {
-    "veiculo": 718,
-    "cep": 916,
-    "horario": 428,
-    "corte": 791,
-    "total": 917
+    "veiculo": 1084,
+    "cep": 2532,
+    "horario": 0,
+    "corte": 147,
+    "total": 2564
   },
   "sobrecarregados": [
-    {
-      "nome": "MRJG498-WELLINGTON DA SILVA DE OLIVEIRA",
-      "codigo": "MRJG498",
-      "veiculo": "MOTO",
-      "coletas": 90,
-      "vezesMediana": 10,
-      "regioes": [
-        "CENTRO E NORTE"
-      ]
-    },
-    {
-      "nome": "MRJG493-MANOEL DAVID DE ALMEIDA - MOTO FLEX",
-      "codigo": "MRJG493",
-      "veiculo": "MOTO",
-      "coletas": 58,
-      "vezesMediana": 6.4,
-      "regioes": [
-        "CENTRO E NORTE"
-      ]
-    },
-    {
-      "nome": "MRJG897 - GILBERTO CARLOS DE ASSIS SILVA JUNIOR(MOTO)",
-      "codigo": "MRJG897",
-      "veiculo": "MOTO",
-      "coletas": 40,
-      "vezesMediana": 4.4,
-      "regioes": [
-        "CENTRO E NORTE"
-      ]
-    },
-    {
-      "nome": "MRJG1470 - EDSON JÚNIOR",
-      "codigo": "MRJG1470",
-      "veiculo": "MOTO",
-      "coletas": 36,
-      "vezesMediana": 4,
-      "regioes": [
-        "CENTRO E NORTE"
-      ]
-    },
-    {
-      "nome": "MRJG1694-VICTOR RODRIGUES",
-      "codigo": "MRJG1694",
-      "veiculo": null,
-      "coletas": 34,
-      "vezesMediana": 3.8,
-      "regioes": [
-        "CENTRO E NORTE"
-      ]
-    },
-    {
-      "nome": "MRJG1657-JULIANA PEREIRA MOTO",
-      "codigo": "MRJG1657",
-      "veiculo": null,
-      "coletas": 31,
-      "vezesMediana": 3.4,
-      "regioes": [
-        "NITEROI"
-      ]
-    },
     {
       "nome": "MRJG1013- ENDERSON NUNES DA SILVA",
       "codigo": "MRJG1013",
       "veiculo": "MOTO",
-      "coletas": 30,
-      "vezesMediana": 3.3,
+      "coletas": 149,
+      "vezesMediana": 29.8,
       "regioes": [
         "CENTRO E NORTE"
       ]
     },
     {
-      "nome": "MRJG1383-MARCIO HENRIQUE LIMA",
-      "codigo": "MRJG1383",
-      "veiculo": "KOMBI",
-      "coletas": 29,
-      "vezesMediana": 3.2,
-      "regioes": [
-        "CENTRO E NORTE"
-      ]
-    },
-    {
-      "nome": "MRJG1458-GUILHERME MOTO",
-      "codigo": "MRJG1458",
+      "nome": "MRJG690 - IGOR CARVALHO NOGUEIRA",
+      "codigo": "MRJG690",
       "veiculo": "MOTO",
-      "coletas": 28,
-      "vezesMediana": 3.1,
+      "coletas": 104,
+      "vezesMediana": 20.8,
+      "regioes": [
+        "CENTRO E NORTE"
+      ]
+    },
+    {
+      "nome": "MRJG1042 - ROMULO ALVES MILLIOLE DE CARVALHO",
+      "codigo": "MRJG1042",
+      "veiculo": "MOTO",
+      "coletas": 96,
+      "vezesMediana": 19.2,
+      "regioes": [
+        "OSTE E BARRA"
+      ]
+    },
+    {
+      "nome": "MRJG1474- JEFFERSON SILVA DOS SANTOS",
+      "codigo": "MRJG1474",
+      "veiculo": "CARRO",
+      "coletas": 88,
+      "vezesMediana": 17.6,
+      "regioes": [
+        "CENTRO E NORTE"
+      ]
+    },
+    {
+      "nome": "MRJG2042 -RENAN RILLYE FRANCISCO BENTO",
+      "codigo": "MRJG2042",
+      "veiculo": null,
+      "coletas": 78,
+      "vezesMediana": 15.6,
+      "regioes": [
+        "OSTE E BARRA"
+      ]
+    },
+    {
+      "nome": "MRJG1902- CANDIDO MANOEL RIBEIRO TAVARES",
+      "codigo": "MRJG1902",
+      "veiculo": null,
+      "coletas": 75,
+      "vezesMediana": 15,
+      "regioes": [
+        "ZONA SUL"
+      ]
+    },
+    {
+      "nome": "MRJG1591- CINTHIA PARREIRA DA SILVA",
+      "codigo": "MRJG1591",
+      "veiculo": "MOTO",
+      "coletas": 58,
+      "vezesMediana": 11.6,
+      "regioes": [
+        "OSTE E BARRA"
+      ]
+    },
+    {
+      "nome": "MRJG941 - ELISEU DA SILVA FRAGOSO",
+      "codigo": "MRJG941",
+      "veiculo": "MOTO",
+      "coletas": 52,
+      "vezesMediana": 10.4,
+      "regioes": [
+        "OSTE E BARRA"
+      ]
+    },
+    {
+      "nome": "MRJG1867-PATRICK HENRIQUE SOUZA PAULA",
+      "codigo": "MRJG1867",
+      "veiculo": null,
+      "coletas": 50,
+      "vezesMediana": 10,
       "regioes": [
         "NITEROI"
+      ]
+    },
+    {
+      "nome": "MRJG1172 - CARLOS ANTONIO CHAGAS DA SILVA",
+      "codigo": "MRJG1172",
+      "veiculo": "MOTO",
+      "coletas": 47,
+      "vezesMediana": 9.4,
+      "regioes": [
+        "CENTRO E NORTE"
+      ]
+    },
+    {
+      "nome": "MRJG1091 - PATRICK CORREA NASCIMENTO DE ARAUJO",
+      "codigo": "MRJG1091",
+      "veiculo": "MOTO",
+      "coletas": 45,
+      "vezesMediana": 9,
+      "regioes": [
+        "CENTRO E NORTE"
+      ]
+    },
+    {
+      "nome": "MRJG 2108-JULIO NETO ESPINDOLA DA SILVA",
+      "codigo": "MRJG2108",
+      "veiculo": null,
+      "coletas": 45,
+      "vezesMediana": 9,
+      "regioes": [
+        "NITEROI"
+      ]
+    },
+    {
+      "nome": "MRJG2032-MARLON CHAVES DE SOUZA",
+      "codigo": "MRJG2032",
+      "veiculo": null,
+      "coletas": 43,
+      "vezesMediana": 8.6,
+      "regioes": [
+        "CENTRO E NORTE"
+      ]
+    },
+    {
+      "nome": "MRJG2315 -ANDERSON DA SILVA GUILHERME - TC",
+      "codigo": "MRJG2315",
+      "veiculo": null,
+      "coletas": 42,
+      "vezesMediana": 8.4,
+      "regioes": [
+        "OSTE E BARRA"
+      ]
+    },
+    {
+      "nome": "MRJG2395 - HIAGO PIRES DE OLIVEIRA",
+      "codigo": "MRJG2395",
+      "veiculo": null,
+      "coletas": 41,
+      "vezesMediana": 8.2,
+      "regioes": [
+        "ZONA SUL"
       ]
     }
   ],
   "dispersos": [
     {
-      "codigo": "MRJG1141",
-      "nome": "MRJG 1141- TALITA FERNANDES",
-      "veiculo": "CARRO",
+      "codigo": "MRJG968",
+      "nome": "MRJG968 - DANIEL DOS SANTOS",
+      "veiculo": "MOTO",
+      "coletas": 12,
+      "cepsDistintos": 9,
+      "coletasPorCep": 1.3,
+      "indice": 0.8,
+      "regioes": [
+        "CENTRO E NORTE"
+      ]
+    },
+    {
+      "codigo": "MRJG1930",
+      "nome": "MRJG1930- WESLEI DOS SANTOS",
+      "veiculo": null,
+      "coletas": 17,
+      "cepsDistintos": 13,
+      "coletasPorCep": 1.3,
+      "indice": 0.8,
+      "regioes": [
+        "BAIXADA"
+      ]
+    },
+    {
+      "codigo": "MRJG1931",
+      "nome": "MRJG1931- RAFAEL FERNANDES DE BRITTO",
+      "veiculo": null,
+      "coletas": 10,
+      "cepsDistintos": 7,
+      "coletasPorCep": 1.4,
+      "indice": 0.7,
+      "regioes": [
+        "CENTRO E NORTE"
+      ]
+    },
+    {
+      "codigo": "MRJG-2436- PABLO HENRIQUE CEZAR DE OLIVEIRA",
+      "nome": "MRJG-2436- PABLO HENRIQUE CEZAR DE OLIVEIRA",
+      "veiculo": null,
+      "coletas": 19,
+      "cepsDistintos": 14,
+      "coletasPorCep": 1.4,
+      "indice": 0.7,
+      "regioes": [
+        "NITEROI"
+      ]
+    },
+    {
+      "codigo": "MRJG1461",
+      "nome": "MRJG1461- HUGO CABRAL IAT",
+      "veiculo": "MOTO",
       "coletas": 10,
       "cepsDistintos": 7,
       "coletasPorCep": 1.4,
@@ -124,11 +232,35 @@ export const coletas = {
       ]
     },
     {
-      "codigo": "MRJG990",
-      "nome": "MRJG990 - IZAQUIEL FABIO NUNES DE MORAES",
-      "veiculo": "MOTO",
+      "codigo": "MRJG2108",
+      "nome": "MRJG 2108-JULIO NETO ESPINDOLA DA SILVA",
+      "veiculo": null,
+      "coletas": 45,
+      "cepsDistintos": 28,
+      "coletasPorCep": 1.6,
+      "indice": 0.6,
+      "regioes": [
+        "NITEROI"
+      ]
+    },
+    {
+      "codigo": "MRJG1475",
+      "nome": "MRJG1475- LEANDRO BARROS DA CONCEICAO",
+      "veiculo": "CARRO",
       "coletas": 14,
-      "cepsDistintos": 9,
+      "cepsDistintos": 8,
+      "coletasPorCep": 1.8,
+      "indice": 0.6,
+      "regioes": [
+        "NITEROI"
+      ]
+    },
+    {
+      "codigo": "MRJG2170",
+      "nome": "MRJG2170-ALEX RODRIGUES ALMEIDA",
+      "veiculo": null,
+      "coletas": 11,
+      "cepsDistintos": 7,
       "coletasPorCep": 1.6,
       "indice": 0.6,
       "regioes": [
@@ -136,8 +268,44 @@ export const coletas = {
       ]
     },
     {
-      "codigo": "MRJG1728",
-      "nome": "MRJG1728-JONATHAN FONSECA",
+      "codigo": "2214- JAIR",
+      "nome": "2214- JAIR",
+      "veiculo": null,
+      "coletas": 15,
+      "cepsDistintos": 9,
+      "coletasPorCep": 1.7,
+      "indice": 0.6,
+      "regioes": [
+        "BAIXADA"
+      ]
+    },
+    {
+      "codigo": "MRJG886",
+      "nome": "MRJG886 - RODRIGO LOURENÇO ANTUNES",
+      "veiculo": "MOTO",
+      "coletas": 14,
+      "cepsDistintos": 7,
+      "coletasPorCep": 2,
+      "indice": 0.5,
+      "regioes": [
+        "ZONA SUL"
+      ]
+    },
+    {
+      "codigo": "MRJG2116",
+      "nome": "MRJG2116 - PAULO SERGIO CONCEICAO DE MELO",
+      "veiculo": null,
+      "coletas": 28,
+      "cepsDistintos": 14,
+      "coletasPorCep": 2,
+      "indice": 0.5,
+      "regioes": [
+        "CENTRO E NORTE"
+      ]
+    },
+    {
+      "codigo": "MRJG1401",
+      "nome": "MRJG1401 - DOUGLAS LUANDERSON XAVIER DA COSTA",
       "veiculo": null,
       "coletas": 11,
       "cepsDistintos": 6,
@@ -146,213 +314,221 @@ export const coletas = {
       "regioes": [
         "CENTRO E NORTE"
       ]
-    },
-    {
-      "codigo": "MRJG1172",
-      "nome": "MRJG1172 - CARLOS ANTONIO CHAGAS DA SILVA",
-      "veiculo": "MOTO",
-      "coletas": 17,
-      "cepsDistintos": 8,
-      "coletasPorCep": 2.1,
-      "indice": 0.5,
-      "regioes": [
-        "CENTRO E NORTE"
-      ]
-    },
-    {
-      "codigo": "MRJG690",
-      "nome": "MRJG690 - IGOR CARVALHO NOGUEIRA",
-      "veiculo": "MOTO",
-      "coletas": 26,
-      "cepsDistintos": 13,
-      "coletasPorCep": 2,
-      "indice": 0.5,
-      "regioes": [
-        "CENTRO E NORTE"
-      ]
-    },
-    {
-      "codigo": "MRJG877",
-      "nome": "MRJG877-JOÃO VITOR MOREIRA MOTO",
-      "veiculo": "MOTO",
-      "coletas": 19,
-      "cepsDistintos": 9,
-      "coletasPorCep": 2.1,
-      "indice": 0.5,
-      "regioes": [
-        "NITEROI"
-      ]
-    },
-    {
-      "codigo": "MRJG1095",
-      "nome": "MRJG1095- GABRIEL FERREIRA MATTOS",
-      "veiculo": "CARRO",
-      "coletas": 11,
-      "cepsDistintos": 5,
-      "coletasPorCep": 2.2,
-      "indice": 0.5,
-      "regioes": [
-        "BAIXADA"
-      ]
-    },
-    {
-      "codigo": "MRJG1589",
-      "nome": "MRJG1589-ANTONIO JOSE MIRANDA MATTOS",
-      "veiculo": "MOTO",
-      "coletas": 11,
-      "cepsDistintos": 5,
-      "coletasPorCep": 2.2,
-      "indice": 0.5,
-      "regioes": [
-        "BAIXADA"
-      ]
     }
   ],
   "semCadastro": [
     {
-      "nome": "MRJG1694-VICTOR RODRIGUES",
-      "codigo": "MRJG1694",
-      "coletas": 34,
+      "nome": "MRJG2042 -RENAN RILLYE FRANCISCO BENTO",
+      "codigo": "MRJG2042",
+      "coletas": 78,
       "regioes": [
-        "CENTRO E NORTE"
+        "OSTE E BARRA"
       ]
     },
     {
-      "nome": "MRJG1657-JULIANA PEREIRA MOTO",
-      "codigo": "MRJG1657",
-      "coletas": 31,
+      "nome": "MRJG1902- CANDIDO MANOEL RIBEIRO TAVARES",
+      "codigo": "MRJG1902",
+      "coletas": 75,
+      "regioes": [
+        "ZONA SUL"
+      ]
+    },
+    {
+      "nome": "MRJG1867-PATRICK HENRIQUE SOUZA PAULA",
+      "codigo": "MRJG1867",
+      "coletas": 50,
       "regioes": [
         "NITEROI"
       ]
     },
     {
-      "nome": "MRJG1691-FERNANDO MARTORELLI",
-      "codigo": "MRJG1691",
+      "nome": "MRJG 2108-JULIO NETO ESPINDOLA DA SILVA",
+      "codigo": "MRJG2108",
+      "coletas": 45,
+      "regioes": [
+        "NITEROI"
+      ]
+    },
+    {
+      "nome": "MRJG2032-MARLON CHAVES DE SOUZA",
+      "codigo": "MRJG2032",
+      "coletas": 43,
+      "regioes": [
+        "CENTRO E NORTE"
+      ]
+    },
+    {
+      "nome": "MRJG2315 -ANDERSON DA SILVA GUILHERME - TC",
+      "codigo": "MRJG2315",
+      "coletas": 42,
+      "regioes": [
+        "OSTE E BARRA"
+      ]
+    },
+    {
+      "nome": "MRJG2395 - HIAGO PIRES DE OLIVEIRA",
+      "codigo": "MRJG2395",
+      "coletas": 41,
+      "regioes": [
+        "ZONA SUL"
+      ]
+    },
+    {
+      "nome": "MRJG2260-KAUA GOMES DE ALMEIDA",
+      "codigo": "MRJG2260",
+      "coletas": 37,
+      "regioes": [
+        "CENTRO E NORTE"
+      ]
+    },
+    {
+      "nome": "MRJG1892- ANDERSON OLIVEIRA DE CAMPOS",
+      "codigo": "MRJG1892",
+      "coletas": 36,
+      "regioes": [
+        "CENTRO E NORTE"
+      ]
+    },
+    {
+      "nome": "MRJG2158 - ANTONIO CARLOS SEVERINO",
+      "codigo": "MRJG2158",
+      "coletas": 32,
+      "regioes": [
+        "CENTRO E NORTE"
+      ]
+    },
+    {
+      "nome": "MRJG2215 - ULYSSES CAVALCANTE DA SILVA",
+      "codigo": "MRJG2215",
+      "coletas": 32,
+      "regioes": [
+        "NITEROI"
+      ]
+    },
+    {
+      "nome": "MRJG2164- ZILDETE DOURADO CHAVES",
+      "codigo": "MRJG2164",
+      "coletas": 32,
+      "regioes": [
+        "OSTE E BARRA"
+      ]
+    },
+    {
+      "nome": "MRJG2116 - PAULO SERGIO CONCEICAO DE MELO",
+      "codigo": "MRJG2116",
+      "coletas": 28,
+      "regioes": [
+        "CENTRO E NORTE"
+      ]
+    },
+    {
+      "nome": "MRJG2009- ANDERSON LUIS CONCEIÇÃO DE OLIVEIRA",
+      "codigo": "MRJG2009",
+      "coletas": 25,
+      "regioes": [
+        "ZONA SUL"
+      ]
+    },
+    {
+      "nome": "MRJG1909-VICTOR ALMEIDA DA ROCHA",
+      "codigo": "MRJG1909",
+      "coletas": 25,
+      "regioes": [
+        "CENTRO E NORTE"
+      ]
+    },
+    {
+      "nome": "MRJG2400 - RAISSA CAROLINE DO NASCIMENTO CAMPOS",
+      "codigo": "MRJG2400",
+      "coletas": 23,
+      "regioes": [
+        "NITEROI"
+      ]
+    },
+    {
+      "nome": "MRJG2113 - IURI GUEDES BOMFIM",
+      "codigo": "MRJG2113",
       "coletas": 21,
       "regioes": [
         "CENTRO E NORTE"
       ]
     },
     {
-      "nome": "MRJG1086-DEIVIDY ARAUJO MOTO",
-      "codigo": "MRJG1086",
-      "coletas": 18,
+      "nome": "MRJG1819- MAXSUEL MATEUS DE ASSIZ",
+      "codigo": "MRJG1819",
+      "coletas": 20,
       "regioes": [
-        "NITEROI"
+        "ZONA SUL"
       ]
     },
     {
-      "nome": "MRJG1755-RUAN PINTO",
-      "codigo": "MRJG1755",
-      "coletas": 13,
+      "nome": "MRJG711 - GILSON MARTINS DE ARAUJO",
+      "codigo": "MRJG711",
+      "coletas": 20,
+      "regioes": [
+        "ZONA SUL"
+      ]
+    },
+    {
+      "nome": "MRJG2373 - LAYLSON ANTONIO GUIMARAES OLIVEIRA",
+      "codigo": "MRJG2373",
+      "coletas": 20,
       "regioes": [
         "CENTRO E NORTE"
-      ]
-    },
-    {
-      "nome": "MRJG1728-JONATHAN FONSECA",
-      "codigo": "MRJG1728",
-      "coletas": 11,
-      "regioes": [
-        "CENTRO E NORTE"
-      ]
-    },
-    {
-      "nome": "MRJG 1563 - JOÃO VICTOR BEZZERRA DOS SANTOS",
-      "codigo": "MRJG1563",
-      "coletas": 10,
-      "regioes": [
-        "BAIXADA"
-      ]
-    },
-    {
-      "nome": "MRJG1729-THIAGO CARRO",
-      "codigo": "MRJG1729",
-      "coletas": 8,
-      "regioes": [
-        "NITEROI"
-      ]
-    },
-    {
-      "nome": "MRJG1725 Fabrício Bragança",
-      "codigo": "MRJG1725",
-      "coletas": 5,
-      "regioes": [
-        "CENTRO E NORTE"
-      ]
-    },
-    {
-      "nome": "MRJG1776-CLAUDIO ROBERTO",
-      "codigo": "MRJG1776",
-      "coletas": 4,
-      "regioes": [
-        "CENTRO E NORTE"
-      ]
-    },
-    {
-      "nome": "MRJG1692-VAGNER LUIZ",
-      "codigo": "MRJG1692",
-      "coletas": 2,
-      "regioes": [
-        "CENTRO E NORTE"
-      ]
-    },
-    {
-      "nome": "MRJG1660-JHEAN CARLO BARRETO GALVAO",
-      "codigo": "MRJG1660",
-      "coletas": 2,
-      "regioes": [
-        "BAIXADA"
-      ]
-    },
-    {
-      "nome": "MRJG1737-Pedro Henrique carvalho",
-      "codigo": "MRJG1737",
-      "coletas": 1,
-      "regioes": [
-        "CENTRO E NORTE"
-      ]
-    },
-    {
-      "nome": "MRJG1762-CARLOS HENRIQUE MOTO",
-      "codigo": "MRJG1762",
-      "coletas": 1,
-      "regioes": [
-        "NITEROI"
       ]
     }
   ],
   "regioes": [
     {
       "nome": "CENTRO E NORTE",
-      "coletas": 680,
-      "motoristas": 41,
-      "mediaPorMotorista": 16.6,
+      "coletas": 1060,
+      "motoristas": 73,
+      "mediaPorMotorista": 14.5,
       "veiculos": {
-        "MOTO": 415,
-        "KOMBI": 29,
-        "CARRO": 100,
-        "BONGO": 4
+        "MOTO": 391,
+        "KOMBI": 24,
+        "CARRO": 140,
+        "BONGO": 2
+      }
+    },
+    {
+      "nome": "OSTE E BARRA",
+      "coletas": 590,
+      "motoristas": 25,
+      "mediaPorMotorista": 23.6,
+      "veiculos": {
+        "MOTO": 272,
+        "CARRO": 10
       }
     },
     {
       "nome": "BAIXADA",
-      "coletas": 123,
-      "motoristas": 19,
-      "mediaPorMotorista": 6.5,
+      "coletas": 361,
+      "motoristas": 60,
+      "mediaPorMotorista": 6,
       "veiculos": {
-        "CARRO": 43,
-        "MOTO": 67
+        "CARRO": 57,
+        "MOTO": 102
+      }
+    },
+    {
+      "nome": "ZONA SUL",
+      "coletas": 284,
+      "motoristas": 27,
+      "mediaPorMotorista": 10.5,
+      "veiculos": {
+        "MOTO": 38,
+        "CARRO": 1
       }
     },
     {
       "nome": "NITEROI",
-      "coletas": 114,
-      "motoristas": 8,
-      "mediaPorMotorista": 14.3,
+      "coletas": 269,
+      "motoristas": 16,
+      "mediaPorMotorista": 16.8,
       "veiculos": {
-        "MOTO": 55,
-        "CARRO": 5
+        "CARRO": 20,
+        "MOTO": 27
       }
     }
   ]
