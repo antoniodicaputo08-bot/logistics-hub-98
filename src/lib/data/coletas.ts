@@ -1,22 +1,22 @@
 // Gerado por analise-rotas.js — não editar à mão.
 // Atualizado diariamente às 8h pelo rotas-diario.js.
 export const coletas = {
-  "gerado": "2026-08-17T08:00:23.548Z",
+  "gerado": "2026-08-18T08:00:23.763Z",
   "resumo": {
-    "coletas": 2564,
-    "motoristas": 195,
-    "medianaColetas": 5,
-    "sobrecarregados": 58,
-    "ociosos": 73,
-    "dispersos": 19,
-    "semCadastro": 87
+    "coletas": 2565,
+    "motoristas": 191,
+    "medianaColetas": 6,
+    "sobrecarregados": 47,
+    "ociosos": 68,
+    "dispersos": 20,
+    "semCadastro": 85
   },
   "cobertura": {
-    "veiculo": 1084,
-    "cep": 2532,
-    "horario": 79,
+    "veiculo": 1105,
+    "cep": 2533,
+    "horario": 477,
     "corte": 147,
-    "total": 2564
+    "total": 2565
   },
   "sobrecarregados": [
     {
@@ -24,7 +24,7 @@ export const coletas = {
       "codigo": "MRJG1013",
       "veiculo": "MOTO",
       "coletas": 149,
-      "vezesMediana": 29.8,
+      "vezesMediana": 24.8,
       "regioes": [
         "CENTRO E NORTE"
       ]
@@ -34,7 +34,7 @@ export const coletas = {
       "codigo": "MRJG690",
       "veiculo": "MOTO",
       "coletas": 104,
-      "vezesMediana": 20.8,
+      "vezesMediana": 17.3,
       "regioes": [
         "CENTRO E NORTE"
       ]
@@ -44,7 +44,7 @@ export const coletas = {
       "codigo": "MRJG1042",
       "veiculo": "MOTO",
       "coletas": 96,
-      "vezesMediana": 19.2,
+      "vezesMediana": 16,
       "regioes": [
         "OSTE E BARRA"
       ]
@@ -53,8 +53,8 @@ export const coletas = {
       "nome": "MRJG1474- JEFFERSON SILVA DOS SANTOS",
       "codigo": "MRJG1474",
       "veiculo": "CARRO",
-      "coletas": 88,
-      "vezesMediana": 17.6,
+      "coletas": 89,
+      "vezesMediana": 14.8,
       "regioes": [
         "CENTRO E NORTE"
       ]
@@ -64,7 +64,7 @@ export const coletas = {
       "codigo": "MRJG2042",
       "veiculo": null,
       "coletas": 78,
-      "vezesMediana": 15.6,
+      "vezesMediana": 13,
       "regioes": [
         "OSTE E BARRA"
       ]
@@ -73,8 +73,8 @@ export const coletas = {
       "nome": "MRJG1902- CANDIDO MANOEL RIBEIRO TAVARES",
       "codigo": "MRJG1902",
       "veiculo": null,
-      "coletas": 75,
-      "vezesMediana": 15,
+      "coletas": 76,
+      "vezesMediana": 12.7,
       "regioes": [
         "ZONA SUL"
       ]
@@ -84,7 +84,7 @@ export const coletas = {
       "codigo": "MRJG1591",
       "veiculo": "MOTO",
       "coletas": 58,
-      "vezesMediana": 11.6,
+      "vezesMediana": 9.7,
       "regioes": [
         "OSTE E BARRA"
       ]
@@ -94,7 +94,7 @@ export const coletas = {
       "codigo": "MRJG941",
       "veiculo": "MOTO",
       "coletas": 52,
-      "vezesMediana": 10.4,
+      "vezesMediana": 8.7,
       "regioes": [
         "OSTE E BARRA"
       ]
@@ -104,7 +104,7 @@ export const coletas = {
       "codigo": "MRJG1867",
       "veiculo": null,
       "coletas": 50,
-      "vezesMediana": 10,
+      "vezesMediana": 8.3,
       "regioes": [
         "NITEROI"
       ]
@@ -114,7 +114,7 @@ export const coletas = {
       "codigo": "MRJG1172",
       "veiculo": "MOTO",
       "coletas": 47,
-      "vezesMediana": 9.4,
+      "vezesMediana": 7.8,
       "regioes": [
         "CENTRO E NORTE"
       ]
@@ -124,7 +124,7 @@ export const coletas = {
       "codigo": "MRJG1091",
       "veiculo": "MOTO",
       "coletas": 45,
-      "vezesMediana": 9,
+      "vezesMediana": 7.5,
       "regioes": [
         "CENTRO E NORTE"
       ]
@@ -134,7 +134,7 @@ export const coletas = {
       "codigo": "MRJG2108",
       "veiculo": null,
       "coletas": 45,
-      "vezesMediana": 9,
+      "vezesMediana": 7.5,
       "regioes": [
         "NITEROI"
       ]
@@ -144,7 +144,7 @@ export const coletas = {
       "codigo": "MRJG2032",
       "veiculo": null,
       "coletas": 43,
-      "vezesMediana": 8.6,
+      "vezesMediana": 7.2,
       "regioes": [
         "CENTRO E NORTE"
       ]
@@ -154,19 +154,19 @@ export const coletas = {
       "codigo": "MRJG2315",
       "veiculo": null,
       "coletas": 42,
-      "vezesMediana": 8.4,
+      "vezesMediana": 7,
       "regioes": [
         "OSTE E BARRA"
       ]
     },
     {
-      "nome": "MRJG2395 - HIAGO PIRES DE OLIVEIRA",
-      "codigo": "MRJG2395",
+      "nome": "MRJG2260-KAUA GOMES DE ALMEIDA",
+      "codigo": "MRJG2260",
       "veiculo": null,
-      "coletas": 41,
-      "vezesMediana": 8.2,
+      "coletas": 37,
+      "vezesMediana": 6.2,
       "regioes": [
-        "ZONA SUL"
+        "CENTRO E NORTE"
       ]
     }
   ],
@@ -196,6 +196,18 @@ export const coletas = {
       ]
     },
     {
+      "codigo": "MRJG2395",
+      "nome": "MRJG2395 - HIAGO PIRES DE OLIVEIRA",
+      "veiculo": null,
+      "coletas": 20,
+      "cepsDistintos": 13,
+      "coletasPorCep": 1.5,
+      "indice": 0.7,
+      "regioes": [
+        "ZONA SUL"
+      ]
+    },
+    {
       "codigo": "MRJG1931",
       "nome": "MRJG1931- RAFAEL FERNANDES DE BRITTO",
       "veiculo": null,
@@ -211,7 +223,7 @@ export const coletas = {
       "codigo": "MRJG-2436- PABLO HENRIQUE CEZAR DE OLIVEIRA",
       "nome": "MRJG-2436- PABLO HENRIQUE CEZAR DE OLIVEIRA",
       "veiculo": null,
-      "coletas": 19,
+      "coletas": 20,
       "cepsDistintos": 14,
       "coletasPorCep": 1.4,
       "indice": 0.7,
@@ -280,18 +292,6 @@ export const coletas = {
       ]
     },
     {
-      "codigo": "MRJG886",
-      "nome": "MRJG886 - RODRIGO LOURENÇO ANTUNES",
-      "veiculo": "MOTO",
-      "coletas": 14,
-      "cepsDistintos": 7,
-      "coletasPorCep": 2,
-      "indice": 0.5,
-      "regioes": [
-        "ZONA SUL"
-      ]
-    },
-    {
       "codigo": "MRJG2116",
       "nome": "MRJG2116 - PAULO SERGIO CONCEICAO DE MELO",
       "veiculo": null,
@@ -328,7 +328,7 @@ export const coletas = {
     {
       "nome": "MRJG1902- CANDIDO MANOEL RIBEIRO TAVARES",
       "codigo": "MRJG1902",
-      "coletas": 75,
+      "coletas": 76,
       "regioes": [
         "ZONA SUL"
       ]
@@ -366,14 +366,6 @@ export const coletas = {
       ]
     },
     {
-      "nome": "MRJG2395 - HIAGO PIRES DE OLIVEIRA",
-      "codigo": "MRJG2395",
-      "coletas": 41,
-      "regioes": [
-        "ZONA SUL"
-      ]
-    },
-    {
       "nome": "MRJG2260-KAUA GOMES DE ALMEIDA",
       "codigo": "MRJG2260",
       "coletas": 37,
@@ -403,14 +395,6 @@ export const coletas = {
       "coletas": 32,
       "regioes": [
         "NITEROI"
-      ]
-    },
-    {
-      "nome": "MRJG2164- ZILDETE DOURADO CHAVES",
-      "codigo": "MRJG2164",
-      "coletas": 32,
-      "regioes": [
-        "OSTE E BARRA"
       ]
     },
     {
@@ -462,6 +446,14 @@ export const coletas = {
       ]
     },
     {
+      "nome": "MRJG2395 - HIAGO PIRES DE OLIVEIRA",
+      "codigo": "MRJG2395",
+      "coletas": 20,
+      "regioes": [
+        "ZONA SUL"
+      ]
+    },
+    {
       "nome": "MRJG711 - GILSON MARTINS DE ARAUJO",
       "codigo": "MRJG711",
       "coletas": 20,
@@ -476,26 +468,35 @@ export const coletas = {
       "regioes": [
         "CENTRO E NORTE"
       ]
+    },
+    {
+      "nome": "MRJG 1779 - DEMETRIO LOPES DO VAL",
+      "codigo": "MRJG1779",
+      "coletas": 19,
+      "regioes": [
+        "ZONA SUL",
+        "CENTRO E NORTE"
+      ]
     }
   ],
   "regioes": [
     {
       "nome": "CENTRO E NORTE",
-      "coletas": 1060,
-      "motoristas": 73,
-      "mediaPorMotorista": 14.5,
+      "coletas": 1061,
+      "motoristas": 72,
+      "mediaPorMotorista": 14.7,
       "veiculos": {
         "MOTO": 391,
         "KOMBI": 24,
-        "CARRO": 140,
+        "CARRO": 141,
         "BONGO": 2
       }
     },
     {
       "nome": "OSTE E BARRA",
       "coletas": 590,
-      "motoristas": 25,
-      "mediaPorMotorista": 23.6,
+      "motoristas": 24,
+      "mediaPorMotorista": 24.6,
       "veiculos": {
         "MOTO": 272,
         "CARRO": 10
@@ -504,8 +505,8 @@ export const coletas = {
     {
       "nome": "BAIXADA",
       "coletas": 361,
-      "motoristas": 60,
-      "mediaPorMotorista": 6,
+      "motoristas": 59,
+      "mediaPorMotorista": 6.1,
       "veiculos": {
         "CARRO": 57,
         "MOTO": 102
@@ -517,15 +518,15 @@ export const coletas = {
       "motoristas": 27,
       "mediaPorMotorista": 10.5,
       "veiculos": {
-        "MOTO": 38,
+        "MOTO": 58,
         "CARRO": 1
       }
     },
     {
       "nome": "NITEROI",
       "coletas": 269,
-      "motoristas": 16,
-      "mediaPorMotorista": 16.8,
+      "motoristas": 15,
+      "mediaPorMotorista": 17.9,
       "veiculos": {
         "CARRO": 20,
         "MOTO": 27
