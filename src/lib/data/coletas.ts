@@ -1,20 +1,20 @@
 // Gerado por analise-rotas.js — não editar à mão.
 // Atualizado diariamente às 8h pelo rotas-diario.js.
 export const coletas = {
-  "gerado": "2026-08-18T08:00:23.763Z",
+  "gerado": "2026-08-19T08:00:25.569Z",
   "resumo": {
     "coletas": 2565,
-    "motoristas": 191,
+    "motoristas": 193,
     "medianaColetas": 6,
-    "sobrecarregados": 47,
-    "ociosos": 68,
+    "sobrecarregados": 46,
+    "ociosos": 69,
     "dispersos": 20,
     "semCadastro": 85
   },
   "cobertura": {
-    "veiculo": 1105,
+    "veiculo": 1098,
     "cep": 2533,
-    "horario": 477,
+    "horario": 455,
     "corte": 147,
     "total": 2565
   },
@@ -483,10 +483,10 @@ export const coletas = {
     {
       "nome": "CENTRO E NORTE",
       "coletas": 1061,
-      "motoristas": 72,
-      "mediaPorMotorista": 14.7,
+      "motoristas": 73,
+      "mediaPorMotorista": 14.5,
       "veiculos": {
-        "MOTO": 391,
+        "MOTO": 390,
         "KOMBI": 24,
         "CARRO": 141,
         "BONGO": 2
@@ -515,10 +515,10 @@ export const coletas = {
     {
       "nome": "ZONA SUL",
       "coletas": 284,
-      "motoristas": 27,
-      "mediaPorMotorista": 10.5,
+      "motoristas": 28,
+      "mediaPorMotorista": 10.1,
       "veiculos": {
-        "MOTO": 58,
+        "MOTO": 52,
         "CARRO": 1
       }
     },
