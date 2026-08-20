@@ -1,20 +1,20 @@
 // Gerado por analise-rotas.js — não editar à mão.
 // Atualizado diariamente às 8h pelo rotas-diario.js.
 export const coletas = {
-  "gerado": "2026-08-19T08:00:25.569Z",
+  "gerado": "2026-08-20T08:00:24.859Z",
   "resumo": {
     "coletas": 2565,
-    "motoristas": 193,
+    "motoristas": 192,
     "medianaColetas": 6,
-    "sobrecarregados": 46,
-    "ociosos": 69,
+    "sobrecarregados": 47,
+    "ociosos": 68,
     "dispersos": 20,
     "semCadastro": 85
   },
   "cobertura": {
-    "veiculo": 1098,
+    "veiculo": 1097,
     "cep": 2533,
-    "horario": 455,
+    "horario": 454,
     "corte": 147,
     "total": 2565
   },
@@ -256,18 +256,6 @@ export const coletas = {
       ]
     },
     {
-      "codigo": "MRJG1475",
-      "nome": "MRJG1475- LEANDRO BARROS DA CONCEICAO",
-      "veiculo": "CARRO",
-      "coletas": 14,
-      "cepsDistintos": 8,
-      "coletasPorCep": 1.8,
-      "indice": 0.6,
-      "regioes": [
-        "NITEROI"
-      ]
-    },
-    {
       "codigo": "MRJG2170",
       "nome": "MRJG2170-ALEX RODRIGUES ALMEIDA",
       "veiculo": null,
@@ -313,6 +301,18 @@ export const coletas = {
       "indice": 0.5,
       "regioes": [
         "CENTRO E NORTE"
+      ]
+    },
+    {
+      "codigo": "MRJG1475",
+      "nome": "MRJG1475- LEANDRO BARROS DA CONCEICAO",
+      "veiculo": "CARRO",
+      "coletas": 15,
+      "cepsDistintos": 7,
+      "coletasPorCep": 2.1,
+      "indice": 0.5,
+      "regioes": [
+        "NITEROI"
       ]
     }
   ],
@@ -495,8 +495,8 @@ export const coletas = {
     {
       "nome": "OSTE E BARRA",
       "coletas": 590,
-      "motoristas": 24,
-      "mediaPorMotorista": 24.6,
+      "motoristas": 23,
+      "mediaPorMotorista": 25.7,
       "veiculos": {
         "MOTO": 272,
         "CARRO": 10
@@ -528,7 +528,7 @@ export const coletas = {
       "motoristas": 15,
       "mediaPorMotorista": 17.9,
       "veiculos": {
-        "CARRO": 20,
+        "CARRO": 19,
         "MOTO": 27
       }
     }
