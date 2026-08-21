@@ -1,20 +1,20 @@
 // Gerado por analise-rotas.js — não editar à mão.
 // Atualizado diariamente às 8h pelo rotas-diario.js.
 export const coletas = {
-  "gerado": "2026-08-20T08:00:24.859Z",
+  "gerado": "2026-08-21T08:00:26.545Z",
   "resumo": {
     "coletas": 2565,
     "motoristas": 192,
     "medianaColetas": 6,
     "sobrecarregados": 47,
     "ociosos": 68,
-    "dispersos": 20,
+    "dispersos": 19,
     "semCadastro": 85
   },
   "cobertura": {
-    "veiculo": 1097,
+    "veiculo": 1095,
     "cep": 2533,
-    "horario": 454,
+    "horario": 466,
     "corte": 147,
     "total": 2565
   },
@@ -304,15 +304,15 @@ export const coletas = {
       ]
     },
     {
-      "codigo": "MRJG1475",
-      "nome": "MRJG1475- LEANDRO BARROS DA CONCEICAO",
-      "veiculo": "CARRO",
-      "coletas": 15,
-      "cepsDistintos": 7,
-      "coletasPorCep": 2.1,
+      "codigo": "MRJG2077",
+      "nome": "MRJG2077- MAURICIO LUIZ PINHEIRO DA SILVA",
+      "veiculo": null,
+      "coletas": 13,
+      "cepsDistintos": 6,
+      "coletasPorCep": 2.2,
       "indice": 0.5,
       "regioes": [
-        "NITEROI"
+        "OSTE E BARRA"
       ]
     }
   ],
@@ -518,7 +518,7 @@ export const coletas = {
       "motoristas": 28,
       "mediaPorMotorista": 10.1,
       "veiculos": {
-        "MOTO": 52,
+        "MOTO": 49,
         "CARRO": 1
       }
     },
@@ -528,7 +528,7 @@ export const coletas = {
       "motoristas": 15,
       "mediaPorMotorista": 17.9,
       "veiculos": {
-        "CARRO": 19,
+        "CARRO": 20,
         "MOTO": 27
       }
     }
