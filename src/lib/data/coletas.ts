@@ -1,20 +1,20 @@
 // Gerado por analise-rotas.js — não editar à mão.
 // Atualizado diariamente às 8h pelo rotas-diario.js.
 export const coletas = {
-  "gerado": "2026-08-21T08:00:26.545Z",
+  "gerado": "2026-08-22T08:00:23.082Z",
   "resumo": {
     "coletas": 2565,
-    "motoristas": 192,
+    "motoristas": 193,
     "medianaColetas": 6,
     "sobrecarregados": 47,
-    "ociosos": 68,
+    "ociosos": 69,
     "dispersos": 19,
     "semCadastro": 85
   },
   "cobertura": {
     "veiculo": 1095,
     "cep": 2533,
-    "horario": 466,
+    "horario": 0,
     "corte": 147,
     "total": 2565
   },
@@ -73,8 +73,8 @@ export const coletas = {
       "nome": "MRJG1902- CANDIDO MANOEL RIBEIRO TAVARES",
       "codigo": "MRJG1902",
       "veiculo": null,
-      "coletas": 76,
-      "vezesMediana": 12.7,
+      "coletas": 75,
+      "vezesMediana": 12.5,
       "regioes": [
         "ZONA SUL"
       ]
@@ -163,8 +163,8 @@ export const coletas = {
       "nome": "MRJG2260-KAUA GOMES DE ALMEIDA",
       "codigo": "MRJG2260",
       "veiculo": null,
-      "coletas": 37,
-      "vezesMediana": 6.2,
+      "coletas": 36,
+      "vezesMediana": 6,
       "regioes": [
         "CENTRO E NORTE"
       ]
@@ -328,7 +328,7 @@ export const coletas = {
     {
       "nome": "MRJG1902- CANDIDO MANOEL RIBEIRO TAVARES",
       "codigo": "MRJG1902",
-      "coletas": 76,
+      "coletas": 75,
       "regioes": [
         "ZONA SUL"
       ]
@@ -368,7 +368,7 @@ export const coletas = {
     {
       "nome": "MRJG2260-KAUA GOMES DE ALMEIDA",
       "codigo": "MRJG2260",
-      "coletas": 37,
+      "coletas": 36,
       "regioes": [
         "CENTRO E NORTE"
       ]
@@ -482,7 +482,7 @@ export const coletas = {
   "regioes": [
     {
       "nome": "CENTRO E NORTE",
-      "coletas": 1061,
+      "coletas": 1060,
       "motoristas": 73,
       "mediaPorMotorista": 14.5,
       "veiculos": {
@@ -504,7 +504,7 @@ export const coletas = {
     },
     {
       "nome": "BAIXADA",
-      "coletas": 361,
+      "coletas": 362,
       "motoristas": 59,
       "mediaPorMotorista": 6.1,
       "veiculos": {
@@ -515,8 +515,8 @@ export const coletas = {
     {
       "nome": "ZONA SUL",
       "coletas": 284,
-      "motoristas": 28,
-      "mediaPorMotorista": 10.1,
+      "motoristas": 29,
+      "mediaPorMotorista": 9.8,
       "veiculos": {
         "MOTO": 49,
         "CARRO": 1
