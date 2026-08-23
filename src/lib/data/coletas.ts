@@ -1,22 +1,22 @@
 // Gerado por analise-rotas.js — não editar à mão.
 // Atualizado diariamente às 8h pelo rotas-diario.js.
 export const coletas = {
-  "gerado": "2026-08-22T08:00:23.082Z",
+  "gerado": "2026-08-23T08:00:24.149Z",
   "resumo": {
-    "coletas": 2565,
+    "coletas": 2568,
     "motoristas": 193,
     "medianaColetas": 6,
     "sobrecarregados": 47,
-    "ociosos": 69,
+    "ociosos": 68,
     "dispersos": 19,
     "semCadastro": 85
   },
   "cobertura": {
     "veiculo": 1095,
-    "cep": 2533,
-    "horario": 0,
+    "cep": 2536,
+    "horario": 77,
     "corte": 147,
-    "total": 2565
+    "total": 2568
   },
   "sobrecarregados": [
     {
@@ -482,7 +482,7 @@ export const coletas = {
   "regioes": [
     {
       "nome": "CENTRO E NORTE",
-      "coletas": 1060,
+      "coletas": 1061,
       "motoristas": 73,
       "mediaPorMotorista": 14.5,
       "veiculos": {
@@ -494,9 +494,9 @@ export const coletas = {
     },
     {
       "nome": "OSTE E BARRA",
-      "coletas": 590,
-      "motoristas": 23,
-      "mediaPorMotorista": 25.7,
+      "coletas": 591,
+      "motoristas": 24,
+      "mediaPorMotorista": 24.6,
       "veiculos": {
         "MOTO": 272,
         "CARRO": 10
@@ -504,8 +504,8 @@ export const coletas = {
     },
     {
       "nome": "BAIXADA",
-      "coletas": 362,
-      "motoristas": 59,
+      "coletas": 363,
+      "motoristas": 60,
       "mediaPorMotorista": 6.1,
       "veiculos": {
         "CARRO": 57,
