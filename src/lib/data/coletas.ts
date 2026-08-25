@@ -1,22 +1,22 @@
 // Gerado por analise-rotas.js — não editar à mão.
 // Atualizado diariamente às 8h pelo rotas-diario.js.
 export const coletas = {
-  "gerado": "2026-08-24T08:00:26.572Z",
+  "gerado": "2026-08-25T08:00:25.953Z",
   "resumo": {
-    "coletas": 2568,
-    "motoristas": 193,
+    "coletas": 2573,
+    "motoristas": 192,
     "medianaColetas": 6,
     "sobrecarregados": 47,
-    "ociosos": 68,
+    "ociosos": 67,
     "dispersos": 19,
     "semCadastro": 85
   },
   "cobertura": {
-    "veiculo": 1095,
-    "cep": 2536,
-    "horario": 77,
+    "veiculo": 1094,
+    "cep": 2541,
+    "horario": 462,
     "corte": 147,
-    "total": 2568
+    "total": 2573
   },
   "sobrecarregados": [
     {
@@ -196,18 +196,6 @@ export const coletas = {
       ]
     },
     {
-      "codigo": "MRJG2395",
-      "nome": "MRJG2395 - HIAGO PIRES DE OLIVEIRA",
-      "veiculo": null,
-      "coletas": 20,
-      "cepsDistintos": 13,
-      "coletasPorCep": 1.5,
-      "indice": 0.7,
-      "regioes": [
-        "ZONA SUL"
-      ]
-    },
-    {
       "codigo": "MRJG1931",
       "nome": "MRJG1931- RAFAEL FERNANDES DE BRITTO",
       "veiculo": null,
@@ -241,6 +229,18 @@ export const coletas = {
       "indice": 0.7,
       "regioes": [
         "BAIXADA"
+      ]
+    },
+    {
+      "codigo": "MRJG2395",
+      "nome": "MRJG2395 - HIAGO PIRES DE OLIVEIRA",
+      "veiculo": null,
+      "coletas": 21,
+      "cepsDistintos": 13,
+      "coletasPorCep": 1.6,
+      "indice": 0.6,
+      "regioes": [
+        "ZONA SUL"
       ]
     },
     {
@@ -430,6 +430,14 @@ export const coletas = {
       ]
     },
     {
+      "nome": "MRJG2395 - HIAGO PIRES DE OLIVEIRA",
+      "codigo": "MRJG2395",
+      "coletas": 21,
+      "regioes": [
+        "ZONA SUL"
+      ]
+    },
+    {
       "nome": "MRJG2113 - IURI GUEDES BOMFIM",
       "codigo": "MRJG2113",
       "coletas": 21,
@@ -440,14 +448,6 @@ export const coletas = {
     {
       "nome": "MRJG1819- MAXSUEL MATEUS DE ASSIZ",
       "codigo": "MRJG1819",
-      "coletas": 20,
-      "regioes": [
-        "ZONA SUL"
-      ]
-    },
-    {
-      "nome": "MRJG2395 - HIAGO PIRES DE OLIVEIRA",
-      "codigo": "MRJG2395",
       "coletas": 20,
       "regioes": [
         "ZONA SUL"
@@ -470,21 +470,20 @@ export const coletas = {
       ]
     },
     {
-      "nome": "MRJG 1779 - DEMETRIO LOPES DO VAL",
-      "codigo": "MRJG1779",
-      "coletas": 19,
+      "nome": "MRJG2112- MARCUS PAULO TRAJANO DE SA PEREIRA",
+      "codigo": "MRJG2112",
+      "coletas": 20,
       "regioes": [
-        "ZONA SUL",
-        "CENTRO E NORTE"
+        "NITEROI"
       ]
     }
   ],
   "regioes": [
     {
       "nome": "CENTRO E NORTE",
-      "coletas": 1061,
-      "motoristas": 73,
-      "mediaPorMotorista": 14.5,
+      "coletas": 1062,
+      "motoristas": 74,
+      "mediaPorMotorista": 14.4,
       "veiculos": {
         "MOTO": 390,
         "KOMBI": 24,
@@ -494,9 +493,9 @@ export const coletas = {
     },
     {
       "nome": "OSTE E BARRA",
-      "coletas": 591,
+      "coletas": 593,
       "motoristas": 24,
-      "mediaPorMotorista": 24.6,
+      "mediaPorMotorista": 24.7,
       "veiculos": {
         "MOTO": 272,
         "CARRO": 10
@@ -505,8 +504,8 @@ export const coletas = {
     {
       "nome": "BAIXADA",
       "coletas": 363,
-      "motoristas": 60,
-      "mediaPorMotorista": 6.1,
+      "motoristas": 59,
+      "mediaPorMotorista": 6.2,
       "veiculos": {
         "CARRO": 57,
         "MOTO": 102
@@ -514,19 +513,19 @@ export const coletas = {
     },
     {
       "nome": "ZONA SUL",
-      "coletas": 284,
+      "coletas": 285,
       "motoristas": 29,
       "mediaPorMotorista": 9.8,
       "veiculos": {
-        "MOTO": 49,
+        "MOTO": 48,
         "CARRO": 1
       }
     },
     {
       "nome": "NITEROI",
-      "coletas": 269,
+      "coletas": 270,
       "motoristas": 15,
-      "mediaPorMotorista": 17.9,
+      "mediaPorMotorista": 18,
       "veiculos": {
         "CARRO": 20,
         "MOTO": 27
