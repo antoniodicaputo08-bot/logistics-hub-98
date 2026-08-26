@@ -1,22 +1,22 @@
 // Gerado por analise-rotas.js — não editar à mão.
 // Atualizado diariamente às 8h pelo rotas-diario.js.
 export const coletas = {
-  "gerado": "2026-08-25T08:00:25.953Z",
+  "gerado": "2026-08-26T08:00:26.266Z",
   "resumo": {
-    "coletas": 2573,
+    "coletas": 2574,
     "motoristas": 192,
     "medianaColetas": 6,
     "sobrecarregados": 47,
-    "ociosos": 67,
+    "ociosos": 68,
     "dispersos": 19,
     "semCadastro": 85
   },
   "cobertura": {
-    "veiculo": 1094,
-    "cep": 2541,
-    "horario": 462,
+    "veiculo": 1093,
+    "cep": 2542,
+    "horario": 439,
     "corte": 147,
-    "total": 2573
+    "total": 2574
   },
   "sobrecarregados": [
     {
@@ -256,18 +256,6 @@ export const coletas = {
       ]
     },
     {
-      "codigo": "MRJG2170",
-      "nome": "MRJG2170-ALEX RODRIGUES ALMEIDA",
-      "veiculo": null,
-      "coletas": 11,
-      "cepsDistintos": 7,
-      "coletasPorCep": 1.6,
-      "indice": 0.6,
-      "regioes": [
-        "BAIXADA"
-      ]
-    },
-    {
       "codigo": "2214- JAIR",
       "nome": "2214- JAIR",
       "veiculo": null,
@@ -310,6 +298,18 @@ export const coletas = {
       "coletas": 13,
       "cepsDistintos": 6,
       "coletasPorCep": 2.2,
+      "indice": 0.5,
+      "regioes": [
+        "OSTE E BARRA"
+      ]
+    },
+    {
+      "codigo": "clientes que não sobem pedido de coleta",
+      "nome": "clientes que não sobem pedido de coleta",
+      "veiculo": null,
+      "coletas": 11,
+      "cepsDistintos": 6,
+      "coletasPorCep": 1.8,
       "indice": 0.5,
       "regioes": [
         "OSTE E BARRA"
@@ -494,8 +494,8 @@ export const coletas = {
     {
       "nome": "OSTE E BARRA",
       "coletas": 593,
-      "motoristas": 24,
-      "mediaPorMotorista": 24.7,
+      "motoristas": 23,
+      "mediaPorMotorista": 25.8,
       "veiculos": {
         "MOTO": 272,
         "CARRO": 10
@@ -503,19 +503,19 @@ export const coletas = {
     },
     {
       "nome": "BAIXADA",
-      "coletas": 363,
+      "coletas": 364,
       "motoristas": 59,
       "mediaPorMotorista": 6.2,
       "veiculos": {
         "CARRO": 57,
-        "MOTO": 102
+        "MOTO": 101
       }
     },
     {
       "nome": "ZONA SUL",
       "coletas": 285,
-      "motoristas": 29,
-      "mediaPorMotorista": 9.8,
+      "motoristas": 28,
+      "mediaPorMotorista": 10.2,
       "veiculos": {
         "MOTO": 48,
         "CARRO": 1
