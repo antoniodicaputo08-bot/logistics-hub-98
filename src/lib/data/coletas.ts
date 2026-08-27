@@ -1,22 +1,22 @@
 // Gerado por analise-rotas.js — não editar à mão.
 // Atualizado diariamente às 8h pelo rotas-diario.js.
 export const coletas = {
-  "gerado": "2026-08-26T08:00:26.266Z",
+  "gerado": "2026-08-27T08:00:25.140Z",
   "resumo": {
-    "coletas": 2574,
-    "motoristas": 192,
+    "coletas": 2575,
+    "motoristas": 193,
     "medianaColetas": 6,
     "sobrecarregados": 47,
-    "ociosos": 68,
+    "ociosos": 69,
     "dispersos": 19,
     "semCadastro": 85
   },
   "cobertura": {
     "veiculo": 1093,
-    "cep": 2542,
-    "horario": 439,
+    "cep": 2543,
+    "horario": 429,
     "corte": 147,
-    "total": 2574
+    "total": 2575
   },
   "sobrecarregados": [
     {
@@ -493,9 +493,9 @@ export const coletas = {
     },
     {
       "nome": "OSTE E BARRA",
-      "coletas": 593,
-      "motoristas": 23,
-      "mediaPorMotorista": 25.8,
+      "coletas": 594,
+      "motoristas": 24,
+      "mediaPorMotorista": 24.8,
       "veiculos": {
         "MOTO": 272,
         "CARRO": 10
