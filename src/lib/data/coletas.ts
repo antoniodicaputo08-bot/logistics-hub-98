@@ -1,20 +1,20 @@
 // Gerado por analise-rotas.js — não editar à mão.
 // Atualizado diariamente às 8h pelo rotas-diario.js.
 export const coletas = {
-  "gerado": "2026-08-27T08:00:25.140Z",
+  "gerado": "2026-08-28T08:00:24.479Z",
   "resumo": {
     "coletas": 2575,
-    "motoristas": 193,
-    "medianaColetas": 6,
-    "sobrecarregados": 47,
-    "ociosos": 69,
-    "dispersos": 19,
+    "motoristas": 190,
+    "medianaColetas": 7,
+    "sobrecarregados": 34,
+    "ociosos": 66,
+    "dispersos": 20,
     "semCadastro": 85
   },
   "cobertura": {
     "veiculo": 1093,
     "cep": 2543,
-    "horario": 429,
+    "horario": 424,
     "corte": 147,
     "total": 2575
   },
@@ -24,7 +24,7 @@ export const coletas = {
       "codigo": "MRJG1013",
       "veiculo": "MOTO",
       "coletas": 149,
-      "vezesMediana": 24.8,
+      "vezesMediana": 21.3,
       "regioes": [
         "CENTRO E NORTE"
       ]
@@ -34,7 +34,7 @@ export const coletas = {
       "codigo": "MRJG690",
       "veiculo": "MOTO",
       "coletas": 104,
-      "vezesMediana": 17.3,
+      "vezesMediana": 14.9,
       "regioes": [
         "CENTRO E NORTE"
       ]
@@ -44,7 +44,7 @@ export const coletas = {
       "codigo": "MRJG1042",
       "veiculo": "MOTO",
       "coletas": 96,
-      "vezesMediana": 16,
+      "vezesMediana": 13.7,
       "regioes": [
         "OSTE E BARRA"
       ]
@@ -54,7 +54,7 @@ export const coletas = {
       "codigo": "MRJG1474",
       "veiculo": "CARRO",
       "coletas": 89,
-      "vezesMediana": 14.8,
+      "vezesMediana": 12.7,
       "regioes": [
         "CENTRO E NORTE"
       ]
@@ -64,7 +64,7 @@ export const coletas = {
       "codigo": "MRJG2042",
       "veiculo": null,
       "coletas": 78,
-      "vezesMediana": 13,
+      "vezesMediana": 11.1,
       "regioes": [
         "OSTE E BARRA"
       ]
@@ -74,7 +74,7 @@ export const coletas = {
       "codigo": "MRJG1902",
       "veiculo": null,
       "coletas": 75,
-      "vezesMediana": 12.5,
+      "vezesMediana": 10.7,
       "regioes": [
         "ZONA SUL"
       ]
@@ -84,7 +84,7 @@ export const coletas = {
       "codigo": "MRJG1591",
       "veiculo": "MOTO",
       "coletas": 58,
-      "vezesMediana": 9.7,
+      "vezesMediana": 8.3,
       "regioes": [
         "OSTE E BARRA"
       ]
@@ -94,7 +94,7 @@ export const coletas = {
       "codigo": "MRJG941",
       "veiculo": "MOTO",
       "coletas": 52,
-      "vezesMediana": 8.7,
+      "vezesMediana": 7.4,
       "regioes": [
         "OSTE E BARRA"
       ]
@@ -104,7 +104,7 @@ export const coletas = {
       "codigo": "MRJG1867",
       "veiculo": null,
       "coletas": 50,
-      "vezesMediana": 8.3,
+      "vezesMediana": 7.1,
       "regioes": [
         "NITEROI"
       ]
@@ -114,7 +114,7 @@ export const coletas = {
       "codigo": "MRJG1172",
       "veiculo": "MOTO",
       "coletas": 47,
-      "vezesMediana": 7.8,
+      "vezesMediana": 6.7,
       "regioes": [
         "CENTRO E NORTE"
       ]
@@ -124,7 +124,7 @@ export const coletas = {
       "codigo": "MRJG1091",
       "veiculo": "MOTO",
       "coletas": 45,
-      "vezesMediana": 7.5,
+      "vezesMediana": 6.4,
       "regioes": [
         "CENTRO E NORTE"
       ]
@@ -134,7 +134,7 @@ export const coletas = {
       "codigo": "MRJG2108",
       "veiculo": null,
       "coletas": 45,
-      "vezesMediana": 7.5,
+      "vezesMediana": 6.4,
       "regioes": [
         "NITEROI"
       ]
@@ -144,7 +144,7 @@ export const coletas = {
       "codigo": "MRJG2032",
       "veiculo": null,
       "coletas": 43,
-      "vezesMediana": 7.2,
+      "vezesMediana": 6.1,
       "regioes": [
         "CENTRO E NORTE"
       ]
@@ -154,7 +154,7 @@ export const coletas = {
       "codigo": "MRJG2315",
       "veiculo": null,
       "coletas": 42,
-      "vezesMediana": 7,
+      "vezesMediana": 6,
       "regioes": [
         "OSTE E BARRA"
       ]
@@ -164,7 +164,7 @@ export const coletas = {
       "codigo": "MRJG2260",
       "veiculo": null,
       "coletas": 36,
-      "vezesMediana": 6,
+      "vezesMediana": 5.1,
       "regioes": [
         "CENTRO E NORTE"
       ]
@@ -304,12 +304,12 @@ export const coletas = {
       ]
     },
     {
-      "codigo": "clientes que não sobem pedido de coleta",
-      "nome": "clientes que não sobem pedido de coleta",
+      "codigo": "MRJG1692",
+      "nome": "MRJG1692- VAGNER LUIZ COELHO RODRIGUES",
       "veiculo": null,
-      "coletas": 11,
-      "cepsDistintos": 6,
-      "coletasPorCep": 1.8,
+      "coletas": 10,
+      "cepsDistintos": 5,
+      "coletasPorCep": 2,
       "indice": 0.5,
       "regioes": [
         "OSTE E BARRA"
@@ -482,8 +482,8 @@ export const coletas = {
     {
       "nome": "CENTRO E NORTE",
       "coletas": 1062,
-      "motoristas": 74,
-      "mediaPorMotorista": 14.4,
+      "motoristas": 73,
+      "mediaPorMotorista": 14.5,
       "veiculos": {
         "MOTO": 390,
         "KOMBI": 24,
@@ -494,8 +494,8 @@ export const coletas = {
     {
       "nome": "OSTE E BARRA",
       "coletas": 594,
-      "motoristas": 24,
-      "mediaPorMotorista": 24.8,
+      "motoristas": 23,
+      "mediaPorMotorista": 25.8,
       "veiculos": {
         "MOTO": 272,
         "CARRO": 10
@@ -504,8 +504,8 @@ export const coletas = {
     {
       "nome": "BAIXADA",
       "coletas": 364,
-      "motoristas": 59,
-      "mediaPorMotorista": 6.2,
+      "motoristas": 58,
+      "mediaPorMotorista": 6.3,
       "veiculos": {
         "CARRO": 57,
         "MOTO": 101
