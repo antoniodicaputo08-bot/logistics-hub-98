@@ -1,22 +1,22 @@
 // Gerado por analise-rotas.js — não editar à mão.
 // Atualizado diariamente às 8h pelo rotas-diario.js.
 export const coletas = {
-  "gerado": "2026-08-28T08:00:24.479Z",
+  "gerado": "2026-08-29T08:00:24.940Z",
   "resumo": {
-    "coletas": 2575,
+    "coletas": 2576,
     "motoristas": 190,
     "medianaColetas": 7,
     "sobrecarregados": 34,
     "ociosos": 66,
-    "dispersos": 20,
+    "dispersos": 21,
     "semCadastro": 85
   },
   "cobertura": {
     "veiculo": 1093,
-    "cep": 2543,
-    "horario": 424,
+    "cep": 2544,
+    "horario": 449,
     "corte": 147,
-    "total": 2575
+    "total": 2576
   },
   "sobrecarregados": [
     {
@@ -208,6 +208,18 @@ export const coletas = {
       ]
     },
     {
+      "codigo": "MRJG2477",
+      "nome": "MRJG2477- ANA BEATRIZ DA C DANTAS M DE OLIVEIRA",
+      "veiculo": null,
+      "coletas": 10,
+      "cepsDistintos": 7,
+      "coletasPorCep": 1.4,
+      "indice": 0.7,
+      "regioes": [
+        "CENTRO E NORTE"
+      ]
+    },
+    {
       "codigo": "MRJG-2436- PABLO HENRIQUE CEZAR DE OLIVEIRA",
       "nome": "MRJG-2436- PABLO HENRIQUE CEZAR DE OLIVEIRA",
       "veiculo": null,
@@ -268,6 +280,18 @@ export const coletas = {
       ]
     },
     {
+      "codigo": "MRJG2110",
+      "nome": "MRJG2110 - TIAGO HENRIQUE ANTONIO SANTOS",
+      "veiculo": null,
+      "coletas": 10,
+      "cepsDistintos": 6,
+      "coletasPorCep": 1.7,
+      "indice": 0.6,
+      "regioes": [
+        "BAIXADA"
+      ]
+    },
+    {
       "codigo": "MRJG2116",
       "nome": "MRJG2116 - PAULO SERGIO CONCEICAO DE MELO",
       "veiculo": null,
@@ -289,30 +313,6 @@ export const coletas = {
       "indice": 0.5,
       "regioes": [
         "CENTRO E NORTE"
-      ]
-    },
-    {
-      "codigo": "MRJG2077",
-      "nome": "MRJG2077- MAURICIO LUIZ PINHEIRO DA SILVA",
-      "veiculo": null,
-      "coletas": 13,
-      "cepsDistintos": 6,
-      "coletasPorCep": 2.2,
-      "indice": 0.5,
-      "regioes": [
-        "OSTE E BARRA"
-      ]
-    },
-    {
-      "codigo": "MRJG1692",
-      "nome": "MRJG1692- VAGNER LUIZ COELHO RODRIGUES",
-      "veiculo": null,
-      "coletas": 10,
-      "cepsDistintos": 5,
-      "coletasPorCep": 2,
-      "indice": 0.5,
-      "regioes": [
-        "OSTE E BARRA"
       ]
     }
   ],
@@ -481,9 +481,9 @@ export const coletas = {
   "regioes": [
     {
       "nome": "CENTRO E NORTE",
-      "coletas": 1062,
+      "coletas": 1063,
       "motoristas": 73,
-      "mediaPorMotorista": 14.5,
+      "mediaPorMotorista": 14.6,
       "veiculos": {
         "MOTO": 390,
         "KOMBI": 24,
