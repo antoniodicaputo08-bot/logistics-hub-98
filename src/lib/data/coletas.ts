@@ -1,7 +1,7 @@
 // Gerado por analise-rotas.js — não editar à mão.
 // Atualizado diariamente às 8h pelo rotas-diario.js.
 export const coletas = {
-  "gerado": "2026-08-29T08:00:24.940Z",
+  "gerado": "2026-08-30T08:00:24.579Z",
   "resumo": {
     "coletas": 2576,
     "motoristas": 190,
@@ -14,7 +14,7 @@ export const coletas = {
   "cobertura": {
     "veiculo": 1093,
     "cep": 2544,
-    "horario": 449,
+    "horario": 72,
     "corte": 147,
     "total": 2576
   },
