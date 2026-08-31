@@ -1,6 +1,6 @@
 export const totals = {
-  entregas: 211372,
-  custo: 2173541.85,
-  fatura: 3301358.78,
-  margem: 1127816.93
+  entregas: 219142,
+  custo: 2260945.21,
+  fatura: 3427383.81,
+  margem: 1166438.6
 };
