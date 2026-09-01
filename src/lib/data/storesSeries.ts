@@ -9001,6 +9001,11 @@ export const storesSeries = [
         "f": 1629,
         "c": 900.84,
         "e": 106
+      },
+      "MITSUBA": {
+        "f": 150,
+        "c": 99,
+        "e": 6
       }
     }
   },
@@ -9016,6 +9021,11 @@ export const storesSeries = [
         "f": 1721,
         "c": 990.4,
         "e": 93
+      },
+      "MITSUBA": {
+        "f": 150,
+        "c": 95,
+        "e": 5
       }
     }
   },
@@ -9031,6 +9041,11 @@ export const storesSeries = [
         "f": 1536,
         "c": 869.84,
         "e": 75
+      },
+      "MITSUBA": {
+        "f": 150,
+        "c": 91,
+        "e": 4
       }
     }
   },
@@ -9046,6 +9061,11 @@ export const storesSeries = [
         "f": 1804,
         "c": 995.76,
         "e": 124
+      },
+      "MITSUBA": {
+        "f": 450,
+        "c": 269,
+        "e": 11
       }
     }
   },
@@ -9061,6 +9081,11 @@ export const storesSeries = [
         "f": 1874,
         "c": 1041.4,
         "e": 144
+      },
+      "MITSUBA": {
+        "f": 450,
+        "c": 265,
+        "e": 10
       }
     }
   },
@@ -9076,6 +9101,11 @@ export const storesSeries = [
         "f": 1943,
         "c": 1064.4,
         "e": 167
+      },
+      "MITSUBA": {
+        "f": 450,
+        "c": 269,
+        "e": 11
       }
     }
   },
@@ -9083,8 +9113,8 @@ export const storesSeries = [
     "data": "2026-08-24",
     "lojas": {
       "DOMINOS": {
-        "f": 3218,
-        "c": 2334,
+        "f": 3238,
+        "c": 2354,
         "e": 193
       },
       "JOAQUINA": {
@@ -9106,6 +9136,11 @@ export const storesSeries = [
         "f": 1763,
         "c": 1004.4,
         "e": 107
+      },
+      "MITSUBA": {
+        "f": 150,
+        "c": 79,
+        "e": 1
       }
     }
   },
@@ -9113,14 +9148,19 @@ export const storesSeries = [
     "data": "2026-08-26",
     "lojas": {
       "DOMINOS": {
-        "f": 4263,
-        "c": 2927,
+        "f": 4288,
+        "c": 2952,
         "e": 200
       },
       "JOAQUINA": {
         "f": 1817,
         "c": 1022.4,
         "e": 125
+      },
+      "MITSUBA": {
+        "f": 150,
+        "c": 95,
+        "e": 5
       }
     }
   },
@@ -9131,6 +9171,16 @@ export const storesSeries = [
         "f": 4199,
         "c": 2900,
         "e": 201
+      },
+      "JOAQUINA": {
+        "f": 1643,
+        "c": 883.2,
+        "e": 114
+      },
+      "MITSUBA": {
+        "f": 150,
+        "c": 95,
+        "e": 5
       }
     }
   },
@@ -9141,6 +9191,16 @@ export const storesSeries = [
         "f": 7255,
         "c": 5495,
         "e": 520
+      },
+      "JOAQUINA": {
+        "f": 1723,
+        "c": 968.76,
+        "e": 97
+      },
+      "MITSUBA": {
+        "f": 300,
+        "c": 186,
+        "e": 9
       }
     }
   },
@@ -9151,6 +9211,16 @@ export const storesSeries = [
         "f": 6840,
         "c": 5061,
         "e": 444
+      },
+      "JOAQUINA": {
+        "f": 1901,
+        "c": 1050.4,
+        "e": 153
+      },
+      "MITSUBA": {
+        "f": 450,
+        "c": 241,
+        "e": 4
       }
     }
   },
@@ -9161,6 +9231,41 @@ export const storesSeries = [
         "f": 7699,
         "c": 5885,
         "e": 556
+      },
+      "JOAQUINA": {
+        "f": 1826,
+        "c": 1011.12,
+        "e": 165
+      },
+      "MITSUBA": {
+        "f": 450,
+        "c": 285,
+        "e": 15
+      }
+    }
+  },
+  {
+    "data": "2026-08-31",
+    "lojas": {
+      "DOMINOS": {
+        "f": 2921,
+        "c": 2155,
+        "e": 179
+      },
+      "JOAQUINA": {
+        "f": 1612,
+        "c": 917.48,
+        "e": 97
+      }
+    }
+  },
+  {
+    "data": "2026-09-01",
+    "lojas": {
+      "MITSUBA": {
+        "f": 150,
+        "c": 75,
+        "e": 0
       }
     }
   }
