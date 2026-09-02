@@ -35428,8 +35428,8 @@ export const entregadoresSeries = [
         "e": 9
       },
       "JEFFERSON TIMÓTEO": {
-        "f": 279.67,
-        "c": 128.2,
+        "f": 168.67,
+        "c": 76.92,
         "e": 0
       },
       "VICTOR HUGO PEDREIRA SILVA (R3)": {
@@ -35648,8 +35648,8 @@ export const entregadoresSeries = [
         "e": 21
       },
       "JOÃO VITOR DO NASCIMENTO": {
-        "f": 175,
-        "c": 94.92,
+        "f": 296,
+        "c": 171.84,
         "e": 18
       },
       "IAN LOPES DOS SANTOS": {
@@ -35943,8 +35943,8 @@ export const entregadoresSeries = [
         "e": 6
       },
       "YURI DE LIMA DA SILVA (R3)": {
-        "f": 150,
-        "c": 107,
+        "f": 160,
+        "c": 117,
         "e": 8
       },
       "CARLOS EDUARDO DE OLIVEIRA (R3)": {
@@ -36036,12 +36036,27 @@ export const entregadoresSeries = [
         "f": 150,
         "c": 99,
         "e": 6
+      },
+      "MARLON NOBRE (SOBRA)": {
+        "f": 212.67,
+        "c": 128.2,
+        "e": 0
+      },
+      "FRANCISCO AGNALDO BRITO": {
+        "f": 212.67,
+        "c": 128.2,
+        "e": 0
       }
     }
   },
   {
     "data": "2026-08-19",
     "motoristas": {
+      "JEFFERSON TIMÓTEO": {
+        "f": 111,
+        "c": 51.28,
+        "e": 4
+      },
       "CARLOS EDUARDO TOTES (R3)": {
         "f": 206,
         "c": 157,
@@ -36216,12 +36231,32 @@ export const entregadoresSeries = [
         "f": 150,
         "c": 95,
         "e": 5
+      },
+      "MARLON NOBRE (SOBRA)": {
+        "f": 111.67,
+        "c": 76.92,
+        "e": 0
+      },
+      "FRANCISCO AGNALDO BRITO": {
+        "f": 212.67,
+        "c": 128.2,
+        "e": 0
+      },
+      "GABRIEL SILVA FIDELIS": {
+        "f": 101,
+        "c": 51.28,
+        "e": 0
       }
     }
   },
   {
     "data": "2026-08-20",
     "motoristas": {
+      "JEFFERSON TIMÓTEO": {
+        "f": 111,
+        "c": 51.28,
+        "e": 1
+      },
       "RODRIGO DIAS PEREIRA (R3)": {
         "f": 300,
         "c": 202,
@@ -36386,12 +36421,27 @@ export const entregadoresSeries = [
         "f": 165,
         "c": 96,
         "e": 9
+      },
+      "GABRIEL SILVA FIDELIS": {
+        "f": 212.67,
+        "c": 128.2,
+        "e": 0
+      },
+      "FRANCISCO AGNALDO BRITO": {
+        "f": 212.67,
+        "c": 128.2,
+        "e": 0
       }
     }
   },
   {
     "data": "2026-08-21",
     "motoristas": {
+      "JEFFERSON TIMÓTEO": {
+        "f": 111,
+        "c": 51.28,
+        "e": 12
+      },
       "CARLOS EDUARDO TOTES (R3)": {
         "f": 222,
         "c": 169,
@@ -36631,12 +36681,27 @@ export const entregadoresSeries = [
         "f": 150,
         "c": 83,
         "e": 2
+      },
+      "GABRIEL SILVA FIDELIS": {
+        "f": 212.67,
+        "c": 128.2,
+        "e": 0
+      },
+      "FRANCISCO AGNALDO BRITO": {
+        "f": 212.67,
+        "c": 128.2,
+        "e": 0
       }
     }
   },
   {
     "data": "2026-08-22",
     "motoristas": {
+      "JEFFERSON TIMÓTEO": {
+        "f": 111,
+        "c": 51.28,
+        "e": 7
+      },
       "MAX SOUZA PRÓCOPIO (R3)": {
         "f": 222,
         "c": 169,
@@ -36891,12 +36956,27 @@ export const entregadoresSeries = [
         "f": 150,
         "c": 87,
         "e": 3
+      },
+      "GABRIEL SILVA FIDELIS": {
+        "f": 212.67,
+        "c": 128.2,
+        "e": 0
+      },
+      "FRANCISCO AGNALDO BRITO": {
+        "f": 212.67,
+        "c": 128.2,
+        "e": 0
       }
     }
   },
   {
     "data": "2026-08-23",
     "motoristas": {
+      "JEFFERSON TIMÓTEO": {
+        "f": 279.67,
+        "c": 128.2,
+        "e": 19
+      },
       "MAX SOUZA PRÓCOPIO (R3)": {
         "f": 222,
         "c": 169,
@@ -37131,6 +37211,26 @@ export const entregadoresSeries = [
         "f": 150,
         "c": 95,
         "e": 5
+      },
+      "FRANCISCO AGNALDO BRITO": {
+        "f": 212.67,
+        "c": 128.2,
+        "e": 0
+      },
+      "GABRIEL SILVA FIDELIS": {
+        "f": 212.67,
+        "c": 128.2,
+        "e": 0
+      },
+      "FRANCISCO CLEBIO (CLT)": {
+        "f": 308,
+        "c": 128.2,
+        "e": 0
+      },
+      "MARLON NOBRE (SOBRA)": {
+        "f": 165,
+        "c": 76.92,
+        "e": 0
       }
     }
   },
@@ -37466,12 +37566,27 @@ export const entregadoresSeries = [
         "f": 148,
         "c": 85.92,
         "e": 9
+      },
+      "GABRIEL SILVA FIDELIS": {
+        "f": 212.67,
+        "c": 128.2,
+        "e": 0
+      },
+      "FRANCISCO AGNALDO BRITO": {
+        "f": 212.67,
+        "c": 128.2,
+        "e": 0
       }
     }
   },
   {
     "data": "2026-08-26",
     "motoristas": {
+      "JEFFERSON TIMÓTEO": {
+        "f": 111,
+        "c": 51.28,
+        "e": 6
+      },
       "JOÃO CARLOS RAMOS (CLT)": {
         "f": 166,
         "c": 127,
@@ -37641,12 +37756,27 @@ export const entregadoresSeries = [
         "f": 154,
         "c": 87.92,
         "e": 11
+      },
+      "GABRIEL SILVA FIDELIS": {
+        "f": 212.67,
+        "c": 128.2,
+        "e": 0
+      },
+      "FRANCISCO AGNALDO BRITO": {
+        "f": 212.67,
+        "c": 128.2,
+        "e": 0
       }
     }
   },
   {
     "data": "2026-08-27",
     "motoristas": {
+      "JEFFERSON TIMÓTEO": {
+        "f": 111,
+        "c": 51.28,
+        "e": 5
+      },
       "JOSE AUGUSTO (R3)": {
         "f": 150,
         "c": 111,
@@ -37811,12 +37941,27 @@ export const entregadoresSeries = [
         "f": 150,
         "c": 95,
         "e": 5
+      },
+      "GABRIEL SILVA FIDELIS": {
+        "f": 212.67,
+        "c": 128.2,
+        "e": 0
+      },
+      "FRANCISCO AGNALDO BRITO": {
+        "f": 212.67,
+        "c": 128.2,
+        "e": 0
       }
     }
   },
   {
     "data": "2026-08-28",
     "motoristas": {
+      "JEFFERSON TIMÓTEO": {
+        "f": 111,
+        "c": 51.28,
+        "e": 9
+      },
       "JORGE DOS SANTOS MANSUR (R3)": {
         "f": 174,
         "c": 133,
@@ -38046,12 +38191,27 @@ export const entregadoresSeries = [
         "f": 150,
         "c": 87,
         "e": 3
+      },
+      "GABRIEL SILVA FIDELIS": {
+        "f": 212.67,
+        "c": 128.2,
+        "e": 0
+      },
+      "FRANCISCO AGNALDO BRITO": {
+        "f": 212.67,
+        "c": 128.2,
+        "e": 0
       }
     }
   },
   {
     "data": "2026-08-29",
     "motoristas": {
+      "JEFFERSON TIMÓTEO": {
+        "f": 111,
+        "c": 51.28,
+        "e": 3
+      },
       "JOSE AUGUSTO (R3)": {
         "f": 158,
         "c": 121,
@@ -38281,12 +38441,27 @@ export const entregadoresSeries = [
         "f": 150,
         "c": 79,
         "e": 1
+      },
+      "GABRIEL SILVA FIDELIS": {
+        "f": 212.67,
+        "c": 128.2,
+        "e": 0
+      },
+      "FRANCISCO AGNALDO BRITO": {
+        "f": 212.67,
+        "c": 128.2,
+        "e": 0
       }
     }
   },
   {
     "data": "2026-08-30",
     "motoristas": {
+      "JEFFERSON TIMÓTEO": {
+        "f": 279.67,
+        "c": 128.2,
+        "e": 18
+      },
       "JOSE AUGUSTO (R3)": {
         "f": 198,
         "c": 151,
@@ -38521,6 +38696,26 @@ export const entregadoresSeries = [
         "f": 150,
         "c": 95,
         "e": 5
+      },
+      "FRANCISCO AGNALDO BRITO": {
+        "f": 223.34,
+        "c": 153.84,
+        "e": 0
+      },
+      "GABRIEL SILVA FIDELIS": {
+        "f": 212.67,
+        "c": 128.2,
+        "e": 0
+      },
+      "MARLON NOBRE (SOBRA)": {
+        "f": 308,
+        "c": 128.2,
+        "e": 0
+      },
+      "ANTONIO MAYCON (SOBRA)/(LÍDER)": {
+        "f": 165,
+        "c": 76.92,
+        "e": 0
       }
     }
   },
@@ -38572,7 +38767,7 @@ export const entregadoresSeries = [
         "c": 115,
         "e": 10
       },
-      "MARCOS JULIO": {
+      "MARCOS JÚNIOR COSTA BORGES": {
         "f": 150,
         "c": 103,
         "e": 7
@@ -38581,6 +38776,21 @@ export const entregadoresSeries = [
         "f": 150,
         "c": 103,
         "e": 7
+      },
+      "GUILHERME MORAIS (CLT)": {
+        "f": 150,
+        "c": 111,
+        "e": 9
+      },
+      "GABRIEL RAMOS (CLT)": {
+        "f": 150,
+        "c": 99,
+        "e": 6
+      },
+      "BRENDO BARBOSA DA SILVA": {
+        "f": 150,
+        "c": 99,
+        "e": 6
       },
       "MARCUS MOURA": {
         "f": 150,
@@ -38646,6 +38856,156 @@ export const entregadoresSeries = [
         "f": 166,
         "c": 91.92,
         "e": 15
+      }
+    }
+  },
+  {
+    "data": "2026-09-01",
+    "motoristas": {
+      "JORGE DOS SANTOS MANSUR (R3)": {
+        "f": 150,
+        "c": 111,
+        "e": 9
+      },
+      "ANTÔNIO BEZERRA DA SILVA (R3)": {
+        "f": 150,
+        "c": 107,
+        "e": 8
+      },
+      "HENRIQUE MOURÃO MESQUITA (R3)": {
+        "f": 150,
+        "c": 95,
+        "e": 5
+      },
+      "FABIO JUNIOR (CLT)": {
+        "f": 150,
+        "c": 87,
+        "e": 3
+      },
+      "MARCUS BRUNO DE SOUZA (LIDER)": {
+        "f": 150,
+        "c": 79,
+        "e": 1
+      },
+      "CARLOS EDUARDO DE OLIVEIRA (R3)": {
+        "f": 202,
+        "c": 159,
+        "e": 14
+      },
+      "YURI DE LIMA DA SILVA (R3)": {
+        "f": 194,
+        "c": 153,
+        "e": 13
+      },
+      "HUMAEL PEDRO DA CRUZ": {
+        "f": 170,
+        "c": 131,
+        "e": 9
+      },
+      "WALLISSON MATHIAS VERAS (R3)": {
+        "f": 166,
+        "c": 127,
+        "e": 12
+      },
+      "ANTHONY FELIPE DE LIMA (R3)": {
+        "f": 150,
+        "c": 111,
+        "e": 9
+      },
+      "FRANCISCO SILVA": {
+        "f": 150,
+        "c": 103,
+        "e": 7
+      },
+      "MARCOS JÚNIOR COSTA": {
+        "f": 150,
+        "c": 103,
+        "e": 7
+      },
+      "MATHEUS CEZARI DA SILVEIRA (R3)": {
+        "f": 150,
+        "c": 103,
+        "e": 7
+      },
+      "JOÃO CARLOS RAMOS (CLT)": {
+        "f": 198,
+        "c": 151,
+        "e": 16
+      },
+      "JEFFERSON ANTERO (R3)": {
+        "f": 348,
+        "c": 254,
+        "e": 23
+      },
+      "GUILHERME MORAIS (CLT)": {
+        "f": 190,
+        "c": 145,
+        "e": 15
+      },
+      "THAYS PROCÓPIO FERREIRA": {
+        "f": 174,
+        "c": 133,
+        "e": 13
+      },
+      "MARCUS MOURA": {
+        "f": 174,
+        "c": 133,
+        "e": 13
+      },
+      "CARLOS EDUARDO TOTES (R3)": {
+        "f": 174,
+        "c": 133,
+        "e": 13
+      },
+      "KEVIN WILLIAM (R3)": {
+        "f": 166,
+        "c": 127,
+        "e": 12
+      },
+      "LUCAS CONCEIÇÃO MARTINS": {
+        "f": 158,
+        "c": 121,
+        "e": 11
+      },
+      "JOÃO VICTOR FEITOSA DA COSTA (R3)": {
+        "f": 150,
+        "c": 91,
+        "e": 4
+      },
+      "claudio venicius da silva araujo": {
+        "f": 300,
+        "c": 214,
+        "e": 16
+      },
+      "GUSTAVO PAULA FRAGOSO (R3)": {
+        "f": 166,
+        "c": 127,
+        "e": 12
+      },
+      "MATHEUS RIBEIRO DINIZ (R3)": {
+        "f": 150,
+        "c": 107,
+        "e": 8
+      },
+      "JULIO HENRIQUE MAGALHÃES (R3)": {
+        "f": 150,
+        "c": 107,
+        "e": 8
+      },
+      "GABRIEL SILVA FIDELIS": {
+        "f": 212.67,
+        "c": 128.2,
+        "e": 0
+      },
+      "ROBSON TOMAS (CLT)": {
+        "f": 111.67,
+        "c": 76.92,
+        "e": 0
+      },
+      "MARLON NOBRE (SOBRA)": {
+        "f": 101,
+        "c": 51.28,
+        "e": 0
       }
     }
   }
