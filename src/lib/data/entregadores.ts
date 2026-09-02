@@ -10,9 +10,9 @@ export const entregadores = [
   },
   {
     "nome": "GABRIEL RAMOS (CLT)",
-    "entregas": 4841,
-    "custo": 46570,
-    "fatura": 61780,
+    "entregas": 4847,
+    "custo": 46669,
+    "fatura": 61930,
     "lojas": [
       "DOMINOS"
     ]
@@ -28,9 +28,9 @@ export const entregadores = [
   },
   {
     "nome": "JOÃO VICTOR FEITOSA DA COSTA (R3)",
-    "entregas": 3668,
-    "custo": 42942,
-    "fatura": 60428,
+    "entregas": 3672,
+    "custo": 43033,
+    "fatura": 60578,
     "lojas": [
       "DOMINOS"
     ]
@@ -91,9 +91,9 @@ export const entregadores = [
   },
   {
     "nome": "JEFFERSON ANTERO (R3)",
-    "entregas": 2508,
-    "custo": 24834,
-    "fatura": 34054,
+    "entregas": 2531,
+    "custo": 25088,
+    "fatura": 34402,
     "lojas": [
       "DOMINOS"
     ]
@@ -228,8 +228,8 @@ export const entregadores = [
   {
     "nome": "JOÃO VITOR DO NASCIMENTO",
     "entregas": 1856,
-    "custo": 13756.25,
-    "fatura": 25500.71,
+    "custo": 13833.17,
+    "fatura": 25621.71,
     "lojas": [
       "JOAQUINA"
     ]
@@ -248,8 +248,8 @@ export const entregadores = [
   {
     "nome": "ANTONIO MAYCON (SOBRA)/(LÍDER)",
     "entregas": 1762,
-    "custo": 14362.35,
-    "fatura": 28245.22,
+    "custo": 14439.27,
+    "fatura": 28410.22,
     "lojas": [
       "COZI",
       "JOAQUINA",
@@ -277,6 +277,15 @@ export const entregadores = [
     ]
   },
   {
+    "nome": "GUILHERME MORAIS (CLT)",
+    "entregas": 1633,
+    "custo": 17184,
+    "fatura": 22838,
+    "lojas": [
+      "DOMINOS"
+    ]
+  },
+  {
     "nome": "LEANDRO GOMES NASCIMENTO",
     "entregas": 1619,
     "custo": 19517,
@@ -286,28 +295,28 @@ export const entregadores = [
     ]
   },
   {
-    "nome": "GUILHERME MORAIS (CLT)",
-    "entregas": 1609,
-    "custo": 16928,
-    "fatura": 22498,
-    "lojas": [
-      "DOMINOS"
-    ]
-  },
-  {
     "nome": "CARLOS EDUARDO DE OLIVEIRA (R3)",
-    "entregas": 1598,
-    "custo": 19686,
-    "fatura": 25876,
+    "entregas": 1612,
+    "custo": 19845,
+    "fatura": 26078,
     "lojas": [
       "DOMINOS"
     ]
   },
   {
     "nome": "ANTÔNIO BEZERRA DA SILVA (R3)",
-    "entregas": 1587,
-    "custo": 17313,
-    "fatura": 23250,
+    "entregas": 1595,
+    "custo": 17420,
+    "fatura": 23400,
+    "lojas": [
+      "DOMINOS"
+    ]
+  },
+  {
+    "nome": "CARLOS EDUARDO TOTES (R3)",
+    "entregas": 1582,
+    "custo": 16530,
+    "fatura": 22358,
     "lojas": [
       "DOMINOS"
     ]
@@ -319,15 +328,6 @@ export const entregadores = [
     "fatura": 21060,
     "lojas": [
       "JOAQUINA"
-    ]
-  },
-  {
-    "nome": "CARLOS EDUARDO TOTES (R3)",
-    "entregas": 1569,
-    "custo": 16397,
-    "fatura": 22184,
-    "lojas": [
-      "DOMINOS"
     ]
   },
   {
@@ -359,23 +359,23 @@ export const entregadores = [
     ]
   },
   {
+    "nome": "JOÃO CARLOS RAMOS (CLT)",
+    "entregas": 1444,
+    "custo": 14587.2,
+    "fatura": 19808.34,
+    "lojas": [
+      "COZI",
+      "DOMINOS",
+      "JOAQUINA"
+    ]
+  },
+  {
     "nome": "RENAN DOS SANTOS",
     "entregas": 1443,
     "custo": 9809.15,
     "fatura": 19587.37,
     "lojas": [
       "RJCC",
-      "JOAQUINA"
-    ]
-  },
-  {
-    "nome": "JOÃO CARLOS RAMOS (CLT)",
-    "entregas": 1428,
-    "custo": 14436.2,
-    "fatura": 19610.34,
-    "lojas": [
-      "COZI",
-      "DOMINOS",
       "JOAQUINA"
     ]
   },
@@ -530,9 +530,18 @@ export const entregadores = [
   },
   {
     "nome": "WALLISSON MATHIAS VERAS (R3)",
-    "entregas": 1157,
-    "custo": 12092,
-    "fatura": 16074,
+    "entregas": 1169,
+    "custo": 12219,
+    "fatura": 16240,
+    "lojas": [
+      "DOMINOS"
+    ]
+  },
+  {
+    "nome": "HENRIQUE MOURÃO MESQUITA (R3)",
+    "entregas": 1145,
+    "custo": 13348,
+    "fatura": 18422,
     "lojas": [
       "DOMINOS"
     ]
@@ -547,19 +556,10 @@ export const entregadores = [
     ]
   },
   {
-    "nome": "HENRIQUE MOURÃO MESQUITA (R3)",
-    "entregas": 1140,
-    "custo": 13253,
-    "fatura": 18272,
-    "lojas": [
-      "DOMINOS"
-    ]
-  },
-  {
     "nome": "FRANCISCO AGNALDO BRITO",
     "entregas": 1108,
-    "custo": 18547.28,
-    "fatura": 26671.99,
+    "custo": 20111.32,
+    "fatura": 29234.7,
     "lojas": [
       "COZI",
       "MITSUBA",
@@ -595,18 +595,18 @@ export const entregadores = [
   },
   {
     "nome": "ANTHONY FELIPE DE LIMA (R3)",
-    "entregas": 1027,
-    "custo": 12705,
-    "fatura": 17444,
+    "entregas": 1036,
+    "custo": 12816,
+    "fatura": 17594,
     "lojas": [
       "DOMINOS"
     ]
   },
   {
     "nome": "KEVIN WILLIAM (R3)",
-    "entregas": 1000,
-    "custo": 10343,
-    "fatura": 13912,
+    "entregas": 1012,
+    "custo": 10470,
+    "fatura": 14078,
     "lojas": [
       "DOMINOS"
     ]
@@ -622,9 +622,9 @@ export const entregadores = [
   },
   {
     "nome": "MATHEUS CEZARI DA SILVEIRA (R3)",
-    "entregas": 962,
-    "custo": 15331,
-    "fatura": 22852,
+    "entregas": 969,
+    "custo": 15434,
+    "fatura": 23002,
     "lojas": [
       "DOMINOS"
     ]
@@ -638,6 +638,15 @@ export const entregadores = [
       "COZI",
       "DOMINOS",
       "JOAQUINA"
+    ]
+  },
+  {
+    "nome": "JEFFERSON TIMÓTEO",
+    "entregas": 940,
+    "custo": 6794.6,
+    "fatura": 14744.39,
+    "lojas": [
+      "ARTIGIANO - ANNA"
     ]
   },
   {
@@ -704,15 +713,6 @@ export const entregadores = [
     ]
   },
   {
-    "nome": "JEFFERSON TIMÓTEO",
-    "entregas": 856,
-    "custo": 6179.24,
-    "fatura": 13408.05,
-    "lojas": [
-      "ARTIGIANO - ANNA"
-    ]
-  },
-  {
     "nome": "MAX SOUZA PRÓCOPIO (R3)",
     "entregas": 837,
     "custo": 8156,
@@ -740,6 +740,15 @@ export const entregadores = [
     ]
   },
   {
+    "nome": "YURI DE LIMA DA SILVA (R3)",
+    "entregas": 824,
+    "custo": 10582,
+    "fatura": 13904,
+    "lojas": [
+      "DOMINOS"
+    ]
+  },
+  {
     "nome": "YURI DA SILVA SARAIVA (R3)",
     "entregas": 819,
     "custo": 8486,
@@ -758,19 +767,10 @@ export const entregadores = [
     ]
   },
   {
-    "nome": "YURI DE LIMA DA SILVA (R3)",
-    "entregas": 811,
-    "custo": 10419,
-    "fatura": 13700,
-    "lojas": [
-      "DOMINOS"
-    ]
-  },
-  {
     "nome": "JORGE DOS SANTOS MANSUR (R3)",
-    "entregas": 805,
-    "custo": 8989,
-    "fatura": 12216,
+    "entregas": 814,
+    "custo": 9100,
+    "fatura": 12366,
     "lojas": [
       "DOMINOS"
     ]
@@ -814,9 +814,9 @@ export const entregadores = [
   },
   {
     "nome": "MATHEUS RIBEIRO DINIZ (R3)",
-    "entregas": 763,
-    "custo": 8768,
-    "fatura": 12116,
+    "entregas": 771,
+    "custo": 8875,
+    "fatura": 12266,
     "lojas": [
       "DOMINOS"
     ]
@@ -924,6 +924,15 @@ export const entregadores = [
     ]
   },
   {
+    "nome": "LUCAS CONCEIÇÃO MARTINS",
+    "entregas": 661,
+    "custo": 6538,
+    "fatura": 8616,
+    "lojas": [
+      "DOMINOS"
+    ]
+  },
+  {
     "nome": "RODRIGO GEILSON",
     "entregas": 658,
     "custo": 5052.12,
@@ -931,15 +940,6 @@ export const entregadores = [
     "lojas": [
       "COZI",
       "JOAQUINA"
-    ]
-  },
-  {
-    "nome": "LUCAS CONCEIÇÃO MARTINS",
-    "entregas": 650,
-    "custo": 6417,
-    "fatura": 8458,
-    "lojas": [
-      "DOMINOS"
     ]
   },
   {
@@ -1008,6 +1008,15 @@ export const entregadores = [
     ]
   },
   {
+    "nome": "BRENDO BARBOSA DA SILVA",
+    "entregas": 610,
+    "custo": 6193,
+    "fatura": 8202,
+    "lojas": [
+      "DOMINOS"
+    ]
+  },
+  {
     "nome": "DAVI DO CARMO",
     "entregas": 610,
     "custo": 6849,
@@ -1031,15 +1040,6 @@ export const entregadores = [
     "entregas": 606,
     "custo": 7786,
     "fatura": 11098,
-    "lojas": [
-      "DOMINOS"
-    ]
-  },
-  {
-    "nome": "BRENDO BARBOSA DA SILVA",
-    "entregas": 604,
-    "custo": 6094,
-    "fatura": 8052,
     "lojas": [
       "DOMINOS"
     ]
@@ -1128,9 +1128,9 @@ export const entregadores = [
   },
   {
     "nome": "MARCUS BRUNO DE SOUZA (LIDER)",
-    "entregas": 538,
-    "custo": 6763,
-    "fatura": 9686,
+    "entregas": 539,
+    "custo": 6842,
+    "fatura": 9836,
     "lojas": [
       "DOMINOS"
     ]
@@ -1256,6 +1256,15 @@ export const entregadores = [
     ]
   },
   {
+    "nome": "GUSTAVO PAULA FRAGOSO (R3)",
+    "entregas": 447,
+    "custo": 5512,
+    "fatura": 7846,
+    "lojas": [
+      "DOMINOS"
+    ]
+  },
+  {
     "nome": "ANTONIO MAYCOM",
     "entregas": 443,
     "custo": 5117,
@@ -1280,15 +1289,6 @@ export const entregadores = [
     "fatura": 7112.78,
     "lojas": [
       "JOAQUINA"
-    ]
-  },
-  {
-    "nome": "GUSTAVO PAULA FRAGOSO (R3)",
-    "entregas": 435,
-    "custo": 5385,
-    "fatura": 7680,
-    "lojas": [
-      "DOMINOS"
     ]
   },
   {
@@ -1447,6 +1447,15 @@ export const entregadores = [
     ]
   },
   {
+    "nome": "HUMAEL PEDRO DA CRUZ",
+    "entregas": 375,
+    "custo": 5264,
+    "fatura": 7076,
+    "lojas": [
+      "DOMINOS"
+    ]
+  },
+  {
     "nome": "GUILHERME FEITOSA",
     "entregas": 372,
     "custo": 3865,
@@ -1460,15 +1469,6 @@ export const entregadores = [
     "entregas": 368,
     "custo": 4436,
     "fatura": 6156,
-    "lojas": [
-      "DOMINOS"
-    ]
-  },
-  {
-    "nome": "HUMAEL PEDRO DA CRUZ",
-    "entregas": 366,
-    "custo": 5133,
-    "fatura": 6906,
     "lojas": [
       "DOMINOS"
     ]
@@ -1578,6 +1578,15 @@ export const entregadores = [
     ]
   },
   {
+    "nome": "JULIO HENRIQUE MAGALHÃES (R3)",
+    "entregas": 314,
+    "custo": 4132,
+    "fatura": 5804,
+    "lojas": [
+      "DOMINOS"
+    ]
+  },
+  {
     "nome": "DANIEL JESUS",
     "entregas": 313,
     "custo": 4211,
@@ -1596,19 +1605,19 @@ export const entregadores = [
     ]
   },
   {
-    "nome": "ANDRE SOARES DE MELO",
-    "entregas": 307,
-    "custo": 3191,
-    "fatura": 4378,
+    "nome": "THAYS PROCÓPIO FERREIRA",
+    "entregas": 308,
+    "custo": 3078,
+    "fatura": 4024,
     "lojas": [
       "DOMINOS"
     ]
   },
   {
-    "nome": "JULIO HENRIQUE MAGALHÃES (R3)",
-    "entregas": 306,
-    "custo": 4025,
-    "fatura": 5654,
+    "nome": "ANDRE SOARES DE MELO",
+    "entregas": 307,
+    "custo": 3191,
+    "fatura": 4378,
     "lojas": [
       "DOMINOS"
     ]
@@ -1645,15 +1654,6 @@ export const entregadores = [
     "entregas": 296,
     "custo": 3587,
     "fatura": 4962,
-    "lojas": [
-      "DOMINOS"
-    ]
-  },
-  {
-    "nome": "THAYS PROCÓPIO FERREIRA",
-    "entregas": 295,
-    "custo": 2945,
-    "fatura": 3850,
     "lojas": [
       "DOMINOS"
     ]
@@ -1932,6 +1932,15 @@ export const entregadores = [
     ]
   },
   {
+    "nome": "claudio venicius da silva araujo",
+    "entregas": 196,
+    "custo": 2670,
+    "fatura": 3764,
+    "lojas": [
+      "DOMINOS"
+    ]
+  },
+  {
     "nome": "FELIPE GOMES DOS SANTOS (R3)",
     "entregas": 195,
     "custo": 2119,
@@ -2041,15 +2050,6 @@ export const entregadores = [
     ]
   },
   {
-    "nome": "claudio venicius da silva araujo",
-    "entregas": 180,
-    "custo": 2456,
-    "fatura": 3464,
-    "lojas": [
-      "DOMINOS"
-    ]
-  },
-  {
     "nome": "FERNANDO FRANCISCO DA SILVA",
     "entregas": 178,
     "custo": 1732,
@@ -2101,6 +2101,15 @@ export const entregadores = [
     "entregas": 168,
     "custo": 1855,
     "fatura": 2482,
+    "lojas": [
+      "DOMINOS"
+    ]
+  },
+  {
+    "nome": "MARCUS MOURA",
+    "entregas": 165,
+    "custo": 1782,
+    "fatura": 2388,
     "lojas": [
       "DOMINOS"
     ]
@@ -2183,15 +2192,6 @@ export const entregadores = [
     "entregas": 152,
     "custo": 1844,
     "fatura": 2544,
-    "lojas": [
-      "DOMINOS"
-    ]
-  },
-  {
-    "nome": "MARCUS MOURA",
-    "entregas": 152,
-    "custo": 1649,
-    "fatura": 2214,
     "lojas": [
       "DOMINOS"
     ]
@@ -2326,6 +2326,15 @@ export const entregadores = [
     ]
   },
   {
+    "nome": "FABIO JUNIOR (CLT)",
+    "entregas": 127,
+    "custo": 1943,
+    "fatura": 2890,
+    "lojas": [
+      "DOMINOS"
+    ]
+  },
+  {
     "nome": "Willians Tavares Mendonça da Silva",
     "entregas": 127,
     "custo": 1864,
@@ -2369,15 +2378,6 @@ export const entregadores = [
     "fatura": 1686,
     "lojas": [
       "JOAQUINA"
-    ]
-  },
-  {
-    "nome": "FABIO JUNIOR (CLT)",
-    "entregas": 124,
-    "custo": 1856,
-    "fatura": 2740,
-    "lojas": [
-      "DOMINOS"
     ]
   },
   {
@@ -3035,6 +3035,15 @@ export const entregadores = [
     ]
   },
   {
+    "nome": "MARCOS JÚNIOR COSTA BORGES",
+    "entregas": 72,
+    "custo": 831,
+    "fatura": 1122,
+    "lojas": [
+      "DOMINOS"
+    ]
+  },
+  {
     "nome": "JOSE VICTOR PRATES",
     "entregas": 72,
     "custo": 397.46,
@@ -3178,15 +3187,6 @@ export const entregadores = [
     "entregas": 65,
     "custo": 728,
     "fatura": 1142,
-    "lojas": [
-      "DOMINOS"
-    ]
-  },
-  {
-    "nome": "MARCOS JÚNIOR COSTA BORGES",
-    "entregas": 65,
-    "custo": 728,
-    "fatura": 972,
     "lojas": [
       "DOMINOS"
     ]
@@ -4051,8 +4051,8 @@ export const entregadores = [
   {
     "nome": "GABRIEL SILVA FIDELIS",
     "entregas": 34,
-    "custo": 14649.44,
-    "fatura": 24371.71,
+    "custo": 16110.92,
+    "fatura": 26812.08,
     "lojas": [
       "JOAQUINA",
       "RJCC"
@@ -5593,8 +5593,8 @@ export const entregadores = [
   {
     "nome": "FRANCISCO CLEBIO (CLT)",
     "entregas": 9,
-    "custo": 846.88,
-    "fatura": 1584.34,
+    "custo": 975.08,
+    "fatura": 1892.34,
     "lojas": [
       "MITSUBA",
       "RJCC"
@@ -5944,7 +5944,16 @@ export const entregadores = [
     ]
   },
   {
-    "nome": "MARCOS JULIO",
+    "nome": "FRANCISCO SILVA",
+    "entregas": 7,
+    "custo": 103,
+    "fatura": 150,
+    "lojas": [
+      "DOMINOS"
+    ]
+  },
+  {
+    "nome": "MARCOS JÚNIOR COSTA",
     "entregas": 7,
     "custo": 103,
     "fatura": 150,
@@ -6715,8 +6724,8 @@ export const entregadores = [
   {
     "nome": "MARLON NOBRE (SOBRA)",
     "entregas": 0,
-    "custo": 717.92,
-    "fatura": 1377.01,
+    "custo": 1179.44,
+    "fatura": 2275.35,
     "lojas": [
       "RJCC"
     ]
@@ -6724,8 +6733,8 @@ export const entregadores = [
   {
     "nome": "ROBSON TOMAS (CLT)",
     "entregas": 0,
-    "custo": 76.92,
-    "fatura": 111.67,
+    "custo": 153.84,
+    "fatura": 223.34,
     "lojas": [
       "RJCC"
     ]
