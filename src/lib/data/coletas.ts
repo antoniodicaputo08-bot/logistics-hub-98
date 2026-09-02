@@ -1,20 +1,20 @@
 // Gerado por analise-rotas.js — não editar à mão.
 // Atualizado diariamente às 8h pelo rotas-diario.js.
 export const coletas = {
-  "gerado": "2026-09-01T08:00:28.037Z",
+  "gerado": "2026-09-02T08:00:28.976Z",
   "resumo": {
     "coletas": 2576,
     "motoristas": 190,
     "medianaColetas": 7,
     "sobrecarregados": 34,
     "ociosos": 66,
-    "dispersos": 20,
+    "dispersos": 21,
     "semCadastro": 85
   },
   "cobertura": {
-    "veiculo": 1095,
+    "veiculo": 1093,
     "cep": 2544,
-    "horario": 480,
+    "horario": 449,
     "corte": 147,
     "total": 2576
   },
@@ -160,13 +160,13 @@ export const coletas = {
       ]
     },
     {
-      "nome": "MRJG1389-JOYCE DA SILVA EVANGELISTA",
-      "codigo": "MRJG1389",
-      "veiculo": "MOTO",
-      "coletas": 37,
-      "vezesMediana": 5.3,
+      "nome": "MRJG2260-KAUA GOMES DE ALMEIDA",
+      "codigo": "MRJG2260",
+      "veiculo": null,
+      "coletas": 36,
+      "vezesMediana": 5.1,
       "regioes": [
-        "OSTE E BARRA"
+        "CENTRO E NORTE"
       ]
     }
   ],
@@ -198,6 +198,18 @@ export const coletas = {
     {
       "codigo": "MRJG1931",
       "nome": "MRJG1931- RAFAEL FERNANDES DE BRITTO",
+      "veiculo": null,
+      "coletas": 10,
+      "cepsDistintos": 7,
+      "coletasPorCep": 1.4,
+      "indice": 0.7,
+      "regioes": [
+        "CENTRO E NORTE"
+      ]
+    },
+    {
+      "codigo": "MRJG2477",
+      "nome": "MRJG2477- ANA BEATRIZ DA C DANTAS M DE OLIVEIRA",
       "veiculo": null,
       "coletas": 10,
       "cepsDistintos": 7,
@@ -301,18 +313,6 @@ export const coletas = {
       "indice": 0.5,
       "regioes": [
         "CENTRO E NORTE"
-      ]
-    },
-    {
-      "codigo": "MRJG2077",
-      "nome": "MRJG2077- MAURICIO LUIZ PINHEIRO DA SILVA",
-      "veiculo": null,
-      "coletas": 13,
-      "cepsDistintos": 6,
-      "coletasPorCep": 2.2,
-      "indice": 0.5,
-      "regioes": [
-        "OSTE E BARRA"
       ]
     }
   ],
@@ -481,9 +481,9 @@ export const coletas = {
   "regioes": [
     {
       "nome": "CENTRO E NORTE",
-      "coletas": 1061,
+      "coletas": 1063,
       "motoristas": 73,
-      "mediaPorMotorista": 14.5,
+      "mediaPorMotorista": 14.6,
       "veiculos": {
         "MOTO": 390,
         "KOMBI": 24,
@@ -493,11 +493,11 @@ export const coletas = {
     },
     {
       "nome": "OSTE E BARRA",
-      "coletas": 596,
+      "coletas": 594,
       "motoristas": 23,
-      "mediaPorMotorista": 25.9,
+      "mediaPorMotorista": 25.8,
       "veiculos": {
-        "MOTO": 274,
+        "MOTO": 272,
         "CARRO": 10
       }
     },
