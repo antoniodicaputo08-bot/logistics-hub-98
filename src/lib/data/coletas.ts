@@ -1,22 +1,22 @@
 // Gerado por analise-rotas.js — não editar à mão.
 // Atualizado diariamente às 8h pelo rotas-diario.js.
 export const coletas = {
-  "gerado": "2026-09-02T08:00:28.976Z",
+  "gerado": "2026-09-03T08:00:26.269Z",
   "resumo": {
-    "coletas": 2576,
-    "motoristas": 190,
-    "medianaColetas": 7,
-    "sobrecarregados": 34,
-    "ociosos": 66,
-    "dispersos": 21,
+    "coletas": 2577,
+    "motoristas": 191,
+    "medianaColetas": 6,
+    "sobrecarregados": 48,
+    "ociosos": 67,
+    "dispersos": 20,
     "semCadastro": 85
   },
   "cobertura": {
-    "veiculo": 1093,
-    "cep": 2544,
-    "horario": 449,
+    "veiculo": 1097,
+    "cep": 2545,
+    "horario": 440,
     "corte": 147,
-    "total": 2576
+    "total": 2577
   },
   "sobrecarregados": [
     {
@@ -24,7 +24,7 @@ export const coletas = {
       "codigo": "MRJG1013",
       "veiculo": "MOTO",
       "coletas": 149,
-      "vezesMediana": 21.3,
+      "vezesMediana": 24.8,
       "regioes": [
         "CENTRO E NORTE"
       ]
@@ -34,7 +34,7 @@ export const coletas = {
       "codigo": "MRJG690",
       "veiculo": "MOTO",
       "coletas": 104,
-      "vezesMediana": 14.9,
+      "vezesMediana": 17.3,
       "regioes": [
         "CENTRO E NORTE"
       ]
@@ -44,7 +44,7 @@ export const coletas = {
       "codigo": "MRJG1042",
       "veiculo": "MOTO",
       "coletas": 96,
-      "vezesMediana": 13.7,
+      "vezesMediana": 16,
       "regioes": [
         "OSTE E BARRA"
       ]
@@ -54,7 +54,7 @@ export const coletas = {
       "codigo": "MRJG1474",
       "veiculo": "CARRO",
       "coletas": 89,
-      "vezesMediana": 12.7,
+      "vezesMediana": 14.8,
       "regioes": [
         "CENTRO E NORTE"
       ]
@@ -64,7 +64,7 @@ export const coletas = {
       "codigo": "MRJG2042",
       "veiculo": null,
       "coletas": 78,
-      "vezesMediana": 11.1,
+      "vezesMediana": 13,
       "regioes": [
         "OSTE E BARRA"
       ]
@@ -74,7 +74,7 @@ export const coletas = {
       "codigo": "MRJG1902",
       "veiculo": null,
       "coletas": 75,
-      "vezesMediana": 10.7,
+      "vezesMediana": 12.5,
       "regioes": [
         "ZONA SUL"
       ]
@@ -84,7 +84,7 @@ export const coletas = {
       "codigo": "MRJG1591",
       "veiculo": "MOTO",
       "coletas": 58,
-      "vezesMediana": 8.3,
+      "vezesMediana": 9.7,
       "regioes": [
         "OSTE E BARRA"
       ]
@@ -94,7 +94,7 @@ export const coletas = {
       "codigo": "MRJG941",
       "veiculo": "MOTO",
       "coletas": 52,
-      "vezesMediana": 7.4,
+      "vezesMediana": 8.7,
       "regioes": [
         "OSTE E BARRA"
       ]
@@ -104,7 +104,7 @@ export const coletas = {
       "codigo": "MRJG1867",
       "veiculo": null,
       "coletas": 50,
-      "vezesMediana": 7.1,
+      "vezesMediana": 8.3,
       "regioes": [
         "NITEROI"
       ]
@@ -114,7 +114,7 @@ export const coletas = {
       "codigo": "MRJG1172",
       "veiculo": "MOTO",
       "coletas": 47,
-      "vezesMediana": 6.7,
+      "vezesMediana": 7.8,
       "regioes": [
         "CENTRO E NORTE"
       ]
@@ -124,7 +124,7 @@ export const coletas = {
       "codigo": "MRJG1091",
       "veiculo": "MOTO",
       "coletas": 45,
-      "vezesMediana": 6.4,
+      "vezesMediana": 7.5,
       "regioes": [
         "CENTRO E NORTE"
       ]
@@ -134,7 +134,7 @@ export const coletas = {
       "codigo": "MRJG2108",
       "veiculo": null,
       "coletas": 45,
-      "vezesMediana": 6.4,
+      "vezesMediana": 7.5,
       "regioes": [
         "NITEROI"
       ]
@@ -144,7 +144,7 @@ export const coletas = {
       "codigo": "MRJG2032",
       "veiculo": null,
       "coletas": 43,
-      "vezesMediana": 6.1,
+      "vezesMediana": 7.2,
       "regioes": [
         "CENTRO E NORTE"
       ]
@@ -154,19 +154,19 @@ export const coletas = {
       "codigo": "MRJG2315",
       "veiculo": null,
       "coletas": 42,
-      "vezesMediana": 6,
+      "vezesMediana": 7,
       "regioes": [
         "OSTE E BARRA"
       ]
     },
     {
-      "nome": "MRJG2260-KAUA GOMES DE ALMEIDA",
-      "codigo": "MRJG2260",
-      "veiculo": null,
-      "coletas": 36,
-      "vezesMediana": 5.1,
+      "nome": "MRJG1389-JOYCE DA SILVA EVANGELISTA",
+      "codigo": "MRJG1389",
+      "veiculo": "MOTO",
+      "coletas": 37,
+      "vezesMediana": 6.2,
       "regioes": [
-        "CENTRO E NORTE"
+        "OSTE E BARRA"
       ]
     }
   ],
@@ -187,8 +187,8 @@ export const coletas = {
       "codigo": "MRJG1930",
       "nome": "MRJG1930- WESLEI DOS SANTOS",
       "veiculo": null,
-      "coletas": 17,
-      "cepsDistintos": 13,
+      "coletas": 16,
+      "cepsDistintos": 12,
       "coletasPorCep": 1.3,
       "indice": 0.8,
       "regioes": [
@@ -198,18 +198,6 @@ export const coletas = {
     {
       "codigo": "MRJG1931",
       "nome": "MRJG1931- RAFAEL FERNANDES DE BRITTO",
-      "veiculo": null,
-      "coletas": 10,
-      "cepsDistintos": 7,
-      "coletasPorCep": 1.4,
-      "indice": 0.7,
-      "regioes": [
-        "CENTRO E NORTE"
-      ]
-    },
-    {
-      "codigo": "MRJG2477",
-      "nome": "MRJG2477- ANA BEATRIZ DA C DANTAS M DE OLIVEIRA",
       "veiculo": null,
       "coletas": 10,
       "cepsDistintos": 7,
@@ -253,6 +241,18 @@ export const coletas = {
       "indice": 0.6,
       "regioes": [
         "ZONA SUL"
+      ]
+    },
+    {
+      "codigo": "MRJG1401",
+      "nome": "MRJG1401 - DOUGLAS LUANDERSON XAVIER DA COSTA",
+      "veiculo": null,
+      "coletas": 12,
+      "cepsDistintos": 7,
+      "coletasPorCep": 1.7,
+      "indice": 0.6,
+      "regioes": [
+        "CENTRO E NORTE"
       ]
     },
     {
@@ -304,15 +304,15 @@ export const coletas = {
       ]
     },
     {
-      "codigo": "MRJG1401",
-      "nome": "MRJG1401 - DOUGLAS LUANDERSON XAVIER DA COSTA",
+      "codigo": "MRJG2077",
+      "nome": "MRJG2077- MAURICIO LUIZ PINHEIRO DA SILVA",
       "veiculo": null,
-      "coletas": 11,
+      "coletas": 13,
       "cepsDistintos": 6,
-      "coletasPorCep": 1.8,
+      "coletasPorCep": 2.2,
       "indice": 0.5,
       "regioes": [
-        "CENTRO E NORTE"
+        "OSTE E BARRA"
       ]
     }
   ],
@@ -481,11 +481,11 @@ export const coletas = {
   "regioes": [
     {
       "nome": "CENTRO E NORTE",
-      "coletas": 1063,
+      "coletas": 1061,
       "motoristas": 73,
-      "mediaPorMotorista": 14.6,
+      "mediaPorMotorista": 14.5,
       "veiculos": {
-        "MOTO": 390,
+        "MOTO": 392,
         "KOMBI": 24,
         "CARRO": 141,
         "BONGO": 2
@@ -493,19 +493,19 @@ export const coletas = {
     },
     {
       "nome": "OSTE E BARRA",
-      "coletas": 594,
+      "coletas": 596,
       "motoristas": 23,
-      "mediaPorMotorista": 25.8,
+      "mediaPorMotorista": 25.9,
       "veiculos": {
-        "MOTO": 272,
+        "MOTO": 274,
         "CARRO": 10
       }
     },
     {
       "nome": "BAIXADA",
-      "coletas": 364,
-      "motoristas": 58,
-      "mediaPorMotorista": 6.3,
+      "coletas": 365,
+      "motoristas": 59,
+      "mediaPorMotorista": 6.2,
       "veiculos": {
         "CARRO": 57,
         "MOTO": 101
