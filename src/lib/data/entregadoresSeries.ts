@@ -33627,10 +33627,10 @@ export const entregadoresSeries = [
         "c": 127,
         "e": 12
       },
-      "GUILHERME MORAIS (CLT)": {
-        "f": 348,
-        "c": 266,
-        "e": 26
+      "GUILHERME FEITOSA": {
+        "f": 150,
+        "c": 115,
+        "e": 10
       },
       "VICTOR HUGO PEDREIRA SILVA (R3)": {
         "f": 300,
@@ -33738,6 +33738,11 @@ export const entregadoresSeries = [
         "e": 18
       },
       "GABRIEL RAMOS (CLT)": {
+        "f": 198,
+        "c": 151,
+        "e": 16
+      },
+      "GUILHERME MORAIS (CLT)": {
         "f": 198,
         "c": 151,
         "e": 16
@@ -38887,6 +38892,21 @@ export const entregadoresSeries = [
         "c": 79,
         "e": 1
       },
+      "THIAGO DINIZ MENESSES (R3)": {
+        "f": 150,
+        "c": 111,
+        "e": 9
+      },
+      "RENAN MACHADO DE MATOS (R3)": {
+        "f": 165,
+        "c": 126,
+        "e": 9
+      },
+      "RAFAEL NUNES DIAS (R3)": {
+        "f": 150,
+        "c": 103,
+        "e": 7
+      },
       "CARLOS EDUARDO DE OLIVEIRA (R3)": {
         "f": 202,
         "c": 159,
@@ -38992,6 +39012,26 @@ export const entregadoresSeries = [
         "c": 107,
         "e": 8
       },
+      "RICARDO ADELINO DE OLIVEIRA (CLT)": {
+        "f": 332,
+        "c": 183.84,
+        "e": 30
+      },
+      "BRUNO SILVA DOS SANTOS (CLT)": {
+        "f": 163,
+        "c": 90.92,
+        "e": 14
+      },
+      "MARLON BEZERRA NOBRE (SOBRA)": {
+        "f": 293,
+        "c": 170.84,
+        "e": 17
+      },
+      "MARLON NOBRE (SOBRA)": {
+        "f": 251,
+        "c": 142.28,
+        "e": 4
+      },
       "GABRIEL SILVA FIDELIS": {
         "f": 212.67,
         "c": 128.2,
@@ -39001,10 +39041,180 @@ export const entregadoresSeries = [
         "f": 111.67,
         "c": 76.92,
         "e": 0
+      }
+    }
+  },
+  {
+    "data": "2026-09-02",
+    "motoristas": {
+      "JOSE AUGUSTO (R3)": {
+        "f": 150,
+        "c": 99,
+        "e": 6
+      },
+      "ANTÔNIO BEZERRA DA SILVA (R3)": {
+        "f": 150,
+        "c": 95,
+        "e": 5
+      },
+      "HENRIQUE MOURÃO MESQUITA (R3)": {
+        "f": 150,
+        "c": 91,
+        "e": 4
+      },
+      "FABIO JUNIOR (CLT)": {
+        "f": 150,
+        "c": 75,
+        "e": 0
+      },
+      "THIAGO HENRIQUE LUIS DE OLIVEIRA": {
+        "f": 165,
+        "c": 130,
+        "e": 10
+      },
+      "RENAN MACHADO DE MATOS (R3)": {
+        "f": 165,
+        "c": 126,
+        "e": 9
+      },
+      "RAFAEL NUNES DIAS (R3)": {
+        "f": 170,
+        "c": 127,
+        "e": 8
+      },
+      "BEATRIZ VITORIA DA SILVA (R3)": {
+        "f": 165,
+        "c": 130,
+        "e": 10
+      },
+      "CARLOS EDUARDO DE OLIVEIRA (R3)": {
+        "f": 165,
+        "c": 118,
+        "e": 7
+      },
+      "HUMAEL PEDRO DA CRUZ": {
+        "f": 160,
+        "c": 105,
+        "e": 5
+      },
+      "RAFAEL REIS LINHARES (R3)": {
+        "f": 166,
+        "c": 127,
+        "e": 12
+      },
+      "FRANCISCO SILVA": {
+        "f": 150,
+        "c": 111,
+        "e": 9
+      },
+      "MARCOS JÚNIOR COSTA": {
+        "f": 150,
+        "c": 103,
+        "e": 7
+      },
+      "MATHEUS CEZARI DA SILVEIRA (R3)": {
+        "f": 150,
+        "c": 91,
+        "e": 4
+      },
+      "JOÃO CARLOS RAMOS (CLT)": {
+        "f": 198,
+        "c": 151,
+        "e": 16
+      },
+      "BRENDO BARBOSA DA SILVA": {
+        "f": 182,
+        "c": 139,
+        "e": 14
+      },
+      "GUILHERME MORAIS (CLT)": {
+        "f": 150,
+        "c": 111,
+        "e": 9
+      },
+      "JEFFERSON ANTERO (R3)": {
+        "f": 150,
+        "c": 83,
+        "e": 2
+      },
+      "MARCUS MOURA": {
+        "f": 150,
+        "c": 115,
+        "e": 10
+      },
+      "MARCUS BRUNO DE SOUZA (LIDER)": {
+        "f": 150,
+        "c": 111,
+        "e": 9
+      },
+      "CARLOS EDUARDO TOTES (R3)": {
+        "f": 182,
+        "c": 139,
+        "e": 14
+      },
+      "MAX SOUZA PRÓCOPIO (R3)": {
+        "f": 166,
+        "c": 127,
+        "e": 12
+      },
+      "JOÃO VICTOR FEITOSA DA COSTA (R3)": {
+        "f": 150,
+        "c": 87,
+        "e": 3
+      },
+      "GUSTAVO PAULA FRAGOSO (R3)": {
+        "f": 300,
+        "c": 190,
+        "e": 10
+      },
+      "MATHEUS RIBEIRO DINIZ (R3)": {
+        "f": 150,
+        "c": 91,
+        "e": 4
+      },
+      "JULIO HENRIQUE MAGALHÃES (R3)": {
+        "f": 150,
+        "c": 91,
+        "e": 4
+      },
+      "HENRIQUE GOMES": {
+        "f": 150,
+        "c": 87,
+        "e": 3
+      },
+      "FRANCISCO CLEBIO DA SILVA (CLT)": {
+        "f": 284,
+        "c": 167.84,
+        "e": 14
+      },
+      "BRUNO SILVA DOS SANTOS (CLT)": {
+        "f": 166,
+        "c": 91.92,
+        "e": 15
+      },
+      "ROBSON TOMAS DE AQUINO (CLT)": {
+        "f": 139,
+        "c": 82.92,
+        "e": 6
+      },
+      "THAUANE BARBOSA (LIDER)": {
+        "f": 139,
+        "c": 82.92,
+        "e": 6
       },
       "MARLON NOBRE (SOBRA)": {
-        "f": 101,
-        "c": 51.28,
+        "f": 150,
+        "c": 103,
+        "e": 7
+      },
+      "GABRIEL SILVA FIDELIS": {
+        "f": 212.67,
+        "c": 128.2,
+        "e": 0
+      },
+      "JOÃO VITOR (FREE)": {
+        "f": 212.67,
+        "c": 128.2,
         "e": 0
       }
     }
