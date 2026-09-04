@@ -1,20 +1,20 @@
 // Gerado por analise-rotas.js — não editar à mão.
 // Atualizado diariamente às 8h pelo rotas-diario.js.
 export const coletas = {
-  "gerado": "2026-09-03T08:00:26.269Z",
+  "gerado": "2026-09-04T08:00:26.043Z",
   "resumo": {
     "coletas": 2577,
     "motoristas": 191,
     "medianaColetas": 6,
     "sobrecarregados": 48,
-    "ociosos": 67,
+    "ociosos": 68,
     "dispersos": 20,
     "semCadastro": 85
   },
   "cobertura": {
     "veiculo": 1097,
     "cep": 2545,
-    "horario": 440,
+    "horario": 432,
     "corte": 147,
     "total": 2577
   },
@@ -244,18 +244,6 @@ export const coletas = {
       ]
     },
     {
-      "codigo": "MRJG1401",
-      "nome": "MRJG1401 - DOUGLAS LUANDERSON XAVIER DA COSTA",
-      "veiculo": null,
-      "coletas": 12,
-      "cepsDistintos": 7,
-      "coletasPorCep": 1.7,
-      "indice": 0.6,
-      "regioes": [
-        "CENTRO E NORTE"
-      ]
-    },
-    {
       "codigo": "MRJG2108",
       "nome": "MRJG 2108-JULIO NETO ESPINDOLA DA SILVA",
       "veiculo": null,
@@ -298,6 +286,18 @@ export const coletas = {
       "coletas": 28,
       "cepsDistintos": 14,
       "coletasPorCep": 2,
+      "indice": 0.5,
+      "regioes": [
+        "CENTRO E NORTE"
+      ]
+    },
+    {
+      "codigo": "MRJG1401",
+      "nome": "MRJG1401 - DOUGLAS LUANDERSON XAVIER DA COSTA",
+      "veiculo": null,
+      "coletas": 13,
+      "cepsDistintos": 7,
+      "coletasPorCep": 1.9,
       "indice": 0.5,
       "regioes": [
         "CENTRO E NORTE"
