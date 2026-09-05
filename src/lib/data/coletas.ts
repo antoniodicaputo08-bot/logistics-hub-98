@@ -1,9 +1,9 @@
 // Gerado por analise-rotas.js — não editar à mão.
 // Atualizado diariamente às 8h pelo rotas-diario.js.
 export const coletas = {
-  "gerado": "2026-09-04T08:00:26.043Z",
+  "gerado": "2026-09-05T08:00:24.179Z",
   "resumo": {
-    "coletas": 2577,
+    "coletas": 2578,
     "motoristas": 191,
     "medianaColetas": 6,
     "sobrecarregados": 48,
@@ -13,10 +13,10 @@ export const coletas = {
   },
   "cobertura": {
     "veiculo": 1097,
-    "cep": 2545,
-    "horario": 432,
+    "cep": 2546,
+    "horario": 0,
     "corte": 147,
-    "total": 2577
+    "total": 2578
   },
   "sobrecarregados": [
     {
@@ -513,7 +513,7 @@ export const coletas = {
     },
     {
       "nome": "ZONA SUL",
-      "coletas": 285,
+      "coletas": 286,
       "motoristas": 28,
       "mediaPorMotorista": 10.2,
       "veiculos": {
